@@ -37,7 +37,7 @@ To verify that OpenJDK 17 has been successfully installed on your machine, open 
 java -version
 ```
 
-You should get the an ouput similar to this one:
+You should get an ouput similar to this one:
 
 ```bash
 openjdk version "17.0.6" 2023-01-23
@@ -51,7 +51,7 @@ OpenJDK 64-Bit Server VM (build 17.0.6+9-61, mixed mode, sharing)
 javac -version
 ```
 
-You should get the an ouput similar to this one:
+You should get an ouput similar to this one:
 
 ```bash
 javac 17.0.6
