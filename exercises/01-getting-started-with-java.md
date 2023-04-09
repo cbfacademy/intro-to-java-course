@@ -23,7 +23,7 @@ In your preferred working directory,
 
 At this point, our project folder structure looks as follows:
 
-![Folder Structure](folder-structure-01.png)
+![Folder Structure](resources/folder-structure-01.png)
 
 ## :wave: Hello World
 
@@ -52,7 +52,7 @@ javac com/codingblackfemales/academy/HelloWorld.java
 
 A `HelloWorld.class` file is now created alongside our Java source.
 
-![Folder Structure](folder-structure-02.png)
+![Folder Structure](resources/folder-structure-02.png)
 
 :runner: **Run**
 
