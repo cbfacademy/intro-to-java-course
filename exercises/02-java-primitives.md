@@ -9,7 +9,7 @@ The goal of this exercise is to familiarise ourselves with Java:
 ## :walking: Decimal Types
 
 
-**Arithmetic Operations**
+### Arithmetic Operations
 
 Following our example of arithmetic operations on integers, create a simple Java program with simple expressions to (for both `float` and `double` types):
 
@@ -20,7 +20,7 @@ Following our example of arithmetic operations on integers, create a simple Java
 
 and print the results on the screen.
 
-**Relational Operations**
+### Relational Operations
 
 Following our example of relational operations on integers, create a simple Java program with simple expressions to (for `double`s only):
 
