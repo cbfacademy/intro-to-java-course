@@ -67,7 +67,7 @@ Using the [Stack Java documentation][4] as a guide, write code for the instructi
 ```java
 import java.util.*;
 
-public class WorkingWithLists {
+public class WorkingWithStacks {
     public static void main(String... args) {
 
         // create an empty stack
@@ -99,7 +99,7 @@ Using the [ArrayDeque Java documentation][5] as a guide, write code for the inst
 ```java
 import java.util.*;
 
-public class WorkingWithLists {
+public class WorkingWithQueues {
     public static void main(String... args) {
 
         // create an empty queue
@@ -124,9 +124,37 @@ public class WorkingWithLists {
 }
 ```
 
-## :pushpin: Java `Map`
+## :pushpin: Java `HashMap`
 
-## :pushpin: Java `Iterator`
+Using the [HashMap Java documentation][6] as a guide, write code for the instructions marked with a `//TODO` comment:
+
+```java
+import java.util.*;
+
+public class WorkingWithMaps {
+    public static void main(String... args) {
+        // create an empty map
+        HashMap<Integer, String> languages = new HashMap<>();
+
+        // add entries to the map
+        languages.put(1, "TypeScript");
+        languages.put(2, "Kotlin");
+        languages.put(3, "Python");
+        languages.put(4, "Java");
+        languages.put(5, "JavaScript");
+        languages.put(6, "Rust");
+
+        //TODO: determine the set of keys from the map and print it on the screen
+        // add your code here
+
+        //TODO: determine the set of values from the map and print it on the screen
+        // add your code here
+
+        //TODO: determine whether the map contains "English" as a language
+        // add your code here
+    }
+}
+```
 
 
 [1]: https://docs.oracle.com/javase/8/docs/api/index.html 
@@ -134,3 +162,4 @@ public class WorkingWithLists {
 [3]: https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html
 [4]: https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html
 [5]: https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html
+[6]: https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html 
