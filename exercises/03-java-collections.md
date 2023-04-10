@@ -92,7 +92,7 @@ public class WorkingWithLists {
 }
 ```
 
-## :pushpin: Java Queues
+## :pushpin: Java `Queue`
 
 Using the [ArrayDeque Java documentation][5] as a guide, write code for the instructions marked with a `//TODO` comment:
 
@@ -124,9 +124,9 @@ public class WorkingWithLists {
 }
 ```
 
-## :pushpin: Java Maps
+## :pushpin: Java `Map`
 
-## :pushpin: Java Iterators
+## :pushpin: Java `Iterator`
 
 
 [1]: https://docs.oracle.com/javase/8/docs/api/index.html 
