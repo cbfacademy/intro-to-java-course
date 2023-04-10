@@ -14,16 +14,20 @@ In our earlier examples on lists, we gave our list a `List` (of `Integer`) type:
 List<Integer> integers = new LinkedList<>();
 ```
 
-We can also declare our list as an `LinkedList`- which means that:
-- not only is it a `List`, 
-- but it is a `LinkedList` specifically.
+We can also declare our list as a `LinkedList` - which means that:
+- our `integers` list is of type `List`, 
+- and it is a `LinkedList` specifically.
 
 
 ```java
 LinkedList<Integer> integers = new LinkedList<>();
 ```
 
-Using the [LinkedList Java documentation][3] as a guide, given the following empty list, write code for the instructions marked with a `//TODO` comment:
+This allows us to access functionality that is specific to `LinkedList`, and may not be available on the `List` type.
+
+----
+
+Using the [LinkedList Java documentation][3] as a guide, write code for the instructions marked with a `//TODO` comment:
 
 ```java
 import java.util.*;
@@ -55,6 +59,34 @@ public class WorkingWithLists {
 }
 ```
 
+## :pushpin: Java `Stack`
+
+Using the [Stack Java documentation][4] as a guide, write code for the instructions marked with a `//TODO` comment:
+
+```java
+import java.util.*;
+
+public class WorkingWithLists {
+    public static void main(String... args) {
+
+        // create an empty stack
+        Stack<Integer> integers = new Stack<>();
+
+        //TODO: add 5, 6, 8, 9 to the the stack
+
+        //TODO: print the first and the last element of the stack?
+
+        //TODO: print the element returned by invoking the pop() method on the stack?
+
+        //TODO: what does the stack look now? Print it on the screen
+
+        //TODO: invoking the push(4) method on the stack, then print the stack on the screen.
+
+    }
+}
+```
+
+
 ## :pushpin: Java Sets
 
 ## :pushpin: Java Queues
@@ -66,4 +98,5 @@ public class WorkingWithLists {
 
 [1]: https://docs.oracle.com/javase/8/docs/api/index.html 
 [2]: https://docs.oracle.com/javase/tutorial/collections/intro/index.html 
-[3]: https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html 
+[3]: https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html
+[4]: https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html
