@@ -8,7 +8,6 @@ The goal of this exercise is to familiarise ourselves with Java:
 
 ## :walking: Decimal Types
 
-
 ### Arithmetic Operations
 
 Following our example of arithmetic operations on integers, create a simple Java program with simple expressions to (for both `float` and `double` types):
@@ -45,4 +44,4 @@ System.out.println(++number2);
 
 Why is that?
 
-[1]: https://www.java.com/en/download/help/whatis_java.html
+[1]: https://docs.oracle.com/javase/8/docs/api/index.html
