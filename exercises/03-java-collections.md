@@ -156,10 +156,75 @@ public class WorkingWithMaps {
 }
 ```
 
+## :pushpin: Java `String`
+
+Using the [String Java documentation][7] as a guide, write code for the instructions marked with a `//TODO` comment:
+
+**Exercise 1**
+
+```java
+public class Strings {
+    public static void main(String... args) {
+        char[] characters = {'h', 'e', 'l', 'l', 'o'};
+
+        //TODO: create a String from the above array of characters and print it
+    }
+}
+```
+
+**Exercise 2**
+
+```java
+public class Strings {
+    public static void main(String... args) {
+        String java = 
+            "Java is a programming language and computing platform first released by Sun Microsystems in 1995. " +
+            "It has evolved from humble beginnings to power a large share of today’s digital world, by providing " + 
+            "the reliable platform upon which many services and applications are built.";
+
+        //TODO: how many 'e' characters are in the string above
+        //  add your code here
+
+        //TODO: how many characters does the string contain  
+        //  add your code here
+    }
+}
+```
+
+**Exercise 3**
+
+Write code which checks if a word is a **palindrome**.
+
+A palindrome is a word which you can read from both sides (from left to right or from right to left) and you will get the same word.
+
+**Examples** <br/>
+- anna 
+- radar
+- solos
+
+```java
+import java.util.List;
+
+public class Palindrome {
+    public static void main(String... args) {
+        List<String> words = List.of(
+                "typescript", "refer", "javascript", "radar", "java", "python",
+                "noon", "midnight", "madam", "java", "python", "street", "apple"
+        );
+
+        //TODO: for each word in the list, determine whether it is a palindrome
+        //  add your code here
+
+    }
+}
+```
+
+
 
 [1]: https://docs.oracle.com/javase/8/docs/api/index.html 
 [2]: https://docs.oracle.com/javase/tutorial/collections/intro/index.html 
 [3]: https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html
 [4]: https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html
 [5]: https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html
-[6]: https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html 
+[6]: https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html
+[7]: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html
