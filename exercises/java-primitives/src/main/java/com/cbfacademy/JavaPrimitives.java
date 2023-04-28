@@ -1,4 +1,4 @@
-package com.cbfacademy.primitives;
+package com.cbfacademy;
 
 public class JavaPrimitives {
     public String getName() {

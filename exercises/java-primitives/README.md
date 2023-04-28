@@ -1,6 +1,6 @@
 # Working With Primitives
 
-[![Java Language](https://img.shields.io/badge/platform-OpenJDK-3A75B0.svg?logo=OpenJDK&style=for-the-badge)][1]
+[![Java Language](https://img.shields.io/badge/PLATFORM-OpenJDK-3A75B0.svg?style=for-the-badge)][1]
 
 The goal of this exercise is to familiarise ourselves with Java:
 - primitive types
