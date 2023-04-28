@@ -7,7 +7,8 @@ The goal of these exercises is to practise:
 - Handling unchecked exceptions
 - Creating custom exceptions
 
-## TODO
+## :pushpin: TODO
 
+> WIP - Will complete this by May 1st
 
 [1]: https://docs.oracle.com/javase/8/docs/api/index.html

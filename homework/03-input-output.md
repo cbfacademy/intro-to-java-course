@@ -10,5 +10,7 @@ The goal of these programming exercises is to practise I/O concepts:
 
 ## :pushpin: TODO
 
+> WIP - Will complete this by May 1st
+
 
 [1]: https://docs.oracle.com/javase/8/docs/api/index.html 
