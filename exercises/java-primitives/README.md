@@ -4,9 +4,10 @@
 [![JUnit5 Testing Framework](https://img.shields.io/badge/testing%20framework-JUnit5-26A162.svg?style=for-the-badge)][2]
 [![Maven Dependency Manager](https://img.shields.io/badge/dependency%20manager-Maven-AA215A.svg?style=for-the-badge)][3]
 
-The goal of this exercise is to familiarise ourselves with Java:
-- primitive types
-- and legal and illegal operations on primitive types
+The goal of this exercise is to familiarise ourselves with Java's:
+- [primitive types][7]
+- [legal and illegal operations on primitive types][8]
+- [and String operations in Java][9]
 
 ## :walking: Decimal Types
 
@@ -44,9 +45,10 @@ System.out.println(number1++);
 System.out.println(++number2);
 ```
 
-Why is that?
+**Why is that?**
 
-## :pushpin: Java `String`
+
+## :thread: String Operations in Java
 
 For this section, we've provided the starter project above. It contains:
 
@@ -71,6 +73,8 @@ public String fromCharacters(char[] characters) {
 }
 ```
 
+<br/>
+
 **<u>Exercise 2</u>**
 
 Implement the `howMany` method, which determines the number of times an input character is found in the input text.
@@ -81,6 +85,8 @@ public Long howMany(String text, Character character) {
     throw new RuntimeException("Not implemented");
 }
 ```
+
+<br/>
 
 **<u>Exercise 3</u>**
 
@@ -165,5 +171,8 @@ Your implementation is correct when all tests pass:
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
 [4]: https://github.com/cbfacademy/intro-to-java-course/blob/main/exercises/java-primitives/src/main/java/com/cbfacademy/StringExercises.java
-[5]: https://github.com/cbfacademy/intro-to-java-course/blob/main/exercises/java-primitives/src/test/java/com/cbfacademy/JavaPrimitivesTest.java
+[5]: https://github.com/cbfacademy/intro-to-java-course/blob/main/exercises/java-primitives/src/test/java/com/cbfacademy/StringExercisesTest.java
 [6]: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html
+[7]: #walking-decimal-types
+[8]: #running-unary-operators---increment--decrement
+[9]: #thread-string-operations-in-java
