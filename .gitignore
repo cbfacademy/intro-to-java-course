@@ -24,3 +24,6 @@ hs_err_pid*
 
 # platform files
 .DS_Store
+
+# VS Code
+.vscode/
