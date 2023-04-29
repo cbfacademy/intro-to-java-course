@@ -4,10 +4,10 @@
 [![JUnit5 Testing Framework](https://img.shields.io/badge/testing%20framework-JUnit5-26A162.svg?style=for-the-badge)][2]
 [![Maven Dependency Manager](https://img.shields.io/badge/dependency%20manager-Maven-AA215A.svg?style=for-the-badge)][3]
 
-The goal of this exercise is to familiarise ourselves with Java's:
-- [primitive types][7]
-- [legal and illegal operations on primitive types][8]
-- [and String operations in Java][9]
+The goal of this exercise is to familiarise ourselves with:
+- [Primitive types][7]
+- [Legal and illegal operations on primitive types][8]
+- [String operations in Java][9]
 
 ## :walking: Decimal Types
 
@@ -167,7 +167,7 @@ Your implementation is correct when all tests pass:
 
 ```
 
-[1]: https://docs.oracle.com/javase/8/docs/api/index.html
+[1]: https://docs.oracle.com/javase/11/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
 [4]: https://github.com/cbfacademy/intro-to-java-course/blob/main/exercises/java-primitives/src/main/java/com/cbfacademy/StringExercises.java
