@@ -73,6 +73,14 @@ Follow [this Java starting guide][10] to:
 
 :tada: When the program runs and prints a `Hello World`, your local environment is correctly set up for the course.
 
+## :rocket: Get Started
+
+Now that your development environment is setup correctly, [fork][12] this repository, then clone your fork locally.
+
+In the coming weeks, you will be actively writing Java code, and pushing your code to your fork.
+
+**Happy learning! :smile:**
+
 
 
 [1]: https://www.java.com/en/download/help/whatis_java.html
@@ -86,3 +94,4 @@ Follow [this Java starting guide][10] to:
 [9]: https://code.visualstudio.com/docs/java/java-tutorial#_installing-extensions
 [10]: https://code.visualstudio.com/docs/java/java-tutorial#_creating-a-source-code-file
 [11]: https://code.visualstudio.com/docs/java/java-tutorial/run-debug.mp4
+[12]: https://docs.github.com/en/get-started/quickstart/fork-a-repo

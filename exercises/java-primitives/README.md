@@ -62,7 +62,7 @@ In each method, replace the `throw new RuntimeException("Not implemented")` with
 
 <br/>
 
-**<u>Exercise 1</u>**
+**<ins>Exercise 1</ins>**
 
 Implement the `fromCharacters` method in such a way that it creates a String from the input array of characters.
 
@@ -75,7 +75,7 @@ public String fromCharacters(char[] characters) {
 
 <br/>
 
-**<u>Exercise 2</u>**
+**<ins>Exercise 2</ins>**
 
 Implement the `howMany` method, which determines the number of times an input character is found in the input text.
 
@@ -88,7 +88,7 @@ public Long howMany(String text, Character character) {
 
 <br/>
 
-**<u>Exercise 3</u>**
+**<ins>Exercise 3</ins>**
 
 Implement the `isPalindrome` method, which checks if a word is a **palindrome**.
 
