@@ -8,7 +8,7 @@ The goal of these exercises is to familiarise ourselves with:
 - the [Java Collections Framework][2]
 - and learn to distinguish working with interfaces and actual implementations.
 
-we've provided the starter project above. It contains:
+We've provided the starter project above. It contains:
 
 - the [CollectionsExercises class][9] with four methods to implement: `useLinkedList`, `useStack`, `useArrayDeque` and `useHashMap`
 

@@ -164,7 +164,6 @@ Your implementation is correct when all tests pass:
 [INFO] Total time:  1.319 s
 [INFO] Finished at: 2023-04-29T16:49:21+01:00
 [INFO] ------------------------------------------------------------------------
-
 ```
 
 [1]: https://docs.oracle.com/javase/11/docs/api/index.html
