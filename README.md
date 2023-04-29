@@ -1,6 +1,6 @@
 # Introduction to Java
 
-[![Java Language](https://img.shields.io/badge/platform-OpenJDK-3A75B0.svg?logo=OpenJDK)][1]
+[![Java Language](https://img.shields.io/badge/PLATFORM-OpenJDK-3A75B0.svg?style=for-the-badge)][1]
 
 This project will house exercises for the Introduction to Java course.
 
