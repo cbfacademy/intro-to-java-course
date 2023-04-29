@@ -17,9 +17,8 @@ In your preferred working directory,
 - Inside this project folder:
     - create a sub-directory called **`com`**
     - inside the `com` directory, create a sub-directory called **`cbfacademy`**
-    - inside the `codingblackfemales` directory, create a sub-directory called **`academy`**
 
-- Inside that last sub-directory (`academy`), create a file called **`HelloWorld.java`**.
+- Inside that last sub-directory (`cbfacademy`), create a file called **`HelloWorld.java`**.
 
 At this point, our project folder structure looks as follows:
 
@@ -47,7 +46,7 @@ In your terminal, navigate to the `getting-started-with-java` project folder.
 Execute this command to **compile** our Java program
 
 ```bash
-javac com/codingblackfemales/academy/HelloWorld.java
+javac com/cbfacademy/HelloWorld.java
 ```
 
 A `HelloWorld.class` file is now created alongside our Java source.
