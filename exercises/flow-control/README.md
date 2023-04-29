@@ -1,6 +1,6 @@
 # Flow Control
 
-[![Java Language](https://img.shields.io/badge/platform-OpenJDK-3A75B0.svg?style=for-the-badge)][1]
+[![Java Language](https://img.shields.io/badge/PLATFORM-OpenJDK-3A75B0.svg?style=for-the-badge)][1]
 
 The goal of these exercises is to practise:
 - conditional evaluation in Java programs

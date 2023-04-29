@@ -1,11 +1,11 @@
-# Object-Oriented Programming
+# Exception Handling
 
 [![Java Language](https://img.shields.io/badge/PLATFORM-OpenJDK-3A75B0.svg?style=for-the-badge)][1]
 
-The goal of these exercises is to practise OOP concepts:
-- Encapsulation
-- Inheritance
-- Polymorphism
+The goal of these exercises is to practise:
+- Handling checked exceptions
+- Handling unchecked exceptions
+- Creating custom exceptions
 
 ## :pushpin: TODO
 
