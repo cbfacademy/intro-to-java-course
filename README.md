@@ -1,6 +1,7 @@
 # Introduction to Java
 
 [![Java Language](https://img.shields.io/badge/PLATFORM-OpenJDK-3A75B0.svg?style=for-the-badge)][1]
+[![MIT License](https://img.shields.io/badge/LICENSE-MIT-green.svg?style=for-the-badge)][13]
 
 This project will house exercises for the Introduction to Java course.
 
@@ -95,3 +96,4 @@ In the coming weeks, you will be actively writing Java code, and pushing your co
 [10]: https://code.visualstudio.com/docs/java/java-tutorial#_creating-a-source-code-file
 [11]: https://code.visualstudio.com/docs/java/java-tutorial/run-debug.mp4
 [12]: https://docs.github.com/en/get-started/quickstart/fork-a-repo
+[13]: https://github.com/cbfacademy/intro-to-java-course/blob/main/LICENSE
