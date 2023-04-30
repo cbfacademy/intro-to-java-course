@@ -12,6 +12,96 @@ For the exercises below, we've provided the starter project above.
 
 ## :pushpin: Exceptions
 
+### <ins>Question 1</ins>
+
+Is the following code legal?
+
+```java
+try {
+
+} finally {
+
+}
+```
+
+### <ins>Question 2</ins>
+
+What exception types can be caught by the following handler?
+```java
+catch (Exception e) {
+    
+}
+```
+
+What is wrong with using this type of exception handler?
+
+### <ins>Question 3</ins>
+
+Is there anything wrong with the following exception handler as written? Will this code compile?
+
+```java
+try {
+
+} catch (Exception e) {
+
+} catch (ArithmeticException a) {
+
+}
+```
+
+### <ins>Question 4</ins>
+
+```java
+int[] A; 
+A[0] = 0;
+```
+
+The above code produces a (choose 1):
+
+- [ ] an error
+- [ ] a checked exception
+- [ ] a checked exception
+- [ ] a compile error
+- [ ] no exception
+
+---
+
+The JVM starts running your program, but the JVM can't find the Java platform classes. 
+(The Java platform classes reside in classes.zip or rt.jar.)
+
+What happens (choose 1):
+
+- [ ] an error
+- [ ] a checked exception
+- [ ] a checked exception
+- [ ] a compile error
+- [ ] no exception
+
+---
+A program is reading a stream and reaches the end of stream marker.
+
+What happens (choose 1):
+
+- [ ] an error
+- [ ] a checked exception
+- [ ] a checked exception
+- [ ] a compile error
+- [ ] no exception
+
+---
+
+Before closing the stream and after reaching the end of stream marker, a program tries to read the stream again.
+
+What happens (choose 1):
+
+- [ ] an error
+- [ ] a checked exception
+- [ ] a checked exception
+- [ ] a compile error
+- [ ] no exception
+
+## :pushpin: Custom Exceptions
+
 Create a class called `FileExtension`, with a `check` method that takes a `fileName` as a `String`.
 
 The `check` method should:
@@ -30,10 +120,10 @@ For the following list of file names: `List.of("App.java", "App.txt", null, "App
 a map with the following entries
 
 ```txt
-{1, "App.java"},
-{0, "App.txt"},
-{-1, null},
-{0, "App.md"}
+{"App.java", 1},
+{"App.txt", 0},
+{null, -1},
+{"App.md", 0}
 ```
 
 [1]: https://docs.oracle.com/javase/11/docs/api/index.html
