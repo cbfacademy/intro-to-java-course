@@ -52,7 +52,7 @@ mvnw.cmd clean test
 [1]: https://docs.oracle.com/javase/11/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
-[4]: https://github.com/cbfacademy/intro-to-java-course/tree/main/homework/java-collections
+[4]: https://github.com/cbfacademy/intro-to-java-course/tree/main/homework/collections
 [5]: https://github.com/cbfacademy/intro-to-java-course/tree/main/homework/object-oriented-programming
 [6]: https://github.com/cbfacademy/intro-to-java-course/tree/main/homework/test-driven-development
 [7]: https://github.com/cbfacademy/intro-to-java-course/tree/main/homework/input-output

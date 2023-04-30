@@ -1,6 +1,8 @@
 # Working With Java Collections
 
 [![Java Language](https://img.shields.io/badge/PLATFORM-OpenJDK-3A75B0.svg?style=for-the-badge)][1]
+[![JUnit5 Testing Framework](https://img.shields.io/badge/testing%20framework-JUnit5-26A162.svg?style=for-the-badge)][4]
+[![Maven Dependency Manager](https://img.shields.io/badge/dependency%20manager-Maven-AA215A.svg?style=for-the-badge)][5]
 
 The goal of this programming assignment is to practise working with:
 - the [Java Collections Framework][2]
@@ -44,3 +46,5 @@ For each of the following four assignments, **specify which of the four core int
 [1]: https://docs.oracle.com/javase/11/docs/api/index.html
 [2]: https://docs.oracle.com/javase/tutorial/collections/intro/index.html
 [3]: https://github.com/cbfacademy/intro-to-java-course/blob/main/homework/collections/src/main/java/com/cbfacademy/CollectionsAssignment.java
+[4]: https://junit.org/junit5/
+[5]: https://maven.apache.org/
