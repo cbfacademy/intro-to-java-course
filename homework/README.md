@@ -8,8 +8,7 @@ Here you'll find a collection of programming assignments to continue learning an
 
 1. [Java Collections][4]
 2. [Object-Oriented Programming][5]
-3. [Test Driven Development][6]
-4. [Input and Output][7]
+4. [Input and Output][6]
 
 
 ## :memo: Instructions
@@ -54,5 +53,4 @@ mvnw.cmd clean test
 [3]: https://maven.apache.org/
 [4]: https://github.com/cbfacademy/intro-to-java-course/tree/main/homework/collections
 [5]: https://github.com/cbfacademy/intro-to-java-course/tree/main/homework/object-oriented-programming
-[6]: https://github.com/cbfacademy/intro-to-java-course/tree/main/homework/test-driven-development
-[7]: https://github.com/cbfacademy/intro-to-java-course/tree/main/homework/input-output
+[6]: https://github.com/cbfacademy/intro-to-java-course/tree/main/homework/input-output
