@@ -56,7 +56,7 @@ int[] A;
 A[0] = 0;
 ```
 
-The above code produces a (choose 1):
+The above code produces (choose 1):
 
 - [ ] an error
 - [ ] a checked exception
