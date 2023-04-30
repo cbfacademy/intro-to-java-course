@@ -25,10 +25,10 @@ They should all fail at first - since there is no implementation for them yet. Y
 
 **<ins>Example</ins>**
 
-To complete the Java Collections' assignment, navigate to the `java-collections` homework folder.
+To complete the Java Collections' assignment, navigate to the `collections` homework folder.
 
 ```shell
-cd java-collections
+cd collections
 ```
 
 Then run the tests. 
