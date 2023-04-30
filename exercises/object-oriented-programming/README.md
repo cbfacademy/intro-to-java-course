@@ -90,7 +90,6 @@ In the same package, create a **program** `PaintShapes` that computes the amount
 
 Run the program, and print the overall amount of paint needed to the screen.
 
-
 [1]: https://docs.oracle.com/javase/11/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
