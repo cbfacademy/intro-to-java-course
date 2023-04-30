@@ -8,6 +8,8 @@ The goal of these programming exercises is to practise:
 - algorithmic thinking
 - implementing popular algorithms in Java
 
+For this assignment, we've provided the starter project above.
+
 ## :pushpin: Sorting
 
 ### Merge Sort<sup>1</sup>
