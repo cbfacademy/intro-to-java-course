@@ -1,6 +1,6 @@
 # Web Applications
 
-[![Language](https://img.shields.io/badge/language-HTML-3A75B0.svg?style=for-the-badge)][1]
+[![Language](https://img.shields.io/badge/language-HTML-E54B20.svg?style=for-the-badge)][1]
 
 The goal of these programming exercises is to practise:
 - working with a web server
