@@ -64,6 +64,20 @@ Create a class `Year` with a `isLeap` method that checks whether its input integ
 | 2011  | false  |
 | ...   | ...    |
 
+## :keyboard: Character Copier
+
+A `CharacterCopier` is a simple class that reads characters from a `Source` and copies them to a `Destination` one character at a time.
+When the `copy` method is called on the copier then it should read characters from the source and copy them to the destination until the source returns a new line (`\n`).
+
+Implement the character copier using test doubles for the source and the destination.
+- Iteration 1: try using spies (write your test doubles manually)
+- Iteration 2: try using mocks (using Mockito).
+
+Start from the definitions on the diagram.
+
+![Character Copier](./resources/test-doubles.png)
+
+
 [1]: https://docs.oracle.com/javase/11/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
