@@ -1,6 +1,6 @@
 # Web Applications
 
-[![Java Language](https://img.shields.io/badge/PLATFORM-OpenJDK-3A75B0.svg?style=for-the-badge)][1]
+[![Language](https://img.shields.io/badge/language-HTML-3A75B0.svg?style=for-the-badge)][1]
 
 The goal of these programming exercises is to practise:
 - working with a web server
@@ -44,6 +44,17 @@ An HTTP client sends the following message:
 
 Write down two feasible responses of the HTTP server (only the status line)
 
+## :spider_web: HTML
+
+An HTML Form is a section of the document that collects input from the user. The input from the user is generally sent to a server (Web servers, Mail clients, etc). We use the HTML `<form>` element to create forms in HTML.
+
+Read [this documentation][2], and create a HTML form that looks like the following:
+
+![HTML Form](./html-form.png)
 
 
-[1]: https://docs.oracle.com/javase/11/docs/api/index.html
+
+
+
+[1]: https://developer.mozilla.org/en-US/docs/Web/HTML
+[2]: https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types
