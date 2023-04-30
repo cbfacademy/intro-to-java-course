@@ -6,13 +6,21 @@
 
 The goal of these programming exercises is to practise I/O concepts:
 - Working with Properties files
-- Reading from a file
-- Writing to a file
 
+For this assignment, we've provided the starter project above.
 
-## :memo: TODO
+## :memo: Properties Files
 
-> WIP - Will complete this by May 1st
+- Create a program that loads the provided `example.properties` file, and prints each property and value to the screen.
+
+- Create a program that creates a `configuration.properties` file, with the following properties:
+
+```properties
+db.url=localhost
+db.port=5353
+db.user=cbfacademy
+db.password=password
+```
 
 
 [1]: https://docs.oracle.com/javase/11/docs/api/index.html
