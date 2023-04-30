@@ -157,7 +157,7 @@ Your implementation is correct when all tests pass:
 [INFO] ------------------------------------------------------------------------
 ```
 
-[1]: https://docs.oracle.com/javase/8/docs/api/index.html
+[1]: https://docs.oracle.com/javase/11/docs/api/index.html
 [2]: https://docs.oracle.com/javase/tutorial/collections/intro/index.html
 [3]: https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html
 [4]: https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html
