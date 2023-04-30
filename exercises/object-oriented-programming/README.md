@@ -67,15 +67,15 @@ Inside the `shapes` package, create an abstract class `Shape` with the following
 
 In the same package, create a concrete class `Sphere`:
 - it is a descendant of `Shape`
-- it has a radius `radius`, and its area (surface area) is given by the formula 4 * 𝛑 * (radius<sup>2</sup>).
+- it has a radius `radius`, and its area (surface area) is given by the formula (`4` * `𝛑` * (`radius`<sup>2</sup>)).
 
 In the same package, create a concrete class `Rectangle`:
 - it is a descendant of `Shape`
-- it is defined by a `length` and a `width`, and its area is given by the formula length * width.
+- it is defined by a `length` and a `width`, and its area is given by the formula (`length` * `width`).
 
 In the same package, create a concrete class `Cylinder`:
 - it is a descendant of `Shape`
-- it is defined by a radius `radius` and a `height`, and its area (surface area) is given by the formula height * 𝛑 * (radius<sup>2</sup>).
+- it is defined by a radius `radius` and a `height`, and its area (surface area) is given by the formula (`height` * `𝛑` * (`radius`<sup>2</sup>)).
 
 **<ins>Part 2</ins>**
 
@@ -84,9 +84,11 @@ Inside the `shapes` package, create a class `Paint` with the following propertie
 - a method `amount(Shape shape)` which returns the amount of paint (number of gallons) needed to paint a given shape
 
 In the same package, create a **program** `PaintShapes` that computes the amount of paint needed to paint various shapes:
-- a rectangle deck of length 35, and width 20 
-- a ball of radius 15
-- and a tank of radius 10 and height 30.
+- a rectangle deck of length `35` and width `20` 
+- a ball of radius `15`
+- and a tank of radius `10` and height `30`.
+
+Run the program, and print the overall amount of paint needed to the screen.
 
 
 [1]: https://docs.oracle.com/javase/11/docs/api/index.html
