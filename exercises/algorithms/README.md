@@ -10,7 +10,7 @@ The goal of these programming exercises is to practise:
 
 ## :pushpin: Sorting
 
-### Merge Sort
+### Merge Sort<sup>1</sup>
 
 Here is the pseudocode for the Merge Sort algorithm:
 
