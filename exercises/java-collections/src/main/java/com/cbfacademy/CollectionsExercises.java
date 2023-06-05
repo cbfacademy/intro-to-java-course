@@ -37,7 +37,18 @@ public class CollectionsExercises {
         //  - invoke the method pop() on the stack and print the result on the screen
         //  - invoke the push(4) method on the stack
         //  - return the stack
-        throw new RuntimeException("Not implemented");
+
+        Stack<Integer> stackOfIntegers = new Stack<Integer>();
+        stackOfIntegers.push(5);
+        stackOfIntegers.push(6);
+        stackOfIntegers.push(8);
+        stackOfIntegers.push(9);
+        System.out.print(stackOfIntegers.firstElement());
+        System.out.print(stackOfIntegers.lastElement());
+        System.out.print(stackOfIntegers.pop());
+        stackOfIntegers.push(4);
+
+        return stackOfIntegers;
     }
 
     public ArrayDeque<Integer> useArrayDeque() {
@@ -55,13 +66,12 @@ public class CollectionsExercises {
         listOfNumbers.add(8);
         listOfNumbers.add(9);
 
-        System.out.println(listOfNumbers.getFirst());
-        System.out.println(listOfNumbers.getLast());
-        System.out.println(listOfNumbers.poll());
-        System.out.println(listOfNumbers.element());
+        System.out.print(listOfNumbers.getFirst());
+        System.out.print(listOfNumbers.getLast());
+        System.out.print(listOfNumbers.poll());
+        System.out.print(listOfNumbers.element());
 
         return listOfNumbers;
-        // throw new RuntimeException("Not implemented");
     }
 
     public HashMap<Integer, String> useHashMap() {
@@ -76,10 +86,8 @@ public class CollectionsExercises {
         //  - determine the set of keys from the map and print it on the screen
         //  - determine whether the map contains "English" as a language and print the result on the screen
         //  - return the map
-
-        // HashMap<Integer, String> programmingLanguages = new HashMap<>();
         HashMap<Integer, String> programmingLanguages = new HashMap<Integer, String>(){{
-            put(1, "Typescript");
+            put(1, "TypeScript");
             put(2, "Kotlin");
             put(3, "Python");
             put(4, "Java");
@@ -89,15 +97,6 @@ public class CollectionsExercises {
         System.out.print(programmingLanguages.keySet());
         System.out.print(programmingLanguages.values());
         System.out.print(programmingLanguages.containsValue("English"));
-        // System.out.println(programmingLanguages);
-
-        // programmingLanguages.put(1, "Typescript");
-        // programmingLanguages.put(2, "Kotlin");
-        // programmingLanguages.put(3, "Python");
-        // programmingLanguages.put(4, "Java");
-        // programmingLanguages.put(5, "JavaScript");
-        // programmingLanguages.put(6, "Rust");
-        // throw new RuntimeException("Not implemented");
         return programmingLanguages;
     }
 
@@ -106,8 +105,14 @@ public class CollectionsExercises {
     }
 
     public static void main(String[] arr) {
+        CollectionsExercises numberLinkedList = new CollectionsExercises();
+        numberLinkedList.useLinkedList();
+
+        CollectionsExercises stackList = new CollectionsExercises();
+        stackList.useStack();
+
         CollectionsExercises numberList = new CollectionsExercises();
-        System.out.print(numberList.useArrayDeque().toString().replace("\n", ""));
+        numberList.useArrayDeque();
 
         CollectionsExercises codingLanaguges = new CollectionsExercises();
         codingLanaguges.useHashMap();
