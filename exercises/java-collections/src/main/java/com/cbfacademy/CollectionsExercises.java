@@ -12,7 +12,21 @@ public class CollectionsExercises {
         //  - add 4 as the 3rd element of the list
         //  - invoke the method element() on the list and print the result on the screen
         //  - return the list
-        throw new RuntimeException("Not implemented");
+
+        LinkedList<Integer> linkedList = new LinkedList<>();
+
+        linkedList.addFirst(4);
+        linkedList.add(5);
+        linkedList.add(6);
+        linkedList.add(8);
+        linkedList.add(2);
+        linkedList.add(9);
+        linkedList.addLast(2);
+        linkedList.add(2, 4);
+
+        System.out.println(linkedList.element());
+
+        return linkedList;
     }
 
     public Stack<Integer> useStack() {
@@ -23,7 +37,18 @@ public class CollectionsExercises {
         //  - invoke the method pop() on the stack and print the result on the screen
         //  - invoke the push(4) method on the stack
         //  - return the stack
-        throw new RuntimeException("Not implemented");
+
+        Stack<Integer> stackOfIntegers = new Stack<Integer>();
+        stackOfIntegers.push(5);
+        stackOfIntegers.push(6);
+        stackOfIntegers.push(8);
+        stackOfIntegers.push(9);
+        System.out.print(stackOfIntegers.firstElement());
+        System.out.print(stackOfIntegers.lastElement());
+        System.out.print(stackOfIntegers.pop());
+        stackOfIntegers.push(4);
+
+        return stackOfIntegers;
     }
 
     public ArrayDeque<Integer> useArrayDeque() {
@@ -34,7 +59,19 @@ public class CollectionsExercises {
         //  - invoke the method poll() on the queue and print the result on the screen
         //  - invoke the element() method on the queue and print the result on the screen
         //  - return the queue
-        throw new RuntimeException("Not implemented");
+
+        ArrayDeque<Integer> listOfNumbers = new ArrayDeque<>();
+        listOfNumbers.add(5);
+        listOfNumbers.add(6);
+        listOfNumbers.add(8);
+        listOfNumbers.add(9);
+
+        System.out.print(listOfNumbers.getFirst());
+        System.out.print(listOfNumbers.getLast());
+        System.out.print(listOfNumbers.poll());
+        System.out.print(listOfNumbers.element());
+
+        return listOfNumbers;
     }
 
     public HashMap<Integer, String> useHashMap() {
@@ -49,10 +86,35 @@ public class CollectionsExercises {
         //  - determine the set of keys from the map and print it on the screen
         //  - determine whether the map contains "English" as a language and print the result on the screen
         //  - return the map
-        throw new RuntimeException("Not implemented");
+        HashMap<Integer, String> programmingLanguages = new HashMap<Integer, String>(){{
+            put(1, "TypeScript");
+            put(2, "Kotlin");
+            put(3, "Python");
+            put(4, "Java");
+            put(5,"JavaScript");
+            put(6, "Rust");
+        }};
+        System.out.print(programmingLanguages.keySet());
+        System.out.print(programmingLanguages.values());
+        System.out.print(programmingLanguages.containsValue("English"));
+        return programmingLanguages;
     }
 
     public String getName() {
         return "Collections Exercises";
+    }
+
+    public static void main(String[] arr) {
+        CollectionsExercises numberLinkedList = new CollectionsExercises();
+        numberLinkedList.useLinkedList();
+
+        CollectionsExercises stackList = new CollectionsExercises();
+        stackList.useStack();
+
+        CollectionsExercises numberList = new CollectionsExercises();
+        numberList.useArrayDeque();
+
+        CollectionsExercises codingLanaguges = new CollectionsExercises();
+        codingLanaguges.useHashMap();
     }
 }
