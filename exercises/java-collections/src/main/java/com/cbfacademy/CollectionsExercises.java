@@ -12,7 +12,21 @@ public class CollectionsExercises {
         //  - add 4 as the 3rd element of the list
         //  - invoke the method element() on the list and print the result on the screen
         //  - return the list
-        throw new RuntimeException("Not implemented");
+
+        LinkedList<Integer> linkedList = new LinkedList<>();
+
+        linkedList.addFirst(4);
+        linkedList.add(5);
+        linkedList.add(6);
+        linkedList.add(8);
+        linkedList.add(2);
+        linkedList.add(9);
+        linkedList.addLast(2);
+        linkedList.add(2, 4);
+
+        System.out.println(linkedList.element());
+
+        return linkedList;
     }
 
     public Stack<Integer> useStack() {
@@ -34,7 +48,20 @@ public class CollectionsExercises {
         //  - invoke the method poll() on the queue and print the result on the screen
         //  - invoke the element() method on the queue and print the result on the screen
         //  - return the queue
-        throw new RuntimeException("Not implemented");
+
+        ArrayDeque<Integer> listOfNumbers = new ArrayDeque<>();
+        listOfNumbers.add(5);
+        listOfNumbers.add(6);
+        listOfNumbers.add(8);
+        listOfNumbers.add(9);
+
+        System.out.println(listOfNumbers.getFirst());
+        System.out.println(listOfNumbers.getLast());
+        System.out.println(listOfNumbers.poll());
+        System.out.println(listOfNumbers.element());
+
+        return listOfNumbers;
+        // throw new RuntimeException("Not implemented");
     }
 
     public HashMap<Integer, String> useHashMap() {
@@ -49,10 +76,40 @@ public class CollectionsExercises {
         //  - determine the set of keys from the map and print it on the screen
         //  - determine whether the map contains "English" as a language and print the result on the screen
         //  - return the map
-        throw new RuntimeException("Not implemented");
+
+        // HashMap<Integer, String> programmingLanguages = new HashMap<>();
+        HashMap<Integer, String> programmingLanguages = new HashMap<Integer, String>(){{
+            put(1, "Typescript");
+            put(2, "Kotlin");
+            put(3, "Python");
+            put(4, "Java");
+            put(5,"JavaScript");
+            put(6, "Rust");
+        }};
+        System.out.print(programmingLanguages.keySet());
+        System.out.print(programmingLanguages.values());
+        System.out.print(programmingLanguages.containsValue("English"));
+        // System.out.println(programmingLanguages);
+
+        // programmingLanguages.put(1, "Typescript");
+        // programmingLanguages.put(2, "Kotlin");
+        // programmingLanguages.put(3, "Python");
+        // programmingLanguages.put(4, "Java");
+        // programmingLanguages.put(5, "JavaScript");
+        // programmingLanguages.put(6, "Rust");
+        // throw new RuntimeException("Not implemented");
+        return programmingLanguages;
     }
 
     public String getName() {
         return "Collections Exercises";
+    }
+
+    public static void main(String[] arr) {
+        CollectionsExercises numberList = new CollectionsExercises();
+        System.out.print(numberList.useArrayDeque().toString().replace("\n", ""));
+
+        CollectionsExercises codingLanaguges = new CollectionsExercises();
+        codingLanaguges.useHashMap();
     }
 }
