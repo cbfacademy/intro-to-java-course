@@ -63,7 +63,7 @@ public class FlowControlExercisesTest {
         assertThat(result.size(), is(2));
         assertThat(keys.contains("SumOfEvens"), is(true));
         assertThat(keys.contains("SumOfOdds"), is(true));
-        assertThat(result.get("SumOfEvens"), is(2450));
+        assertThat(result.get("SumOfEvens"), is(2550));
         assertThat(result.get("SumOfOdds"), is(2500));
     }
 
