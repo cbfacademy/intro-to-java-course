@@ -39,7 +39,7 @@ public class CollectionsAssignmentTest {
         final boolean result = CollectionsAssignment.containsDuplicates(numbers);
         assertThat(result, is(true));
 
-        numbers.remove(12);
+        numbers.remove(7);
         final boolean anotherResult = CollectionsAssignment.containsDuplicates(numbers);
         assertThat(anotherResult, is(false));
     }
