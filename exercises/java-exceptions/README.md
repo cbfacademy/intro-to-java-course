@@ -12,7 +12,7 @@ For the exercises below, we've provided the starter project above.
 
 ## :pushpin: Exceptions
 
-### <ins>Question 1</ins>
+### Question 1
 
 Is the following code legal?
 
@@ -24,7 +24,7 @@ try {
 }
 ```
 
-### <ins>Question 2</ins>
+### Question 2
 
 What exception types can be caught by the following handler?
 ```java
@@ -35,7 +35,7 @@ catch (Exception e) {
 
 What is wrong with using this type of exception handler?
 
-### <ins>Question 3</ins>
+### Question 3
 
 Is there anything wrong with the following exception handler as written? Will this code compile?
 
@@ -49,7 +49,7 @@ try {
 }
 ```
 
-### <ins>Question 4</ins>
+### Question 4
 
 ```java
 int[] A; 
@@ -60,11 +60,11 @@ The above code produces (choose 1):
 
 - [ ] an error
 - [ ] a checked exception
-- [ ] a checked exception
+- [ ] an unchecked exception
 - [ ] a compile error
 - [ ] no exception
 
----
+### Question 5
 
 The JVM starts running your program, but the JVM can't find the Java platform classes. 
 (The Java platform classes reside in classes.zip or rt.jar.)
@@ -73,51 +73,31 @@ What happens (choose 1):
 
 - [ ] an error
 - [ ] a checked exception
-- [ ] a checked exception
-- [ ] a compile error
-- [ ] no exception
-
----
-A program is reading a stream and reaches the end of stream marker.
-
-What happens (choose 1):
-
-- [ ] an error
-- [ ] a checked exception
-- [ ] a checked exception
-- [ ] a compile error
-- [ ] no exception
-
----
-
-Before closing the stream and after reaching the end of stream marker, a program tries to read the stream again.
-
-What happens (choose 1):
-
-- [ ] an error
-- [ ] a checked exception
-- [ ] a checked exception
+- [ ] an unchecked exception
 - [ ] a compile error
 - [ ] no exception
 
 ## :pushpin: Custom Exceptions
 
-Create a class called `FileExtension`, with a `check` method that takes a `fileName` as a `String`.
+Create a custom (checked) exception class called `FilenameException`.
+
+Create a class called `FileExtension` with the following methods:
+
+- `boolean check(String filename)`
+- `Map<String, int> map(List<String> filenames)`
 
 The `check` method should:
-- return `1` when the file extension is `.java`
-- return `0` when the file extension is not `.java`
-- throw a custom exception (that you'll create) when the file name is `null` or an empty string.
+- return `true` when the file extension is `.java`
+- return `false` when the file extension is not `.java`
+- throw a custom checked exception called `FilenameException` (that you must create) when the file name is `null` or an empty string.
 
-Then, in the `App::main` method, write code that creates a map as follows:
-- it takes a list of file names
-- checks each file's extension and maps the returned value to the filename
-- maps `-1` when an exception occurs
+The `map` method should:
+- check each provided file's extension and map the returned value as 1 if true or 0 if false
+- map `-1` when an exception occurs
 
-**<ins>Example</ins>**
+**Example**
 
-For the following list of file names: `List.of("App.java", "App.txt", null, "App.md")`, the program should create 
-a map with the following entries
+For the following list of file names: `Arrays.asList("App.java", "App.txt", null, "App.md")`, the `map` method should return a map with the following entries:
 
 ```txt
 {"App.java", 1},
