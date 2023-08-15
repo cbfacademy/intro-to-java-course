@@ -103,22 +103,25 @@ What happens (choose 1):
 
 ## :pushpin: Custom Exceptions
 
-Create a class called `FileExtension`, with a `check` method that takes a `fileName` as a `String`.
+Create a custom (checked) exception class called `FilenameException`.
+
+Create a class called `FileExtension` with the following methods:
+
+- `boolean check(String filename)`
+- `Map<String, int> map(List<String> filenames)`
 
 The `check` method should:
-- return `1` when the file extension is `.java`
-- return `0` when the file extension is not `.java`
-- throw a custom exception (that you'll create) when the file name is `null` or an empty string.
+- return `true` when the file extension is `.java`
+- return `false` when the file extension is not `.java`
+- throw a custom checked exception called `FilenameException` (that you must create) when the file name is `null` or an empty string.
 
-Then, in the `App::main` method, write code that creates a map as follows:
-- it takes a list of file names
-- checks each file's extension and maps the returned value to the filename
-- maps `-1` when an exception occurs
+The `map` method should:
+- check each provided file's extension and map the returned value as 1 if true or 0 if false
+- map `-1` when an exception occurs
 
 **Example**
 
-For the following list of file names: `List.of("App.java", "App.txt", null, "App.md")`, the program should create 
-a map with the following entries
+For the following list of file names: `Arrays.asList("App.java", "App.txt", null, "App.md")`, the `map` method should return a map with the following entries:
 
 ```txt
 {"App.java", 1},
