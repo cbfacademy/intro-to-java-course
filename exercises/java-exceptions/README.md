@@ -12,7 +12,7 @@ For the exercises below, we've provided the starter project above.
 
 ## :pushpin: Exceptions
 
-### <ins>Question 1</ins>
+### Question 1
 
 Is the following code legal?
 
@@ -24,7 +24,7 @@ try {
 }
 ```
 
-### <ins>Question 2</ins>
+### Question 2
 
 What exception types can be caught by the following handler?
 ```java
@@ -35,7 +35,7 @@ catch (Exception e) {
 
 What is wrong with using this type of exception handler?
 
-### <ins>Question 3</ins>
+### Question 3
 
 Is there anything wrong with the following exception handler as written? Will this code compile?
 
@@ -49,7 +49,7 @@ try {
 }
 ```
 
-### <ins>Question 4</ins>
+### Question 4
 
 ```java
 int[] A; 
@@ -64,7 +64,7 @@ The above code produces (choose 1):
 - [ ] a compile error
 - [ ] no exception
 
----
+### Question 5
 
 The JVM starts running your program, but the JVM can't find the Java platform classes. 
 (The Java platform classes reside in classes.zip or rt.jar.)
@@ -77,7 +77,8 @@ What happens (choose 1):
 - [ ] a compile error
 - [ ] no exception
 
----
+### Question 6
+
 A program is reading a stream and reaches the end of stream marker.
 
 What happens (choose 1):
@@ -88,7 +89,7 @@ What happens (choose 1):
 - [ ] a compile error
 - [ ] no exception
 
----
+### Question 7
 
 Before closing the stream and after reaching the end of stream marker, a program tries to read the stream again.
 
@@ -114,7 +115,7 @@ Then, in the `App::main` method, write code that creates a map as follows:
 - checks each file's extension and maps the returned value to the filename
 - maps `-1` when an exception occurs
 
-**<ins>Example</ins>**
+**Example**
 
 For the following list of file names: `List.of("App.java", "App.txt", null, "App.md")`, the program should create 
 a map with the following entries
