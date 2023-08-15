@@ -77,30 +77,6 @@ What happens (choose 1):
 - [ ] a compile error
 - [ ] no exception
 
-### Question 6
-
-A program is reading a stream and reaches the end of stream marker.
-
-What happens (choose 1):
-
-- [ ] an error
-- [ ] a checked exception
-- [ ] an unchecked exception
-- [ ] a compile error
-- [ ] no exception
-
-### Question 7
-
-Before closing the stream and after reaching the end of stream marker, a program tries to read the stream again.
-
-What happens (choose 1):
-
-- [ ] an error
-- [ ] a checked exception
-- [ ] an unchecked exception
-- [ ] a compile error
-- [ ] no exception
-
 ## :pushpin: Custom Exceptions
 
 Create a custom (checked) exception class called `FilenameException`.
