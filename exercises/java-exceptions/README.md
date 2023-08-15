@@ -60,7 +60,7 @@ The above code produces (choose 1):
 
 - [ ] an error
 - [ ] a checked exception
-- [ ] a checked exception
+- [ ] an unchecked exception
 - [ ] a compile error
 - [ ] no exception
 
@@ -73,7 +73,7 @@ What happens (choose 1):
 
 - [ ] an error
 - [ ] a checked exception
-- [ ] a checked exception
+- [ ] an unchecked exception
 - [ ] a compile error
 - [ ] no exception
 
@@ -85,7 +85,7 @@ What happens (choose 1):
 
 - [ ] an error
 - [ ] a checked exception
-- [ ] a checked exception
+- [ ] an unchecked exception
 - [ ] a compile error
 - [ ] no exception
 
@@ -97,7 +97,7 @@ What happens (choose 1):
 
 - [ ] an error
 - [ ] a checked exception
-- [ ] a checked exception
+- [ ] an unchecked exception
 - [ ] a compile error
 - [ ] no exception
 
