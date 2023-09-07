@@ -7,7 +7,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-@DisplayName(value = "Basic Test Suite")
+@DisplayName(value = "App Test Suite")
 public class AppTest {
 
     @Test
