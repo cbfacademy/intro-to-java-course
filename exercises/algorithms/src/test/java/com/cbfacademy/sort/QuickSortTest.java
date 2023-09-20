@@ -1,7 +1,4 @@
-package com.cbfacademy;
-
-import com.cbfacademy.sort.ArraySorter;
-import com.cbfacademy.sort.QuickSort;
+package com.cbfacademy.sort;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
