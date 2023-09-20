@@ -21,32 +21,50 @@ Inside the `people` package, create a class called `ImmutablePerson` with the fo
 
 ## :pushpin: Inheritance
 
-**<ins>Part 1</ins>**
+### Part 1
 
-Inside the `accounts` package, create a class called `Account` with the following characteristics:
-- an instance variable `balance` to hold the account balance
-- and instance variable `accountNumber` to hold the account number
+Inside the `accounts` package, create a class called `Account` with the following members:
+- `double balance` - instance variable
+- `int accountNumber` - instance variable
+- `double getBalance()` - returns the current account balance
+- `int getAccountNumber()` - returns the account number
+- `double deposit(double amount)` - deposits funds to the account and returns the new balance
+- `double withdraw(double requested)` - withdraws funds from the account and returns the requested amount or `0` if the account has an insufficient balance
 
-The `Account` class allows deposits and withdraws, but not overdraft limits or interest rates.
+#### Notes
+- This account doesn't have an overdraft facility.
+- The balance of an account may only be modified through the `deposit()` and `withdraw()` methods.
+- Consider the appropriate visibility of the instance variables to allow any sub-classes to access those values
 
-**Note that the balance of an account may only be modified through the `deposit` and `withdraw` methods.**
+### Part 2
 
-**<ins>Part 2</ins>**
+Using the `Account` class as a base class, create two derived classes:
 
-Using the `Account` class as a base class, create two derived classes `SavingsAccount` and `CurrentAccount`.
+`SavingsAccount` with the following members, in addition to the attributes of the `Account` class:
+- `double interest` - instance variable
+- `void applyInterest()` applies interest to the account
 
-- A `SavingsAccount` object, in addition to the attributes of an `Account` object, should have an interest variable and a method which adds interest to the account.
-- A `CurrentAccount` object, in addition to the attributes of an `Account` object, should have an overdraft limit variable.
+`CurrentAccount` with the following members, in addition to the attributes of the `Account` class:
+- `double overdraftLimit` - instance variable
+- `double getOverdraftLimit()` - returns the current overdraft limit
 
-- Ensure that you have overridden methods of the Account class as necessary in both derived classes.
+#### Notes
+Ensure that you have overridden methods of the `Account` class where necessary in the derived classes.
 
-**<ins>Part 3</ins>**
+### Part 3
 
-Now create a `Bank` class, an object which contains a list of `Account` objects. Accounts in the list could be instances of the `Account` class, the `SavingsAccount` class, or the `CurrentAccount` class.
-
-Write an `update` method in the bank class. It iterates through each account, updating it in the following ways: 
-- saving accounts get interest added (via the method you already wrote); 
-- current accounts get a letter sent if they are in overdraft.
+Create a `Bank` class, with the following members:
+- `List<Account> accounts` - instance variable. Remember that accounts in the list could be instances of the `Account` class, the `SavingsAccount` class, or the `CurrentAccount` class.
+- `void closeAccount(int accountNumber)` - removes the specified account from the bank's list
+- `void contactAccountHolder(int accountNumber, String message)` - displays a message that would be sent to the holder of the specified account
+- `Account getAccount(int accountNumber)` - returns the account identified by the specified account number
+- `int[] getAccountNumbers()` - returns a list of account numbers held by the bank
+- `Account openAccount(double balance, String accountType)` - creates a new account with the specified balance and adds it the bank's list.
+  - An `accountType` value of "current" will create a `CurrentAccount` instance, a value of "savings" will create a `SavingsAccount` instance and any other value should create an `Account` instance
+- `void payDividend(double dividend)` - pays a dividend to all accounts held by the bank
+- `void update()` - iterates through each account, updating it in the following ways: 
+  - `SavingsAccount` instances get interest added (via the method you already wrote)
+  - `CurrentAccount` instances get a letter sent to the account holder if they are in overdraft.
 
 Additionally, the `Bank` class requires methods for opening and closing accounts, and for paying a dividend into each account.
 
