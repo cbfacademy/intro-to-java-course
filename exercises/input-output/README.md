@@ -12,7 +12,7 @@ For the exercises below, we've provided the starter project above.
 
 ## :pushpin: File Reading
 
-Create a class called `FileManager` with the following method:
+Create a class called `FileManager` with the following methods:
 
 ```java
 public BufferedReader getReader(String filename)
@@ -30,9 +30,11 @@ public void copy(String inputFile, String outputFile)
 ```
 
 The `copy` method should:
-- copy the contents of `inputFile` to `outputFile`.
+- copy the contents of a text file at the path defined by `inputFile` to the path defined by `outputFile`.
 - create `outputFile` if it doesn't exist and overwrite it, if it does
-- look in this project's resources folder for both `inputFile` and `outputFile`
+
+### :bookmark: Note:
+The paths to `inputFile` and `outputFile` are relative to the root directory of this repository (e.g. `exercises/input-output/src/main/resources/exercise.txt`)
 
 ## :pushpin: `java.nio.*`
 
