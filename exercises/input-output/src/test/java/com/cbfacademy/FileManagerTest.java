@@ -55,25 +55,20 @@ public class FileManagerTest {
     }
 
     @Test
-    @DisplayName("getReader() method can read file contents")
-    void getReader_CanReadFileContents() throws IOException {
+    @DisplayName("readFile() method can read file contents")
+    void readFile_CanReadFileContents() throws IOException {
         // Prepare a test file
         Path testFile = createTempFileWithContent("testfile.txt", inputString);
+        String content = String.join(System.lineSeparator(), fileManager.readFile(testFile.toString()));
 
-        try (BufferedReader reader = fileManager.getReader(testFile.toString())) {
-            assertThat(reader, is(notNullValue()));
-
-            String content = reader.lines().collect(Collectors.joining(System.lineSeparator()));
-
-            assertThat(content, is(equalTo(inputString)));
-        }
+        assertThat(content, is(equalTo(inputString)));
     }
 
     @Test
-    @DisplayName("getReader() method throws IOException for non-existent file")
-    void getReader_ThrowsIOExceptionForNonExistentFile() {
+    @DisplayName("readFile() method throws IOException for non-existent file")
+    void readFile_ThrowsIOExceptionForNonExistentFile() {
         // Attempt to read a nonexistent file
-        assertThrows(IOException.class, () -> fileManager.getReader("nonexistent.txt"));
+        assertThrows(IOException.class, () -> fileManager.readFile("nonexistent.txt"));
     }
 
     @Test

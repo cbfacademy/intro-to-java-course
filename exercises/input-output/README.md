@@ -15,11 +15,11 @@ For the exercises below, we've provided the starter project above.
 Create a class called `FileManager` with the following methods:
 
 ```java
-public BufferedReader getReader(String filename)
+public List<String> readFile(String filename)
 ```
 
-The `getReader` method should:
-- return a `BufferedReader` object for the provided file
+The `readFile` method should:
+- return a `List<String>` object, where each list item is a line from the specified file
 
 ## :pushpin: File Writing
 
@@ -38,7 +38,7 @@ The paths to `inputFile` and `outputFile` are relative to the root directory of 
 
 ## :pushpin: `java.nio.*`
 
-Using the `java.nio.*` classes, improve the `FileManager` class:
+Improve the `FileManager` class by using the `java.nio.*` classes to replace the logic of the `readFile` and `copy` methods.
 
 ## :pushpin: File Content Handling
 
