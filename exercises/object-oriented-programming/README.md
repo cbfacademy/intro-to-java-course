@@ -37,6 +37,24 @@ Inside the `accounts` package, create a class called `Account` with the followin
 - The balance of an account may only be modified through the `deposit()` and `withdraw()` methods.
 - Consider the appropriate visibility of the instance variables to allow any sub-classes to access those values
 
+#### :white_check_mark: Verify Your Implementation
+
+To verify that your code works as expected, run the `AccountTest` tests.
+
+In your terminal, ensure that you are in the `object-oriented-programming` folder, then run the following command:
+
+```shell
+./mvnw clean test -Dtest=AccountTest
+```
+
+If you are on Windows, run this command instead:
+
+```bat
+mvnw.cmd clean test -Dtest=AccountTest
+```
+
+Your implementation is correct when all tests pass.
+
 ### Part 2
 
 Using the `Account` class as a base class, create two derived classes:
@@ -57,22 +75,41 @@ Using the `Account` class as a base class, create two derived classes:
 #### Notes
 Ensure that you have overridden methods of the `Account` class where necessary in the derived classes.
 
-### Part 3
+#### :white_check_mark: Verify Your Implementation
 
-Create a `Bank` class, with the following members:
-- `List<Account> accounts` - instance variable. Remember that accounts in the list could be instances of the `Account` class, the `SavingsAccount` class, or the `CurrentAccount` class.
-- `void closeAccount(int accountNumber)` - removes the specified account from the bank's list
-- `void contactAccountHolder(int accountNumber, String message)` - displays a message that would be sent to the holder of the specified account
-- `Account getAccount(int accountNumber)` - returns the account identified by the specified account number
-- `int[] getAccountNumbers()` - returns a list of account numbers held by the bank
-- `Account openAccount(double balance, String accountType)` - creates a new account with the specified balance and adds it the bank's list.
-  - An `accountType` value of "current" will create a `CurrentAccount` instance, a value of "savings" will create a `SavingsAccount` instance and any other value should create an `Account` instance
-- `void payDividend(double dividend)` - pays a dividend to all accounts held by the bank
-- `void update()` - iterates through each account, updating it in the following ways: 
-  - `SavingsAccount` instances get interest added (via the method you already wrote)
-  - `CurrentAccount` instances get a letter sent to the account holder if they are in overdraft.
+To verify that your code works as expected, run the `CurrentAccountTest` and `SavingsAccountTest` tests.
 
-Additionally, the `Bank` class requires methods for opening and closing accounts, and for paying a dividend into each account.
+In your terminal, ensure that you are in the `object-oriented-programming` folder, then run the following command:
+
+```shell
+./mvnw clean test -Dtest=CurrentAccountTest,SavingsAccountTest
+```
+
+If you are on Windows, run this command instead:
+
+```bat
+mvnw.cmd clean test -Dtest=CurrentAccountTest,SavingsAccountTest
+```
+
+Your implementation is correct when all tests pass.
+
+### Stretch Goal
+
+If you have extra time in the session, or wish to experiment further, create a `Bank` class to manage accounts. Consider the following ideas:
+- storing a internal list of accounts. Remember that accounts in the list could be instances of the `Account` class, the `SavingsAccount` class, or the `CurrentAccount` class.
+- opening a new account, given a type and balance.
+- getting a list of account numbers held by the bank
+- getting an account, given an account number
+- closing an account, given an account number
+- displaying a report of all accounts held by the bank
+- paying a dividend to all accounts held by the bank
+- applying interest to all savings accounts
+- contacting all current account holders if their account is in overdraft.
+
+Update `App.java` to create a bank instance and then execute your bank's operations
+
+#### Notes
+There are no tests for the `Bank` class, so it's up to you how to implement it.
 
 ## :pushpin: Abstraction
 
