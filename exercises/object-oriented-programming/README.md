@@ -138,18 +138,18 @@ In the same package, create a concrete class `Cylinder` that extends `Shape`:
 
 #### :white_check_mark: Verify Your Implementation
 
-To verify that your code works as expected, run the `CylinderTest`, `RectangleTest` and `SphereTest` tests.
+To verify that your code works as expected, run the `ShapeTest` tests.
 
 In your terminal, ensure that you are in the `object-oriented-programming` folder, then run the following command:
 
 ```shell
-./mvnw clean test -Dtest=CylinderTest,RectangleTest,SphereTest
+./mvnw clean test -Dtest=ShapeTest
 ```
 
 If you are on Windows, run this command instead:
 
 ```bat
-mvnw.cmd clean test -Dtest=CylinderTest,RectangleTest,SphereTest
+mvnw.cmd clean test -Dtest=ShapeTest
 ```
 
 Your implementation is correct when all tests pass.
