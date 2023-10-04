@@ -113,43 +113,81 @@ There are no tests for the `Bank` class, so it's up to you how to implement it.
 
 ## :pushpin: Abstraction
 
-In this exercise you will develop a class hierarchy of shapes and write a program that computes the amount of paint
-needed to paint different objects. 
-The hierarchy will consist of a parent class `Shape` with three derived classes - `Sphere`, `Rectangle`, and `Cylinder`. 
-For the purposes of this exercise, the only attribute a shape will have is a `name` and the method of
-interest will be one that computes the area of the shape (surface area in the case of three-dimensional shapes).
+In this exercise you will develop a class hierarchy of shapes and write a program that computes the amount of paint needed to paint different objects. 
+The hierarchy will consist of a parent class `Shape` with three derived classes - `Sphere`, `Rectangle`, and `Cylinder`.
 
-**<ins>Part 1</ins>**
+For the purposes of this exercise, the only attribute a shape will have is a `name` and the method of interest will be one that computes the area of the shape (surface area in the case of three-dimensional shapes).
 
-Inside the `shapes` package, create an abstract class `Shape` with the following properties:
-- an instance variable `shapeName` of type String
-- an abstract method `area()`
-- a `toString` method that returns the name of the shape
+### Part 1
 
-In the same package, create a concrete class `Sphere`:
-- it is a descendant of `Shape`
-- it has a radius `radius`, and its area (surface area) is given by the formula (`4` * `𝛑` * (`radius`<sup>2</sup>)).
+Inside the `shapes` package, create an abstract class `Shape` with the following members:
+- `abstract double getArea()` - returns the area of the shape
+- `String getName()` - returns the name of the shape
 
-In the same package, create a concrete class `Rectangle`:
-- it is a descendant of `Shape`
-- it is defined by a `length` and a `width`, and its area is given by the formula (`length` * `width`).
+In the same package, create a concrete class `Sphere` that extends `Shape`:
+- `Sphere(double radius)` - constructor
+- `double getArea()` - overrides the base method. The value is given by the formula (`4` * `𝛑` * (`radius`<sup>2</sup>))
 
-In the same package, create a concrete class `Cylinder`:
-- it is a descendant of `Shape`
-- it is defined by a radius `radius` and a `height`, and its area (surface area) is given by the formula (`height` * `𝛑` * (`radius`<sup>2</sup>)).
+In the same package, create a concrete class `Rectangle` that extends `Shape`:
+- `Rectangle(double length, double width)` - constructor
+- `double getArea()` - overrides the base method. The value is given by the formula (`length` * `width`)
 
-**<ins>Part 2</ins>**
+In the same package, create a concrete class `Cylinder` that extends `Shape`:
+- `Cylinder(double radius, double height)` - constructor
+- `double getArea()` - overrides the base method. The value is given by the formula (`height` * `𝛑` * (`radius`<sup>2</sup>)).
 
-Inside the `shapes` package, create a class `Paint` with the following properties:
-- an instance variable `coverage` of type Double, which represents the number of square feet per gallon of paint
-- a method `amount(Shape shape)` which returns the amount of paint (number of gallons) needed to paint a given shape
+#### :white_check_mark: Verify Your Implementation
 
-In the same package, create a **program** `PaintShapes` that computes the amount of paint needed to paint various shapes:
-- a rectangle deck of length `35` and width `20` 
+To verify that your code works as expected, run the `CylinderTest`, `RectangleTest` and `SphereTest` tests.
+
+In your terminal, ensure that you are in the `object-oriented-programming` folder, then run the following command:
+
+```shell
+./mvnw clean test -Dtest=CylinderTest,RectangleTest,SphereTest
+```
+
+If you are on Windows, run this command instead:
+
+```bat
+mvnw.cmd clean test -Dtest=CylinderTest,RectangleTest,SphereTest
+```
+
+Your implementation is correct when all tests pass.
+
+### Part 2
+
+Inside the `shapes` package, create a class `Paint` with the following members:
+- `Paint(double coverage)` - constructor that accepts a parameter representing the number of square feet per gallon this paint can cover
+- `amount(Shape shape)` - returns the amount of paint (measured in gallons) needed to paint a given shape
+
+#### :white_check_mark: Verify Your Implementation
+
+To verify that your code works as expected, run the `PaintTest` tests.
+
+In your terminal, ensure that you are in the `object-oriented-programming` folder, then run the following command:
+
+```shell
+./mvnw clean test -Dtest=PaintTest
+```
+
+If you are on Windows, run this command instead:
+
+```bat
+mvnw.cmd clean test -Dtest=PaintTest
+```
+
+Your implementation is correct when all tests pass.
+
+### Stretch Goal
+
+If you have extra time in the session, or wish to experiment further, create a **program** in the same package that computes the amount of paint needed to paint various shapes, e.g.:
+- a rectangular deck of length `35` and width `20` 
 - a ball of radius `15`
-- and a tank of radius `10` and height `30`.
+- a tank of radius `10` and height `30`.
 
-Run the program, and print the overall amount of paint needed to the screen.
+Consider the following ideas:
+- print the amount of paint needed for each item
+- print the overall amount of paint needed to the screen
 
 [1]: https://docs.oracle.com/javase/11/docs/api/index.html
 [2]: https://junit.org/junit5/
