@@ -158,7 +158,7 @@ Your implementation is correct when all tests pass.
 
 Inside the `shapes` package, create a class `Paint` with the following members:
 - `Paint(double coverage)` - constructor that accepts a parameter representing the number of square feet per gallon this paint can cover
-- `amount(Shape shape)` - returns the amount of paint (measured in gallons) needed to paint a given shape
+- `getAmount(Shape shape)` - returns the amount of paint (measured in gallons) needed to paint a given shape
 
 #### :white_check_mark: Verify Your Implementation
 
