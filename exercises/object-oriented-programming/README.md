@@ -76,24 +76,22 @@ Your implementation is correct when all tests pass.
 ### Part 1
 
 Inside the `accounts` package, create a class called `Account` with the following members:
-- `Account(int accountNumber, double balance)` - constructor
-- `double balance` - instance variable
-- `int accountNumber` - instance variable
-- `double getBalance()` - returns the current account balance
-- `int getAccountNumber()` - returns the account number
-- `double deposit(double amount)` - deposits funds to the account and returns the new balance
-- `double withdraw(double requested)` - withdraws funds from the account and returns the requested amount or `0` if the account has an insufficient balance
+- `public Account(int accountNumber, double balance)` - constructor that accepts parameters representing the new account number and starting balance
+- `public double getBalance()` - returns the current account balance
+- `public int getAccountNumber()` - returns the account number
+- `public double deposit(double amount)` - deposits funds to the account and returns the new balance
+- `public double withdraw(double requested)` - withdraws funds from the account and returns the requested amount or `0` if the account has an insufficient balance
 
 #### Notes
 - This account doesn't have an overdraft facility.
 - The balance of an account may only be modified through the `deposit()` and `withdraw()` methods.
-- Consider the appropriate visibility of the instance variables to allow any sub-classes to access those values
+- Consider the necessary instance variables and the appropriate access modifiers of to allow any sub-classes to access those values
 
 #### :white_check_mark: Verify Your Implementation
 
 To verify that your code works as expected, run the `AccountTest` tests.
 
-In your terminal, ensure that you are in the `object-oriented-programming` folder, then run the following command:
+In your terminal, run the following command:
 
 ```shell
 ./mvnw clean test -Dtest=AccountTest
@@ -112,17 +110,15 @@ Your implementation is correct when all tests pass.
 Using the `Account` class as a base class, create two derived classes:
 
 `SavingsAccount` with the following members, in addition to the attributes of the `Account` class:
-- `SavingsAccount(int accountNumber, double balance, double interestRate)` - constructor
-- `double interestRate` - instance variable
-- `void applyInterest()` applies interest to the account
-- `double getInterestRate()` - returns the current interest rate
-- `void setInterestRate()` - sets the interest rate
+- `public SavingsAccount(int accountNumber, double balance, double interestRate)` - constructor that accepts parameters representing the new account number, starting balance and interest rate
+- `public void applyInterest()` applies interest to the account
+- `public double getInterestRate()` - returns the current interest rate
+- `public void setInterestRate()` - sets the interest rate
 
 `CurrentAccount` with the following members, in addition to the attributes of the `Account` class:
-- `CurrentAccount(int accountNumber, double balance, double overdraftLimit)` - constructor
-- `double overdraftLimit` - instance variable
-- `double getOverdraftLimit()` - returns the current overdraft limit
-- `void setOverdraftLimit()` - sets the overdraft limit
+- `public CurrentAccount(int accountNumber, double balance, double overdraftLimit)` - constructor that accepts parameters representing the new account number, starting balance and overdraft limit
+- `public double getOverdraftLimit()` - returns the current overdraft limit
+- `public void setOverdraftLimit()` - sets the overdraft limit
 
 #### Notes
 Ensure that you have overridden methods of the `Account` class where necessary in the derived classes.
@@ -131,7 +127,7 @@ Ensure that you have overridden methods of the `Account` class where necessary i
 
 To verify that your code works as expected, run the `CurrentAccountTest` and `SavingsAccountTest` tests.
 
-In your terminal, ensure that you are in the `object-oriented-programming` folder, then run the following command:
+In your terminal, run the following command:
 
 ```shell
 ./mvnw clean test -Dtest=CurrentAccountTest,SavingsAccountTest
@@ -188,11 +184,14 @@ In the same package, create a concrete class `Cylinder` that extends `Shape`:
 - `Cylinder(double radius, double height)` - constructor
 - `double getArea()` - overrides the base method. The value is given by the formula (`height` * `𝛑` * (`radius`<sup>2</sup>)).
 
+#### Notes
+Consider the appropriate visibility of all constructors, methods and instance variables
+
 #### :white_check_mark: Verify Your Implementation
 
 To verify that your code works as expected, run the `ShapeTest` tests.
 
-In your terminal, ensure that you are in the `object-oriented-programming` folder, then run the following command:
+In your terminal, run the following command:
 
 ```shell
 ./mvnw clean test -Dtest=ShapeTest
@@ -216,7 +215,7 @@ Inside the `shapes` package, create a class `Paint` with the following members:
 
 To verify that your code works as expected, run the `PaintTest` tests.
 
-In your terminal, ensure that you are in the `object-oriented-programming` folder, then run the following command:
+In your terminal, run the following command:
 
 ```shell
 ./mvnw clean test -Dtest=PaintTest
