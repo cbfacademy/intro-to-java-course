@@ -53,7 +53,7 @@ public class CarTest extends ClassExerciseTest {
     public void testCarObjectHasValidGetDetailsMethod(Car car, String make, String model, String colour, int year) {
         String details = car.getDetails();
 
-        assertTrue(details.indexOf(make) >= 0 && details.indexOf(model) >= 0
+        assertTrue(details.indexOf(make) >= 0 && details.indexOf(model) >= 0 && details.indexOf(colour) >= 0
                 && details.indexOf(Integer.toString(year)) >= 0);
     }
 }

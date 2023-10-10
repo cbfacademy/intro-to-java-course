@@ -19,7 +19,7 @@ Inside the `cars` package, create a class called `Car` with the following member
 - `private String make`
 - `private String model`
 - `private int year`
-- `public Car(String make, String model, int year)` - constructor that accepts parameters representing the make, model and year of the car
+- `public Car(String make, String model, String colour, int year)` - constructor that accepts parameters representing the make, model, colour and year of the car
 - `public String getMake()` - returns the car make
 - `public String getModel()` - returns the car model
 - `public int getYear()` - returns the year the car was made

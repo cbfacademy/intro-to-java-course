@@ -27,7 +27,7 @@ public abstract class ClassExerciseTest {
                     {
                         put("make", "Volvo");
                         put("model", "V40");
-                        put("colour", "blue");
+                        put("colour", "Blue");
                         put("year", 2012);
                     }
                 },
@@ -35,7 +35,7 @@ public abstract class ClassExerciseTest {
                     {
                         put("make", "Porsche");
                         put("model", "Panamera");
-                        put("colour", "red");
+                        put("colour", "Red");
                         put("year", 2009);
                     }
                 },
@@ -43,7 +43,7 @@ public abstract class ClassExerciseTest {
                     {
                         put("make", "Audi");
                         put("model", "A3");
-                        put("colour", "grey");
+                        put("colour", "Grey");
                         put("year", 2018);
                     }
                 });

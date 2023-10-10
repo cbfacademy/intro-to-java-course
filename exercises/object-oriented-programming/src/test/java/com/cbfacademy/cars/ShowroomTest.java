@@ -37,6 +37,12 @@ public class ShowroomTest extends ClassExerciseTest {
                 match = false;
             }
 
+            String colour = (String) map.get("colour");
+
+            if (colour != null && !car.getColour().equals(colour)) {
+                match = false;
+            }
+
             Integer year = (Integer) map.get("year");
 
             if (year != null && car.getYear() != year) {
