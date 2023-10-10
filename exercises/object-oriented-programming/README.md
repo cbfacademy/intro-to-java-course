@@ -23,7 +23,9 @@ Inside the `cars` package, create a class called `Car` with the following member
 - `public String getMake()` - returns the car make
 - `public String getModel()` - returns the car model
 - `public int getYear()` - returns the year the car was made
-- `public String getDetails()` - returns the car details, including the make, model and year
+- `public String getColour()` - returns the colour of the car
+- `public String setColour()` - sets the colour of the car
+- `public String getDetails()` - returns the car details, including the make, model, colour and year
 
 #### :white_check_mark: Verify Your Implementation
 
@@ -47,9 +49,9 @@ Your implementation is correct when all tests pass.
 
 Create a class called `Showroom` with the following members:
 - `public List<Car> getCars()` - returns a list containing the following three `Car` objects:
-  - a Volvo V40 from 2012
-  - a Porsche Panamera from 2009
-  - an Audi A3 from 2018
+  - a blue Volvo V40 from 2012
+  - a red Porsche Panamera from 2009
+  - a grey Audi A3 from 2018
 
 In the `main` method of the `App` class, instantiate a `Showroom` object, call `getCars()` and print the details for each `Car` instance in the list.
 
@@ -85,7 +87,7 @@ Inside the `accounts` package, create a class called `Account` with the followin
 #### Notes
 - This account doesn't have an overdraft facility.
 - The balance of an account may only be modified through the `deposit()` and `withdraw()` methods.
-- Consider the necessary instance variables and the appropriate access modifiers of to allow any sub-classes to access those values
+- Consider the necessary instance variables and the appropriate access modifiers to allow any sub-classes to access those values
 
 #### :white_check_mark: Verify Your Implementation
 
@@ -143,7 +145,7 @@ Your implementation is correct when all tests pass.
 
 ### Stretch Goal
 
-If you have extra time in the session, or wish to experiment further, create a `Bank` class to manage accounts. Consider the following ideas:
+If you have extra time in the session, or wish to experiment further, create a `Bank` class to manage accounts. Consider the following ideas — you may choose to implement some, all or come up with your own:
 - storing a internal list of accounts. Remember that accounts in the list could be instances of the `Account` class, the `SavingsAccount` class, or the `CurrentAccount` class.
 - opening a new account, given a type and balance.
 - getting a list of account numbers held by the bank

@@ -14,9 +14,10 @@ public abstract class ClassExerciseTest {
                 .map(map -> {
                     String make = (String) map.get("make");
                     String model = (String) map.get("model");
+                    String colour = (String) map.get("colour");
                     int year = (int) map.get("year");
 
-                    return Arguments.of(new Car(make, model, year), make, model, year);
+                    return Arguments.of(new Car(make, model, colour, year), make, model, colour, year);
                 });
     }
 
@@ -26,6 +27,7 @@ public abstract class ClassExerciseTest {
                     {
                         put("make", "Volvo");
                         put("model", "V40");
+                        put("colour", "blue");
                         put("year", 2012);
                     }
                 },
@@ -33,6 +35,7 @@ public abstract class ClassExerciseTest {
                     {
                         put("make", "Porsche");
                         put("model", "Panamera");
+                        put("colour", "red");
                         put("year", 2009);
                     }
                 },
@@ -40,6 +43,7 @@ public abstract class ClassExerciseTest {
                     {
                         put("make", "Audi");
                         put("model", "A3");
+                        put("colour", "grey");
                         put("year", 2018);
                     }
                 });
