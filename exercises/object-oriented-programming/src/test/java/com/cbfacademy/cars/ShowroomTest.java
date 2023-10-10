@@ -9,7 +9,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName(value = "Showroom tests")
-public class ShowroomTest {
+public class ShowroomTest extends ClassExerciseTest {
 
     @Test
     @DisplayName("Showroom object has a valid getCars method")
@@ -20,32 +20,6 @@ public class ShowroomTest {
         for (HashMap<String, Object> expected : carValues) {
             assertTrue(hasMatch(cars, expected));
         }
-    }
-
-    private static List<HashMap<String, Object>> getCarValues() {
-        List<HashMap<String, Object>> cars = List.of(
-                new HashMap<>() {
-                    {
-                        put("make", "Volvo");
-                        put("model", "V40");
-                        put("year", 2012);
-                    }
-                },
-                new HashMap<>() {
-                    {
-                        put("make", "Porsche");
-                        put("model", "Panamera");
-                        put("year", 2009);
-                    }
-                },
-                new HashMap<>() {
-                    {
-                        put("make", "Audi");
-                        put("model", "A3");
-                        put("year", 2018);
-                    }
-                });
-        return cars;
     }
 
     private static boolean hasMatch(List<Car> cars, HashMap<String, Object> map) {

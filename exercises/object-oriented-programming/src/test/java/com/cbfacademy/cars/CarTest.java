@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName(value = "Car tests")
-public class CarTest {
+public class CarTest extends ClassExerciseTest {
 
     @ParameterizedTest
     @MethodSource("getCarArguments")
