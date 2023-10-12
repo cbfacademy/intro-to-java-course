@@ -5,55 +5,39 @@
 [![Maven Dependency Manager](https://img.shields.io/badge/dependency%20manager-Maven-AA215A.svg?style=for-the-badge)][3]
 
 The goal of these programming exercises is to practise I/O concepts:
-- Reading from a file
-- Writing to a file
+- Reading from a text file
+- Writing to a text file
 
 For the exercises below, we've provided the starter project above.
 
-## :pushpin: File Reading
+## :pushpin: File Input/Output
+
+### Part 1
 
 Create a class called `FileManager` with the following methods:
 
-```java
-public List<String> readFile(String filename)
-```
+- `public List<String> readFile(String filename)` - returns a `List<String>` object, where each list item is a line from the specified file
+- `public void copy(String inputFile, String outputFile)` - copies the contents of a text file at the path defined by `inputFile` to the path defined by `outputFile`. Creates `outputFile` if it doesn't exist and overwrites it, if it does
 
-The `readFile` method should:
-- return a `List<String>` object, where each list item is a line from the specified file
-
-## :pushpin: File Writing
-
-Add the following method to the `FileManager` class:
-
-```java
-public void copy(String inputFile, String outputFile)
-```
-
-The `copy` method should:
-- copy the contents of a text file at the path defined by `inputFile` to the path defined by `outputFile`.
-- create `outputFile` if it doesn't exist and overwrite it, if it does
-
-### :bookmark: Note:
+#### :bookmark: Note:
 The paths to `inputFile` and `outputFile` are relative to the root directory of this repository (e.g. `exercises/input-output/src/main/resources/exercise.txt`)
 
-## :pushpin: `java.nio.*`
+### Part 2
 
 Improve the `FileManager` class by using the `java.nio.*` classes to replace the logic of the `readFile` and `copy` methods.
 
-## :pushpin: File Content Handling
+### Part 3
 
 Add the following method to the `FileManager` class:
 
-```java
-public void reverseLines(String inputFile, String outputFile)
-```
+- `public void reverseLines(String inputFile, String outputFile)`
+  - read the contents of `inputFile`
+  - write the lines to `outputFile`, but in reverse order; the first line will be the last one, the second will be the penultimate, and so on, until the last line of the original file, which should appear in the first position of the resulting file.
+  - create `outputFile` if it doesn't exist and overwrite it, if it does
+  - look in this project's resources folder for both `inputFile` and `outputFile`
+  - not reuse any of the previous methods
 
-The `reverseLines` method should:
-- read the contents of `inputFile`
-- write the lines to `outputFile`, but in reverse order; the first line will be the last one, the second will be the penultimate, and so on, until the last line of the original file, which should appear in the first position of the resulting file.
-- create `outputFile` if it doesn't exist and overwrite it, if it does
-- look in this project's resources folder for both `inputFile` and `outputFile`
-- not reuse any of the previous methods
+### Part 4
 
 Create a program to "invert" the contents of a text file.
 We've provided the input `exercise.txt` file in this project's resources folder.
@@ -110,25 +94,18 @@ Your implementation is correct when all tests pass:
 [INFO] ------------------------------------------------------------------------
 
 ```
-## Class usage
+## Stretch Goal
 Once you've verified your class works correctly, you can utilise it in `App.java`.
 
 Add the following methods and call them from the `main` method:
 
-```java
-public static void readFile(String filePath) {}
-
-public static void reverseFile(String sourcePath, String targetPath) {}
-```
-
-The `readFile` method should:
-- use a `FileManager` instance to read the contents of the sample file we've provided at `resources/exercise.txt` file
-- print the contents to the screen, line by line
-
-The `reverseFile` method should:
-- use a `FileManager` instance to reverse the contents of the sample file we've provided at `resources/exercise.txt` file to a new file at `resources/reversed.txt`
-- read the contents of the reversed file
-- print the contents to the screen, line by line
+- `public static void readFile(String filePath)`
+  - use a `FileManager` instance to read the contents of the sample file we've provided at `resources/exercise.txt` file
+  - print the contents to the screen, line by line
+- `public static void reverseFile(String sourcePath, String targetPath)`
+  - use a `FileManager` instance to reverse the contents of the sample file we've provided at `resources/exercise.txt` file to a new file at `resources/reversed.txt`
+  - read the contents of the reversed file
+  - print the contents to the screen, line by line
 
 [1]: https://docs.oracle.com/javase/11/docs/api/index.html
 [2]: https://junit.org/junit5/
