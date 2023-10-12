@@ -39,14 +39,14 @@ Add the following method to the `FileManager` class:
 
 ### Part 4
 
-Create a program to "invert" the contents of a text file.
-We've provided the input `exercise.txt` file in this project's resources folder.
+Add the following method to the `FileManager` class:
 
-Write code that reads the content of the `exercise.txt`, then writes them to an `inverted.txt` file. 
-
-It should contain the same lines as the original but in reverse order:
-- the first line will be the last one, 
-- the second will be the penultimate, and so on, until the last line of the original file, which should appear in the first position of the resulting file.
+- `public void reverseLines(String inputFile, String outputFile)`
+  - read the contents of `inputFile`
+  - write the lines to `outputFile`, but in reverse order; the first line will be the last one, the second will be the penultimate, and so on, until the last line of the original file, which should appear in the first position of the resulting file.
+  - create `outputFile` if it doesn't exist and overwrite it, if it does
+  - look in this project's resources folder for both `inputFile` and `outputFile`
+  - not reuse any of the previous methods
 
 ## :white_check_mark: Verify Your Implementation
 
