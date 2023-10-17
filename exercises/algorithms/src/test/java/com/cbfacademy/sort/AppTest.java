@@ -1,4 +1,4 @@
-package com.cbfacademy;
+package com.cbfacademy.sort;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

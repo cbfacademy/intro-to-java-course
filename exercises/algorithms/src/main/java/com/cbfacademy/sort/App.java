@@ -1,4 +1,4 @@
-package com.cbfacademy;
+package com.cbfacademy.sort;
 
 public class App {
     public static void main(String[] args) {

@@ -7,88 +7,240 @@
 The goal of these exercises is to practise OOP concepts:
 - Encapsulation
 - Inheritance
-- Polymorphism
+- Abstraction
 
 For the exercises below, we've provided the starter project above.
 
-## :pushpin: Immutability
+## :pushpin: Classes & Objects
 
-Inside the `people` package, create a class called `ImmutablePerson` with the following characteristics:
-- a required first name
-- an optional middle name
-- a required last name
-- an optional list of nicknames
+### Part 1
+
+Inside the `cars` package, create a class called `Car` with the following members:
+- `private String make`
+- `private String model`
+- `private int year`
+- `public Car(String make, String model, String colour, int year)` - constructor that accepts parameters representing the make, model, colour and year of the car
+- `public String getMake()` - returns the car make
+- `public String getModel()` - returns the car model
+- `public int getYear()` - returns the year the car was made
+- `public String getColour()` - returns the colour of the car
+- `public String setColour()` - sets the colour of the car
+- `public String getDetails()` - returns the car details, including the make, model, colour and year
+
+#### :white_check_mark: Verify Your Implementation
+
+To verify that your code works as expected, run the `CarTest` tests.
+
+In your terminal, ensure that you are in the `object-oriented-programming` folder, then run the following command:
+
+```shell
+./mvnw clean test -Dtest=CarTest
+```
+
+If you are on Windows, run this command instead:
+
+```bat
+mvnw.cmd clean test -Dtest=CarTest
+```
+
+Your implementation is correct when all tests pass.
+
+### Part 2
+
+Create a class called `Showroom` with the following members:
+- `public List<Car> getCars()` - returns a list containing the following three `Car` objects:
+  - a blue Volvo V40 from 2012
+  - a red Porsche Panamera from 2009
+  - a grey Audi A3 from 2018
+
+In the `main` method of the `App` class, instantiate a `Showroom` object, call `getCars()` and print the details for each `Car` instance in the list.
+
+#### :white_check_mark: Verify Your Implementation
+
+To verify that your code works as expected, run the `ShowroomTest` tests.
+
+In your terminal, run the following command:
+
+```shell
+./mvnw clean test -Dtest=ShowroomTest
+```
+
+If you are on Windows, run this command instead:
+
+```bat
+mvnw.cmd clean test -Dtest=ShowroomTest
+```
+
+Your implementation is correct when all tests pass.
 
 ## :pushpin: Inheritance
 
-**<ins>Part 1</ins>**
+### Part 1
 
-Inside the `accounts` package, create a class called `Account` with the following characteristics:
-- an instance variable `balance` to hold the account balance
-- and instance variable `accountNumber` to hold the account number
+Inside the `accounts` package, create a class called `Account` with the following members:
+- `public Account(int accountNumber, double balance)` - constructor that accepts parameters representing the new account number and starting balance
+- `public double getBalance()` - returns the current account balance
+- `public int getAccountNumber()` - returns the account number
+- `public double deposit(double amount)` - deposits funds to the account and returns the new balance
+- `public double withdraw(double requested)` - withdraws funds from the account and returns the requested amount or `0` if the account has an insufficient balance
 
-The `Account` class allows deposits and withdraws, but not overdraft limits or interest rates.
+#### Notes
+- This account doesn't have an overdraft facility.
+- The balance of an account may only be modified through the `deposit()` and `withdraw()` methods.
+- Consider the necessary instance variables and the appropriate access modifiers to allow any sub-classes to access those values
 
-**Note that the balance of an account may only be modified through the `deposit` and `withdraw` methods.**
+#### :white_check_mark: Verify Your Implementation
 
-**<ins>Part 2</ins>**
+To verify that your code works as expected, run the `AccountTest` tests.
 
-Using the `Account` class as a base class, create two derived classes `SavingsAccount` and `CurrentAccount`.
+In your terminal, run the following command:
 
-- A `SavingsAccount` object, in addition to the attributes of an `Account` object, should have an interest variable and a method which adds interest to the account.
-- A `CurrentAccount` object, in addition to the attributes of an `Account` object, should have an overdraft limit variable.
+```shell
+./mvnw clean test -Dtest=AccountTest
+```
 
-- Ensure that you have overridden methods of the Account class as necessary in both derived classes.
+If you are on Windows, run this command instead:
 
-**<ins>Part 3</ins>**
+```bat
+mvnw.cmd clean test -Dtest=AccountTest
+```
 
-Now create a `Bank` class, an object which contains a list of `Account` objects. Accounts in the list could be instances of the `Account` class, the `SavingsAccount` class, or the `CurrentAccount` class.
+Your implementation is correct when all tests pass.
 
-Write an `update` method in the bank class. It iterates through each account, updating it in the following ways: 
-- saving accounts get interest added (via the method you already wrote); 
-- current accounts get a letter sent if they are in overdraft.
+### Part 2
 
-Additionally, the `Bank` class requires methods for opening and closing accounts, and for paying a dividend into each account.
+Using the `Account` class as a base class, create two derived classes:
+
+`SavingsAccount` with the following members, in addition to the attributes of the `Account` class:
+- `public SavingsAccount(int accountNumber, double balance, double interestRate)` - constructor that accepts parameters representing the new account number, starting balance and interest rate
+- `public void applyInterest()` applies interest to the account
+- `public double getInterestRate()` - returns the current interest rate
+- `public void setInterestRate()` - sets the interest rate
+
+`CurrentAccount` with the following members, in addition to the attributes of the `Account` class:
+- `public CurrentAccount(int accountNumber, double balance, double overdraftLimit)` - constructor that accepts parameters representing the new account number, starting balance and overdraft limit
+- `public double getOverdraftLimit()` - returns the current overdraft limit
+- `public void setOverdraftLimit()` - sets the overdraft limit
+
+#### Notes
+Ensure that you have overridden methods of the `Account` class where necessary in the derived classes.
+
+#### :white_check_mark: Verify Your Implementation
+
+To verify that your code works as expected, run the `CurrentAccountTest` and `SavingsAccountTest` tests.
+
+In your terminal, run the following command:
+
+```shell
+./mvnw clean test -Dtest=CurrentAccountTest,SavingsAccountTest
+```
+
+If you are on Windows, run this command instead:
+
+```bat
+mvnw.cmd clean test -Dtest=CurrentAccountTest,SavingsAccountTest
+```
+
+Your implementation is correct when all tests pass.
+
+### Stretch Goal
+
+If you have extra time in the session, or wish to experiment further, create a `Bank` class to manage accounts. Consider the following ideas — you may choose to implement some, all or come up with your own:
+- storing a internal list of accounts. Remember that accounts in the list could be instances of the `Account` class, the `SavingsAccount` class, or the `CurrentAccount` class.
+- opening a new account, given a type and balance.
+- getting a list of account numbers held by the bank
+- getting an account, given an account number
+- closing an account, given an account number
+- displaying a report of all accounts held by the bank
+- paying a dividend to all accounts held by the bank
+- applying interest to all savings accounts
+- contacting all current account holders if their account is in overdraft.
+
+Update `App.java` to create a bank instance and then execute your bank's operations
+
+#### Notes
+There are no tests for the `Bank` class, so it's up to you how to implement it.
 
 ## :pushpin: Abstraction
 
-In this exercise you will develop a class hierarchy of shapes and write a program that computes the amount of paint
-needed to paint different objects. 
-The hierarchy will consist of a parent class `Shape` with three derived classes - `Sphere`, `Rectangle`, and `Cylinder`. 
-For the purposes of this exercise, the only attribute a shape will have is a `name` and the method of
-interest will be one that computes the area of the shape (surface area in the case of three-dimensional shapes).
+In this exercise you will develop a class hierarchy of shapes and write a program that computes the amount of paint needed to paint different objects. 
+The hierarchy will consist of a parent class `Shape` with three derived classes - `Sphere`, `Rectangle`, and `Cylinder`.
 
-**<ins>Part 1</ins>**
+For the purposes of this exercise, the only attribute a shape will have is a `name` and the method of interest will be one that computes the area of the shape (surface area in the case of three-dimensional shapes).
 
-Inside the `shapes` package, create an abstract class `Shape` with the following properties:
-- an instance variable `shapeName` of type String
-- an abstract method `area()`
-- a `toString` method that returns the name of the shape
+### Part 1
 
-In the same package, create a concrete class `Sphere`:
-- it is a descendant of `Shape`
-- it has a radius `radius`, and its area (surface area) is given by the formula (`4` * `𝛑` * (`radius`<sup>2</sup>)).
+Inside the `shapes` package, create an abstract class `Shape` with the following members:
+- `abstract double getArea()` - returns the area of the shape
+- `String getName()` - returns the name of the shape
 
-In the same package, create a concrete class `Rectangle`:
-- it is a descendant of `Shape`
-- it is defined by a `length` and a `width`, and its area is given by the formula (`length` * `width`).
+In the same package, create a concrete class `Sphere` that extends `Shape`:
+- `Sphere(double radius)` - constructor
+- `double getArea()` - overrides the base method. The value is given by the formula (`4` * `𝛑` * (`radius`<sup>2</sup>))
 
-In the same package, create a concrete class `Cylinder`:
-- it is a descendant of `Shape`
-- it is defined by a radius `radius` and a `height`, and its area (surface area) is given by the formula (`height` * `𝛑` * (`radius`<sup>2</sup>)).
+In the same package, create a concrete class `Rectangle` that extends `Shape`:
+- `Rectangle(double length, double width)` - constructor
+- `double getArea()` - overrides the base method. The value is given by the formula (`length` * `width`)
 
-**<ins>Part 2</ins>**
+In the same package, create a concrete class `Cylinder` that extends `Shape`:
+- `Cylinder(double radius, double height)` - constructor
+- `double getArea()` - overrides the base method. The value is given by the formula (`height` * `𝛑` * (`radius`<sup>2</sup>)).
 
-Inside the `shapes` package, create a class `Paint` with the following properties:
-- an instance variable `coverage` of type Double, which represents the number of square feet per gallon of paint
-- a method `amount(Shape shape)` which returns the amount of paint (number of gallons) needed to paint a given shape
+#### Notes
+Consider the appropriate visibility of all constructors, methods and instance variables
 
-In the same package, create a **program** `PaintShapes` that computes the amount of paint needed to paint various shapes:
-- a rectangle deck of length `35` and width `20` 
+#### :white_check_mark: Verify Your Implementation
+
+To verify that your code works as expected, run the `ShapeTest` tests.
+
+In your terminal, run the following command:
+
+```shell
+./mvnw clean test -Dtest=ShapeTest
+```
+
+If you are on Windows, run this command instead:
+
+```bat
+mvnw.cmd clean test -Dtest=ShapeTest
+```
+
+Your implementation is correct when all tests pass.
+
+### Part 2
+
+Inside the `shapes` package, create a class `Paint` with the following members:
+- `Paint(double coverage)` - constructor that accepts a parameter representing the number of square feet per gallon this paint can cover
+- `getAmount(Shape shape)` - returns the amount of paint (measured in gallons) needed to paint a given shape
+
+#### :white_check_mark: Verify Your Implementation
+
+To verify that your code works as expected, run the `PaintTest` tests.
+
+In your terminal, run the following command:
+
+```shell
+./mvnw clean test -Dtest=PaintTest
+```
+
+If you are on Windows, run this command instead:
+
+```bat
+mvnw.cmd clean test -Dtest=PaintTest
+```
+
+Your implementation is correct when all tests pass.
+
+### Stretch Goal
+
+If you have extra time in the session, or wish to experiment further, create a **program** in the same package that computes the amount of paint needed to paint various shapes, e.g.:
+- a rectangular deck of length `35` and width `20` 
 - a ball of radius `15`
-- and a tank of radius `10` and height `30`.
+- a tank of radius `10` and height `30`.
 
-Run the program, and print the overall amount of paint needed to the screen.
+Consider the following ideas:
+- print the amount of paint needed for each item
+- print the overall amount of paint needed to the screen
 
 [1]: https://docs.oracle.com/javase/11/docs/api/index.html
 [2]: https://junit.org/junit5/
