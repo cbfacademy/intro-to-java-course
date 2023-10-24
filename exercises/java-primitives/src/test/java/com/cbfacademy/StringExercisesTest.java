@@ -1,7 +1,6 @@
 package com.cbfacademy;
 
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -15,16 +14,6 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(value = "String Exercises")
 public class StringExercisesTest {
-
-    @Test
-    @DisplayName("returns this unit's exercises name")
-    public void returnExerciseName() {
-        final StringExercises exercise = new StringExercises();
-
-        final String name = exercise.getName();
-
-        assertThat(name, is("String Exercises"));
-    }
 
     @ParameterizedTest
     @MethodSource("firstExerciseProvider")

@@ -16,8 +16,4 @@ public class StringExercises {
         // TODO - Write code to determine whether the input ${word} is a palindrome
         throw new RuntimeException("Not implemented");
     }
-
-    public String getName() {
-        return "String Exercises";
-    }
 }
