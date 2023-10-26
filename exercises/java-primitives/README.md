@@ -5,50 +5,11 @@
 [![Maven Dependency Manager](https://img.shields.io/badge/dependency%20manager-Maven-AA215A.svg?style=for-the-badge)][3]
 
 The goal of this exercise is to familiarise ourselves with:
-- [Primitive types][7]
-- [Legal and illegal operations on primitive types][8]
-- [String operations in Java][9]
+- [Strings](#pushpin-strings)
+- [Operators](#pushpin-operators)
+- [Arrays](#pushpin-arrays)
 
-## :walking: Decimal Types
-
-### Arithmetic Operations
-
-Following our example of arithmetic operations on integers, create a simple Java program with simple expressions to (for both `float` and `double` types):
-
-- add decimal numbers
-- subtract decimal numbers
-- multiply decimal numbers
-- divide decimal numbers
-
-and print the results on the screen.
-
-### Relational Operations
-
-Following our example of relational operations on integers, create a simple Java program with simple expressions to (for `double`s only):
-
-- compare the equality of decimal numbers
-- evaluate which decimal is higher
-- evaluate which decimal is smaller
-
-and print the results on the screen.
-
-
-## :running: Unary Operators - Increment & Decrement
-
-What do the following expressions evaluate to:
-
-```java
-int number1 = 12;
-int number2 = 12;
-
-System.out.println(number1++);
-System.out.println(++number2);
-```
-
-**Why is that?**
-
-
-## :thread: String Operations in Java
+## :pushpin: Strings
 
 For this section, we've provided starter code in the `exercises/java-primitives/` directory. It contains:
 
@@ -156,12 +117,47 @@ Your implementation is correct when all tests pass:
 [INFO] ------------------------------------------------------------------------
 ```
 
+## :pushpin: Operators
+
+### Arithmetic Operators
+
+Following our example of arithmetic operations on integers, create a simple Java program with simple expressions to (for both `float` and `double` types):
+
+- add decimal numbers
+- subtract decimal numbers
+- multiply decimal numbers
+- divide decimal numbers
+
+and print the results on the screen.
+
+### Relational Operators
+
+Following our example of relational operations on integers, create a simple Java program with simple expressions to (for `double`s only):
+
+- compare the equality of decimal numbers
+- evaluate which decimal is higher
+- evaluate which decimal is smaller
+
+and print the results on the screen.
+
+
+### Unary Operators
+
+What do the following expressions evaluate to:
+
+```java
+int number1 = 12;
+int number2 = 12;
+
+System.out.println(number1++);
+System.out.println(++number2);
+```
+
+**Why is that?**
+
 [1]: https://docs.oracle.com/javase/11/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
 [4]: exercises/java-primitives/src/main/java/com/cbfacademy/strings/App.java
 [5]: exercises/java-primitives/src/test/java/com/cbfacademy/strings/AppTest.java
 [6]: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html
-[7]: #walking-decimal-types
-[8]: #running-unary-operators---increment--decrement
-[9]: #thread-string-operations-in-java
