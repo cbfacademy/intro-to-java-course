@@ -50,19 +50,16 @@ System.out.println(++number2);
 
 ## :thread: String Operations in Java
 
-For this section, we've provided the starter project above. It contains:
+For this section, we've provided starter code in the `exercises/java-primitives/` directory. It contains:
 
-- the [StringExercises class][4] with three methods to implement: `concatenate`, `areEqual` and `format`
+- a [Java program][4] with three methods to implement: `concatenate`, `areEqual` and `format`
+- a [test suite][5] to verify your implementation
 
-- and a test suite to verify your implementation [StringExercisesTest][5].
+Using the [String Java documentation][6] as a guide, implement the methods in `src/main/java/com/cbfacademy/strings/App.java`.
 
-Using the [String Java documentation][6] as a guide, implement the methods of the `StringExercises` class.
+In each method, replace `throw new RuntimeException("Not implemented")` with your code.
 
-In each method, replace the `throw new RuntimeException("Not implemented")` with your code.
-
-<br/>
-
-**<ins>Exercise 1</ins>**
+### Exercise 1
 
 Implement the `concatenate` method in such a way that it creates a new String by concatenating the provided parameters.
 
@@ -73,9 +70,7 @@ public String concatenate(String word1, String word2, String word3) {
 }
 ```
 
-<br/>
-
-**<ins>Exercise 2</ins>**
+### Exercise 2
 
 Implement the `areEqual` method, which determines whether the two provided parameters are equal strings. The equality check should be case-sensitive (i.e. hello != HELLO)
 
@@ -86,18 +81,9 @@ public Boolean areEqual(String word1, String word2) {
 }
 ```
 
-<br/>
-
-**<ins>Exercise 3</ins>**
+### Exercise 3
 
 Implement the `format` method, which returns a formatted string containing the provided parameters. The price value should be displayed with a pound (£) symbol and two decimal places.
-
-**Example**
-```java
-String lineItem = new StringExercises().format("Apple iPhone 15 Pro", 47, 1199.99);
-
-System.out.println(lineItem); // Output: Item: Apple iPhone 15 Pro. Price: £1199.99. Quantity: 47
-```
 
 ```java
 public String format(String item, int quantity, double price) {
@@ -106,24 +92,33 @@ public String format(String item, int quantity, double price) {
 }
 ```
 
-## :white_check_mark: Verify Your Implementation
+**Example**
+```java
+String lineItem = format("Apple iPhone 15 Pro", 47, 1199.99);
 
-To verify that your code works as expected, run the `StringExercisesTest` tests.
+System.out.println(lineItem); // Output: Item: Apple iPhone 15 Pro. Price: £1199.99. Quantity: 47
+```
+
+#### :white_check_mark: Verify Your Implementation
+
+To verify that your code works as expected, run the `AppTest` tests.
 
 In your terminal, ensure that you are in the `java-primitives` folder.
 Then run the following command in your terminal.
 
 ```shell
-./mvnw clean test
+./mvnw clean test -Dtest=com.cbfacademy.strings.AppTest
 ```
 
 If you are on Windows, run this command instead:
 
 ```shell
-mvnw.cmd clean test
+mvnw.cmd clean test -Dtest=com.cbfacademy.strings.AppTest
 ```
 
-### Tests Results
+The `-Dtest=com.cbfacademy.strings.AppTest` flag sets the specific test suite to be executed. If you want to run all the unit tests for the session, simply omit that option.
+
+#### Test Results
 
 Your implementation is correct when all tests pass:
 
@@ -164,8 +159,8 @@ Your implementation is correct when all tests pass:
 [1]: https://docs.oracle.com/javase/11/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
-[4]: https://github.com/cbfacademy/intro-to-java-course/blob/main/exercises/java-primitives/src/main/java/com/cbfacademy/StringExercises.java
-[5]: https://github.com/cbfacademy/intro-to-java-course/blob/main/exercises/java-primitives/src/test/java/com/cbfacademy/StringExercisesTest.java
+[4]: exercises/java-primitives/src/main/java/com/cbfacademy/strings/App.java
+[5]: exercises/java-primitives/src/test/java/com/cbfacademy/strings/AppTest.java
 [6]: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html
 [7]: #walking-decimal-types
 [8]: #running-unary-operators---increment--decrement

@@ -1,4 +1,4 @@
-package com.cbfacademy;
+package com.cbfacademy.strings;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,14 +13,13 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(value = "String Exercises")
-public class StringExercisesTest {
+public class AppTest {
 
     @ParameterizedTest
     @MethodSource
     @DisplayName("concatenate() method returns correctly concatenated string")
     public void concatenate_ReturnsConcatenatedString(String word1, String word2, String word3, String expected) {
-        final StringExercises exercise = new StringExercises();
-        final String result = exercise.concatenate(word1, word2, word3);
+        final String result = App.concatenate(word1, word2, word3);
 
         assertThat(result, is(equalTo(expected)));
     }
@@ -38,9 +37,8 @@ public class StringExercisesTest {
     @MethodSource
     @DisplayName("areEqual() method returns equality of two strings")
     public void areEqual_ReturnsEqualityOfTwoStrings(String word1, String word2, Boolean expected) {
-        final StringExercises exercise = new StringExercises();
-        final Boolean result = exercise.areEqual(word1, word2);
-        final Boolean caseInsensitiveResult = exercise.areEqual(word1.toUpperCase(), word2.toLowerCase());
+        final Boolean result = App.areEqual(word1, word2);
+        final Boolean caseInsensitiveResult = App.areEqual(word1.toUpperCase(), word2.toLowerCase());
 
         assertThat(result, is(equalTo(expected)));
         assertThat(caseInsensitiveResult, is(false));
@@ -60,9 +58,8 @@ public class StringExercisesTest {
     @MethodSource
     @DisplayName("format() method returns formatted string")
     public void format_ReturnsFormattedString(String item, int quantity, double price) {
-        final StringExercises exercise = new StringExercises();
         final String expected = formatItem(item, quantity, price);
-        final String result = exercise.format(item, quantity, price);
+        final String result = App.format(item, quantity, price);
 
         assertThat(result, is(equalTo(expected)));
     }
