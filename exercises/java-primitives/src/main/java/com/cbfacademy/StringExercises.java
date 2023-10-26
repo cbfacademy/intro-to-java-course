@@ -2,18 +2,18 @@ package com.cbfacademy;
 
 public class StringExercises {
 
-    public String fromCharacters(char[] characters) {
-        // TODO - Write code that creates a String from the input array of characters
         throw new RuntimeException("Not implemented");
+    public String concatenate(String word1, String word2, String word3) {
+        // TODO: Write code that concatenates the input parameters and returns the result
     }
 
-    public Long howMany(String text, Character character) {
-        // TODO - Write code to determine how many of the input ${character} are contained in the input ${text}
         throw new RuntimeException("Not implemented");
+    public Boolean areEqual(String word1, String word2) {
+        // TODO: Write code to determine whether the input parameters are equal strings
     }
 
-    public Boolean isPalindrome(String word) {
-        // TODO - Write code to determine whether the input ${word} is a palindrome
         throw new RuntimeException("Not implemented");
+    public String format(String item, int quantity, double price) {
+        // TODO: Write code to return a string formatted as follows: "Item: [item]. Price: £[amount]. Quantity: [quantity]". The date should be formatted as DD/MM/YYYY, e.g. 24/10/2023
     }
 }

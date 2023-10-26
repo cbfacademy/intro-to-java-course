@@ -52,7 +52,7 @@ System.out.println(++number2);
 
 For this section, we've provided the starter project above. It contains:
 
-- the [StringExercises class][4] with three methods to implement: `fromCharacters`, `howMany` and `isPalindrome`
+- the [StringExercises class][4] with three methods to implement: `concatenate`, `areEqual` and `format`
 
 - and a test suite to verify your implementation [StringExercisesTest][5].
 
@@ -64,11 +64,11 @@ In each method, replace the `throw new RuntimeException("Not implemented")` with
 
 **<ins>Exercise 1</ins>**
 
-Implement the `fromCharacters` method in such a way that it creates a String from the input array of characters.
+Implement the `concatenate` method in such a way that it creates a new String by concatenating the provided parameters.
 
 ```java
-public String fromCharacters(char[] characters) {
-    // TODO: Write code that creates a String from the input array of characters
+public String concatenate(String word1, String word2, String word3) {
+    // TODO: Write code that concatenates the input parameters and returns the result
     throw new RuntimeException("Not implemented");
 }
 ```
@@ -77,11 +77,11 @@ public String fromCharacters(char[] characters) {
 
 **<ins>Exercise 2</ins>**
 
-Implement the `howMany` method, which determines the number of times an input character is found in the input text.
+Implement the `areEqual` method, which determines whether the two provided parameters are equal strings. The equality check should be case-sensitive (i.e. hello != HELLO)
 
 ```java
-public Long howMany(String text, Character character) {
-    // TODO: Write code to determine how many of the input ${character} are contained in the input ${text}
+public Boolean areEqual(String word1, String word2) {
+    // TODO: Write code to determine whether the input parameters are equal strings
     throw new RuntimeException("Not implemented");
 }
 ```
@@ -90,18 +90,18 @@ public Long howMany(String text, Character character) {
 
 **<ins>Exercise 3</ins>**
 
-Implement the `isPalindrome` method, which checks if a word is a **palindrome**.
+Implement the `format` method, which returns a formatted string containing the provided parameters. The price value should be displayed with a pound (£) symbol and two decimal places.
 
-A palindrome is a word which read from both sides (from left to right or from right to left) results to the same word.
+**Example**
+```java
+String lineItem = new StringExercises().format("Apple iPhone 15 Pro", 47, 1199.99);
 
-**Examples** <br/>
-- anna
-- radar
-- solos
+System.out.println(lineItem); // Output: Item: Apple iPhone 15 Pro. Price: £1199.99. Quantity: 47
+```
 
 ```java
-public Boolean isPalindrome(String word) {
-    // TODO: Write code to determine whether the input ${word} is a palindrome
+public String format(String item, int quantity, double price) {
+    // TODO: Write code to return a string formatted as follows: "Item: [item]. Price: £[amount]. Quantity: [quantity]"
     throw new RuntimeException("Not implemented");
 }
 ```
@@ -131,38 +131,33 @@ Your implementation is correct when all tests pass:
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
-[INFO] ├─ String Exercises - 0.079s
-[INFO] │  ├─ ✔ returns this unit's exercises name - 0.012s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[1] anna, true - 0.019s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[2] radar, true - 0.001s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[3] refer, true - 0.001s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[4] solos, true - 0.001s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[5] noon, true - 0.001s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[6] madam, true - 0s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[7] typescript, false - 0.001s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[8] javascript, false - 0.001s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[9] java, false - 0s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[10] street, false - 0s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[11] apple, false - 0s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[12] python, false - 0.001s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[13] midnight, false - 0.001s
-[INFO] │  ├─ ✔ returns a String from an array of characters[1] [h, e, l, l, o], hello - 0.001s
-[INFO] │  ├─ ✔ returns a String from an array of characters[2] [w, o, r, l, d], world - 0.001s
-[INFO] │  ├─ ✔ returns a String from an array of characters[3] [C, B, F], CBF - 0.001s
-[INFO] │  ├─ ✔ returns a String from an array of characters[4] [a, c, a, d, e, m, y], academy - 0s
-[INFO] │  ├─ ✔ returns a String from an array of characters[5] [i, n, t, r, o, -, t, o, -, j, a, v, a], intro-to-java - 0s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[1] This section describes the Java Collections Framework. Here, you will learn what collections are and how they can ... - 0.001s
-[INFO] │  └─ ✔ counts the number of times a character is found in a string[2] Java is a programming language and computing platform first released by Sun Microsystems in 1995. It has evolved f... - 0s
+[INFO] ├─ String Exercises - 0.072s
+[INFO] │  ├─ ✔ areEqual() method returns equality of two strings[1] Java, Java, true - 0.018s
+[INFO] │  ├─ ✔ areEqual() method returns equality of two strings[2] HTML, HTML, true - 0.001s
+[INFO] │  ├─ ✔ areEqual() method returns equality of two strings[3] beta, beta, true - 0.001s
+[INFO] │  ├─ ✔ areEqual() method returns equality of two strings[4] camel-case, camel_case, false - 0.001s
+[INFO] │  ├─ ✔ areEqual() method returns equality of two strings[5] WET, wet, false - 0.001s
+[INFO] │  ├─ ✔ areEqual() method returns equality of two strings[6] dry, DRY, false - 0s
+[INFO] │  ├─ ✔ concatenate() method returns correctly concatenated string[1] Red, Green, Blue, RedGreenBlue - 0.005s
+[INFO] │  ├─ ✔ concatenate() method returns correctly concatenated string[2] one, two, three, onetwothree - 0s
+[INFO] │  ├─ ✔ concatenate() method returns correctly concatenated string[3] QUICK, BROWN, FOX, QUICKBROWNFOX - 0s
+[INFO] │  ├─ ✔ concatenate() method returns correctly concatenated string[4] www., google., com, www.google.com - 0s
+[INFO] │  ├─ ✔ concatenate() method returns correctly concatenated string[5] Intro , to , Java, Intro to Java - 0s
+[INFO] │  ├─ ✔ format() method returns formatted string[1] Laptop, 27, 1999.99 - 0.008s
+[INFO] │  ├─ ✔ format() method returns formatted string[2] Mobile phone, 200, 999.99 - 0.001s
+[INFO] │  ├─ ✔ format() method returns formatted string[3] Tablet, 85, 1199.99 - 0s
+[INFO] │  ├─ ✔ format() method returns formatted string[4] Charger, 467, 29.99 - 0s
+[INFO] │  └─ ✔ format() method returns formatted string[5] USB cable, 883, 8.99 - 0s
 [INFO] 
 [INFO] Results:
 [INFO] 
-[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.319 s
-[INFO] Finished at: 2023-04-29T16:49:21+01:00
+[INFO] Total time:  1.098 s
+[INFO] Finished at: 2023-10-26T02:34:16+01:00
 [INFO] ------------------------------------------------------------------------
 ```
 

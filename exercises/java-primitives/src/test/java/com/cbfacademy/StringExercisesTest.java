@@ -16,83 +16,67 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 public class StringExercisesTest {
 
     @ParameterizedTest
-    @MethodSource("firstExerciseProvider")
-    @DisplayName("returns a String from an array of characters")
-    public void stringsFromCharacters(char[] characters, String expected) {
+    @MethodSource
+    @DisplayName("concatenate() method returns correctly concatenated string")
+    public void concatenate_ReturnsConcatenatedString(String word1, String word2, String word3, String expected) {
         final StringExercises exercise = new StringExercises();
+        final String result = exercise.concatenate(word1, word2, word3);
 
-        final String result = exercise.fromCharacters(characters);
+        assertThat(result, is(equalTo(expected)));
+    }
 
-        assertThat(result, equalTo(expected));
+    static Stream<Arguments> concatenate_ReturnsConcatenatedString() {
+        return Stream.of(
+                arguments("Red", "Green", "Blue", "RedGreenBlue"),
+                arguments("one", "two", "three", "onetwothree"),
+                arguments("QUICK", "BROWN", "FOX", "QUICKBROWNFOX"),
+                arguments("www.", "google.", "com", "www.google.com"),
+                arguments("Intro ", "to ", "Java", "Intro to Java"));
     }
 
     @ParameterizedTest
-    @MethodSource("secondExerciseProvider")
-    @DisplayName("counts the number of times a character is found in a string")
-    public void howMany(String text, Character character, Long count) {
+    @MethodSource
+    @DisplayName("areEqual() method returns equality of two strings")
+    public void areEqual_ReturnsEqualityOfTwoStrings(String word1, String word2, Boolean expected) {
         final StringExercises exercise = new StringExercises();
+        final Boolean result = exercise.areEqual(word1, word2);
+        final Boolean caseInsensitiveResult = exercise.areEqual(word1.toUpperCase(), word2.toLowerCase());
 
-        final Long result = exercise.howMany(text, character);
+        assertThat(result, is(equalTo(expected)));
+        assertThat(caseInsensitiveResult, is(false));
+    }
 
-        assertThat(result, equalTo(count));
+    static Stream<Arguments> areEqual_ReturnsEqualityOfTwoStrings() {
+        return Stream.of(
+                arguments("Java", "Java", true),
+                arguments("HTML", "HTML", true),
+                arguments("beta", "beta", true),
+                arguments("camel-case", "camel_case", false),
+                arguments("WET", "wet", false),
+                arguments("dry", "DRY", false));
     }
 
     @ParameterizedTest
-    @MethodSource("thirdExerciseProvider")
-    @DisplayName("counts the number of times a character is found in a string")
-    public void isPalindrome(String word, Boolean expected) {
+    @MethodSource
+    @DisplayName("format() method returns formatted string")
+    public void format_ReturnsFormattedString(String item, int quantity, double price) {
         final StringExercises exercise = new StringExercises();
+        final String expected = formatItem(item, quantity, price);
+        final String result = exercise.format(item, quantity, price);
 
-        final Boolean result = exercise.isPalindrome(word);
-
-        assertThat(result, is(expected));
+        assertThat(result, is(equalTo(expected)));
     }
 
-    static Stream<Arguments> firstExerciseProvider() {
+    static Stream<Arguments> format_ReturnsFormattedString() {
         return Stream.of(
-                arguments(new char[]{'h', 'e', 'l', 'l', 'o'}, "hello"),
-                arguments(new char[]{'w', 'o', 'r', 'l', 'd'}, "world"),
-                arguments(new char[]{'C', 'B', 'F'}, "CBF"),
-                arguments(new char[]{'a', 'c', 'a', 'd', 'e', 'm', 'y'}, "academy"),
-                arguments(new char[]{'i', 'n', 't', 'r', 'o', '-', 't', 'o', '-', 'j', 'a', 'v', 'a'}, "intro-to-java")
-        );
+                arguments("Laptop", 27, 2000),
+                arguments("Mobile phone", 200, 999.99),
+                arguments("Tablet", 85, 1199.9),
+                arguments("Charger", 467, 29.999),
+                arguments("USB cable", 883, 8.0001));
     }
 
-    static Stream<Arguments> secondExerciseProvider() {
-        return Stream.of(
-                arguments(
-                    "This section describes the Java Collections Framework. Here, you will learn what collections are " +
-                    "and how they can make your job easier and programs better. You'll learn about the core elements — " +
-                    "interfaces, implementations, aggregate operations, and algorithms — that comprise the Java " +
-                    "Collections Framework.",
-                    'g',
-                    5L
-                ),
-                arguments(
-                    "Java is a programming language and computing platform first released by Sun Microsystems in 1995. " +
-                    "It has evolved from humble beginnings to power a large share of today’s digital world, by providing " +
-                    "the reliable platform upon which many services and applications are built.",
-                    'e',
-                    18L
-                )
-        );
-    }
-
-    static Stream<Arguments> thirdExerciseProvider() {
-        return Stream.of(
-                arguments("anna", true),
-                arguments("radar", true),
-                arguments("refer", true),
-                arguments("solos", true),
-                arguments("noon", true),
-                arguments("madam", true),
-                arguments("typescript", false),
-                arguments("javascript", false),
-                arguments("java", false),
-                arguments("street", false),
-                arguments("apple", false),
-                arguments("python", false),
-                arguments("midnight", false)
-        );
+    private String formatItem(String item, int quantity, double price) {
+        return String.format("Item: %s. Price: £%.2f. Quantity: %d", item, price, quantity);
     }
 }
