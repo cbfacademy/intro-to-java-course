@@ -20,7 +20,7 @@ Using the [String Java documentation][6] as a guide, implement the methods in `s
 
 In each method, replace `throw new RuntimeException("Not implemented")` with your code.
 
-### 1. String Concatenation
+### String Concatenation
 
 Implement the `concatenate` method in such a way that it creates a new String by concatenating the provided parameters.
 
@@ -31,7 +31,7 @@ public String concatenate(String word1, String word2, String word3) {
 }
 ```
 
-### 2. String Comparison
+### String Comparison
 
 Implement the `areEqual` method, which determines whether the two provided parameters are equal strings. The equality check should be case-sensitive (i.e. hello != HELLO)
 
@@ -42,7 +42,7 @@ public Boolean areEqual(String word1, String word2) {
 }
 ```
 
-### 3. String Formatting
+### String Formatting
 
 Implement the `format` method, which returns a formatted string containing the provided parameters. The price value should be displayed with a pound (£) symbol and two decimal places.
 
