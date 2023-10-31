@@ -116,27 +116,25 @@ Your implementation is correct when all tests pass:
 
 ## :pushpin: Operators
 
+FFor this section, open the `src/main/java/com/cbfacademy/operators/` directory. It contains a [Java program][4] with three methods to implement: `concatenate`, `areEqual` and `format`.
+
+Using the [Java Operators documentation][7] as a guide, implement the methods in `App.java`. In each method, replace `throw new RuntimeException("Not implemented")` with your code.
+
 ### Arithmetic Operators
 
-Following our example of arithmetic operations on integers, create a simple Java program with simple expressions to (for both `float` and `double` types):
+Implement the methods in `App.java` to add, subtract and multiply decimal numbers. In each method, replace `throw new RuntimeException("Not implemented")` with your code:
 
-- add decimal numbers
-- subtract decimal numbers
-- multiply decimal numbers
-- divide decimal numbers
-
-and print the results on the screen.
+- `public static double add(double operand1, double operand2)`
+- `public static double subtract(double operand1, double operand2)`
+- `public static double multiply(double operand1, double operand2)`
 
 ### Relational Operators
 
-Following our example of relational operations on integers, create a simple Java program with simple expressions to (for `double`s only):
+Implement the methods in `App.java` to compare equality and evaluate the largest and smallest given decimal numbers. In each method, replace `throw new RuntimeException("Not implemented")` with your code:
 
-- compare the equality of decimal numbers
-- evaluate which decimal is higher
-- evaluate which decimal is smaller
-
-and print the results on the screen.
-
+- `public static Boolean areEqual(double operand1, double operand2)`
+- `public static double getMax(double operand1, double operand2)`
+- `public static double getMin(double operand1, double operand2)`
 
 ### Unary Operators
 
@@ -158,3 +156,4 @@ System.out.println(++number2);
 [4]: exercises/java-primitives/src/main/java/com/cbfacademy/strings/App.java
 [5]: exercises/java-primitives/src/test/java/com/cbfacademy/strings/AppTest.java
 [6]: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html
+[7]: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html
