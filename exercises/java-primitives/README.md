@@ -9,23 +9,20 @@ The goal of this exercise is to familiarise ourselves with:
 - [Operators](#pushpin-operators)
 - [Arrays](#pushpin-arrays)
 
+For this exercise, we've provided starter code in the `exercises/java-primitives/` directory. After opening your repo in your IDE, ensure you've navigated to this path in your terminal.
+
 ## :pushpin: Strings
 
-For this section, we've provided starter code in the `exercises/java-primitives/` directory. It contains:
+For this section, open the `src/main/java/com/cbfacademy/strings/` directory. It contains a [Java program][4] with three methods to implement: `concatenate`, `areEqual` and `format`.
 
-- a [Java program][4] with three methods to implement: `concatenate`, `areEqual` and `format`
-- a [test suite][5] to verify your implementation
-
-Using the [String Java documentation][6] as a guide, implement the methods in `src/main/java/com/cbfacademy/strings/App.java`.
-
-In each method, replace `throw new RuntimeException("Not implemented")` with your code.
+Using the [String Java documentation][6] as a guide, implement the methods in `App.java`. In each method, replace `throw new RuntimeException("Not implemented")` with your code.
 
 ### String Concatenation
 
 Implement the `concatenate` method in such a way that it creates a new String by concatenating the provided parameters.
 
 ```java
-public String concatenate(String word1, String word2, String word3) {
+public static String concatenate(String word1, String word2, String word3) {
     // TODO: Write code that concatenates the input parameters and returns the result
     throw new RuntimeException("Not implemented");
 }
@@ -36,7 +33,7 @@ public String concatenate(String word1, String word2, String word3) {
 Implement the `areEqual` method, which determines whether the two provided parameters are equal strings. The equality check should be case-sensitive (i.e. hello != HELLO)
 
 ```java
-public Boolean areEqual(String word1, String word2) {
+public static Boolean areEqual(String word1, String word2) {
     // TODO: Write code to determine whether the input parameters are equal strings
     throw new RuntimeException("Not implemented");
 }
@@ -47,7 +44,7 @@ public Boolean areEqual(String word1, String word2) {
 Implement the `format` method, which returns a formatted string containing the provided parameters. The price value should be displayed with a pound (£) symbol and two decimal places.
 
 ```java
-public String format(String item, int quantity, double price) {
+public static String format(String item, int quantity, double price) {
     // TODO: Write code to return a string formatted as follows: "Item: [item]. Price: £[amount]. Quantity: [quantity]"
     throw new RuntimeException("Not implemented");
 }
@@ -62,7 +59,7 @@ System.out.println(lineItem); // Output: Item: Apple iPhone 15 Pro. Price: £119
 
 #### :white_check_mark: Verify Your Implementation
 
-To verify that your code works as expected, run the `AppTest` tests.
+We've created a [unit test suite][5] to verify your solution. To verify that your code works as expected, run the `AppTest` tests.
 
 In your terminal, ensure that you are in the `java-primitives` folder.
 Then run the following command in your terminal.
