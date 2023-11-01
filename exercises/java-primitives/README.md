@@ -116,7 +116,7 @@ Your implementation is correct when all tests pass:
 
 ## :pushpin: Operators
 
-FFor this section, open the `src/main/java/com/cbfacademy/operators/` directory. It contains a [Java program][4] with three methods to implement: `concatenate`, `areEqual` and `format`.
+For this section, open the `src/main/java/com/cbfacademy/operators/` directory. It contains a [Java program][4] with a number of methods to implement.
 
 Using the [Java Operators documentation][7] as a guide, implement the methods in `App.java`. In each method, replace `throw new RuntimeException("Not implemented")` with your code.
 
@@ -133,8 +133,8 @@ Implement the methods in `App.java` to add, subtract and multiply decimal number
 Implement the methods in `App.java` to compare equality and evaluate the largest and smallest given decimal numbers. In each method, replace `throw new RuntimeException("Not implemented")` with your code:
 
 - `public static Boolean areEqual(double operand1, double operand2)`
-- `public static double getMax(double operand1, double operand2)`
-- `public static double getMin(double operand1, double operand2)`
+- `public static Boolean isLessThan(double operand1, double operand2)`
+- `public static Boolean isMoreThan(double operand1, double operand2)`
 
 ### Unary Operators
 
