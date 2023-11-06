@@ -5,35 +5,138 @@
 [![Maven Dependency Manager](https://img.shields.io/badge/dependency%20manager-Maven-AA215A.svg?style=for-the-badge)][3]
 
 The goal of this exercise is to familiarise ourselves with:
-- [Primitive types][7]
-- [Legal and illegal operations on primitive types][8]
-- [String operations in Java][9]
+- [Strings](#pushpin-strings)
+- [Operators](#pushpin-operators)
+- [Arrays](#pushpin-arrays)
 
-## :walking: Decimal Types
+For this exercise, we've provided starter code in the `exercises/java-primitives/` directory. After opening your repo in your IDE, ensure you've navigated to this path in your terminal.
 
-### Arithmetic Operations
+## :pushpin: Strings
 
-Following our example of arithmetic operations on integers, create a simple Java program with simple expressions to (for both `float` and `double` types):
+For this section, open the `src/main/java/com/cbfacademy/strings/` directory. It contains a [Java program][4] with three methods to implement: `concatenate`, `areEqual` and `format`.
 
-- add decimal numbers
-- subtract decimal numbers
-- multiply decimal numbers
-- divide decimal numbers
+Using the [String Java documentation][6] as a guide, implement the methods in `App.java`. In each method, replace `throw new RuntimeException("Not implemented")` with your code.
 
-and print the results on the screen.
+### String Concatenation
 
-### Relational Operations
+Implement the `concatenate` method in such a way that it creates a new String by concatenating the provided parameters.
 
-Following our example of relational operations on integers, create a simple Java program with simple expressions to (for `double`s only):
+```java
+public static String concatenate(String word1, String word2, String word3) {
+    // TODO: Write code that concatenates the input parameters and returns the result
+    throw new RuntimeException("Not implemented");
+}
+```
 
-- compare the equality of decimal numbers
-- evaluate which decimal is higher
-- evaluate which decimal is smaller
+### String Comparison
 
-and print the results on the screen.
+Implement the `areEqual` method, which determines whether the two provided parameters are equal strings. The equality check should be case-sensitive (i.e. hello != HELLO)
 
+```java
+public static Boolean areEqual(String word1, String word2) {
+    // TODO: Write code to determine whether the input parameters are equal strings
+    throw new RuntimeException("Not implemented");
+}
+```
 
-## :running: Unary Operators - Increment & Decrement
+### String Formatting
+
+Implement the `format` method, which returns a formatted string containing the provided parameters. The price value should be displayed with a pound (£) symbol and two decimal places.
+
+```java
+public static String format(String item, int quantity, double price) {
+    // TODO: Write code to return a string formatted as follows: "Item: [item]. Price: £[amount]. Quantity: [quantity]"
+    throw new RuntimeException("Not implemented");
+}
+```
+
+**Example**
+```java
+String lineItem = format("Apple iPhone 15 Pro", 47, 1199.99);
+
+System.out.println(lineItem); // Output: Item: Apple iPhone 15 Pro. Price: £1199.99. Quantity: 47
+```
+
+#### :white_check_mark: Verify Your Implementation
+
+We've created a [unit test suite][5] to verify your solution. To verify that your code works as expected, run the `AppTest` tests.
+
+In your terminal, ensure that you are in the `java-primitives` folder.
+Then run the following command in your terminal.
+
+```shell
+./mvnw clean test -Dtest=com.cbfacademy.strings.AppTest
+```
+
+If you are on Windows, run this command instead:
+
+```shell
+mvnw.cmd clean test -Dtest=com.cbfacademy.strings.AppTest
+```
+
+The `-Dtest=com.cbfacademy.strings.AppTest` flag sets the specific test suite to be executed. If you want to run all the unit tests for the session, simply omit that option.
+
+#### Test Results
+
+Your implementation is correct when all tests pass:
+
+```shell
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] ├─ String Exercises - 0.072s
+[INFO] │  ├─ ✔ areEqual() method returns equality of two strings[1] Java, Java, true - 0.018s
+[INFO] │  ├─ ✔ areEqual() method returns equality of two strings[2] HTML, HTML, true - 0.001s
+[INFO] │  ├─ ✔ areEqual() method returns equality of two strings[3] beta, beta, true - 0.001s
+[INFO] │  ├─ ✔ areEqual() method returns equality of two strings[4] camel-case, camel_case, false - 0.001s
+[INFO] │  ├─ ✔ areEqual() method returns equality of two strings[5] WET, wet, false - 0.001s
+[INFO] │  ├─ ✔ areEqual() method returns equality of two strings[6] dry, DRY, false - 0s
+[INFO] │  ├─ ✔ concatenate() method returns correctly concatenated string[1] Red, Green, Blue, RedGreenBlue - 0.005s
+[INFO] │  ├─ ✔ concatenate() method returns correctly concatenated string[2] one, two, three, onetwothree - 0s
+[INFO] │  ├─ ✔ concatenate() method returns correctly concatenated string[3] QUICK, BROWN, FOX, QUICKBROWNFOX - 0s
+[INFO] │  ├─ ✔ concatenate() method returns correctly concatenated string[4] www., google., com, www.google.com - 0s
+[INFO] │  ├─ ✔ concatenate() method returns correctly concatenated string[5] Intro , to , Java, Intro to Java - 0s
+[INFO] │  ├─ ✔ format() method returns formatted string[1] Laptop, 27, 1999.99 - 0.008s
+[INFO] │  ├─ ✔ format() method returns formatted string[2] Mobile phone, 200, 999.99 - 0.001s
+[INFO] │  ├─ ✔ format() method returns formatted string[3] Tablet, 85, 1199.99 - 0s
+[INFO] │  ├─ ✔ format() method returns formatted string[4] Charger, 467, 29.99 - 0s
+[INFO] │  └─ ✔ format() method returns formatted string[5] USB cable, 883, 8.99 - 0s
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.098 s
+[INFO] Finished at: 2023-10-26T02:34:16+01:00
+[INFO] ------------------------------------------------------------------------
+```
+
+## :pushpin: Operators
+
+For this section, open the `src/main/java/com/cbfacademy/operators/` directory. It contains a [Java program][4] with a number of methods to implement.
+
+Using the [Java Operators documentation][7] as a guide, implement the methods in `App.java`. In each method, replace `throw new RuntimeException("Not implemented")` with your code.
+
+### Arithmetic Operators
+
+Implement the methods in `App.java` to add, subtract and multiply decimal numbers. In each method, replace `throw new RuntimeException("Not implemented")` with your code:
+
+- `public static double add(double operand1, double operand2)`
+- `public static double subtract(double operand1, double operand2)`
+- `public static double multiply(double operand1, double operand2)`
+
+### Relational Operators
+
+Implement the methods in `App.java` to compare equality and evaluate the largest and smallest given decimal numbers. In each method, replace `throw new RuntimeException("Not implemented")` with your code:
+
+- `public static Boolean areEqual(double operand1, double operand2)`
+- `public static Boolean isLessThan(double operand1, double operand2)`
+- `public static Boolean isMoreThan(double operand1, double operand2)`
+
+### Unary Operators
 
 What do the following expressions evaluate to:
 
@@ -47,131 +150,10 @@ System.out.println(++number2);
 
 **Why is that?**
 
-
-## :thread: String Operations in Java
-
-For this section, we've provided the starter project above. It contains:
-
-- the [StringExercises class][4] with three methods to implement: `fromCharacters`, `howMany` and `isPalindrome`
-
-- and a test suite to verify your implementation [StringExercisesTest][5].
-
-Using the [String Java documentation][6] as a guide, implement the methods of the `StringExercises` class.
-
-In each method, replace the `throw new RuntimeException("Not implemented")` with your code.
-
-<br/>
-
-**<ins>Exercise 1</ins>**
-
-Implement the `fromCharacters` method in such a way that it creates a String from the input array of characters.
-
-```java
-public String fromCharacters(char[] characters) {
-    // TODO: Write code that creates a String from the input array of characters
-    throw new RuntimeException("Not implemented");
-}
-```
-
-<br/>
-
-**<ins>Exercise 2</ins>**
-
-Implement the `howMany` method, which determines the number of times an input character is found in the input text.
-
-```java
-public Long howMany(String text, Character character) {
-    // TODO: Write code to determine how many of the input ${character} are contained in the input ${text}
-    throw new RuntimeException("Not implemented");
-}
-```
-
-<br/>
-
-**<ins>Exercise 3</ins>**
-
-Implement the `isPalindrome` method, which checks if a word is a **palindrome**.
-
-A palindrome is a word which read from both sides (from left to right or from right to left) results to the same word.
-
-**Examples** <br/>
-- anna
-- radar
-- solos
-
-```java
-public Boolean isPalindrome(String word) {
-    // TODO: Write code to determine whether the input ${word} is a palindrome
-    throw new RuntimeException("Not implemented");
-}
-```
-
-## :white_check_mark: Verify Your Implementation
-
-To verify that your code works as expected, run the `StringExercisesTest` tests.
-
-In your terminal, ensure that you are in the `java-primitives` folder.
-Then run the following command in your terminal.
-
-```shell
-./mvnw clean test
-```
-
-If you are on Windows, run this command instead:
-
-```shell
-mvnw.cmd clean test
-```
-
-### Tests Results
-
-Your implementation is correct when all tests pass:
-
-```shell
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] ├─ String Exercises - 0.079s
-[INFO] │  ├─ ✔ returns this unit's exercises name - 0.012s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[1] anna, true - 0.019s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[2] radar, true - 0.001s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[3] refer, true - 0.001s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[4] solos, true - 0.001s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[5] noon, true - 0.001s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[6] madam, true - 0s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[7] typescript, false - 0.001s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[8] javascript, false - 0.001s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[9] java, false - 0s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[10] street, false - 0s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[11] apple, false - 0s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[12] python, false - 0.001s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[13] midnight, false - 0.001s
-[INFO] │  ├─ ✔ returns a String from an array of characters[1] [h, e, l, l, o], hello - 0.001s
-[INFO] │  ├─ ✔ returns a String from an array of characters[2] [w, o, r, l, d], world - 0.001s
-[INFO] │  ├─ ✔ returns a String from an array of characters[3] [C, B, F], CBF - 0.001s
-[INFO] │  ├─ ✔ returns a String from an array of characters[4] [a, c, a, d, e, m, y], academy - 0s
-[INFO] │  ├─ ✔ returns a String from an array of characters[5] [i, n, t, r, o, -, t, o, -, j, a, v, a], intro-to-java - 0s
-[INFO] │  ├─ ✔ counts the number of times a character is found in a string[1] This section describes the Java Collections Framework. Here, you will learn what collections are and how they can ... - 0.001s
-[INFO] │  └─ ✔ counts the number of times a character is found in a string[2] Java is a programming language and computing platform first released by Sun Microsystems in 1995. It has evolved f... - 0s
-[INFO] 
-[INFO] Results:
-[INFO] 
-[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.319 s
-[INFO] Finished at: 2023-04-29T16:49:21+01:00
-[INFO] ------------------------------------------------------------------------
-```
-
 [1]: https://docs.oracle.com/javase/11/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
-[4]: https://github.com/cbfacademy/intro-to-java-course/blob/main/exercises/java-primitives/src/main/java/com/cbfacademy/StringExercises.java
-[5]: https://github.com/cbfacademy/intro-to-java-course/blob/main/exercises/java-primitives/src/test/java/com/cbfacademy/StringExercisesTest.java
+[4]: exercises/java-primitives/src/main/java/com/cbfacademy/strings/App.java
+[5]: exercises/java-primitives/src/test/java/com/cbfacademy/strings/AppTest.java
 [6]: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html
-[7]: #walking-decimal-types
-[8]: #running-unary-operators---increment--decrement
-[9]: #thread-string-operations-in-java
+[7]: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html
