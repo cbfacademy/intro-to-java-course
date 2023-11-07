@@ -5,7 +5,7 @@
 
 This project will house exercises for the Introduction to Java course.
 
-We'll be using edition 11 of Java - Java 11 LTS. 
+We'll be using edition 17 of Java - Java 17 LTS. 
 
 This short guide describes:
 
@@ -22,15 +22,15 @@ The Java Development Kit is platform specific. Follow the instructions described
 
 **Ubuntu Linux**
 
-- [How to Install Java JDK 11 on Ubuntu 22.04][5]
+- [How to Install Java JDK 17 on Ubuntu 22.04][5]
 
 **Mac OS**
 
-- [Install OpenJDK 11 with Homebrew][6]
+- [Install OpenJDK 17 with Homebrew][6]
 
 ### :white_check_mark: Verify your installation
 
-To verify that OpenJDK 11 has been successfully installed on your machine, open a terminal and run the following commands:
+To verify that OpenJDK 17 has been successfully installed on your machine, open a terminal and run the following commands:
 
 **Java Runtime Environment**
 
@@ -41,9 +41,9 @@ java -version
 You should get an ouput similar to this one:
 
 ```bash
-openjdk version "11.0.18" 2023-01-17 LTS
-OpenJDK Runtime Environment (build 11.0.18+10-LTS)
-OpenJDK 64-Bit Server VM (build 11.0.18+10-LTS, mixed mode)
+openjdk version "17.0.9" 2023-01-17 LTS
+OpenJDK Runtime Environment (build 17.0.9+9-LTS)
+OpenJDK 64-Bit Server VM (build 17.0.9+9-LTS, mixed mode)
 ```
 
 **Java Compiler**
@@ -55,7 +55,7 @@ javac -version
 You should get an ouput similar to this one:
 
 ```bash
-javac 11.0.18
+javac 17.0.9
 ```
 
 ## :wrench: Visual Studio Code Configuration
@@ -87,9 +87,9 @@ In the coming weeks, you will be actively writing Java code, and pushing your co
 [1]: https://www.java.com/en/download/help/whatis_java.html
 [2]: #coffee-install-openjdk
 [3]: #wrench-visual-studio-code-configuration
-[4]: https://access.redhat.com/documentation/en-us/openjdk/11/html/installing_and_using_openjdk_11_for_windows/installing_openjdk_msi_installer 
-[5]: https://www.linuxcapable.com/how-to-install-openjdk-11-on-ubuntu-linux/
-[6]: https://formulae.brew.sh/formula/openjdk@11
+[4]: https://learn.microsoft.com/en-us/java/openjdk/install?source=recommendations#install-on-windows-via-msi
+[5]: https://learn.microsoft.com/en-us/java/openjdk/install?source=recommendations#install-on-ubuntu
+[6]: https://formulae.brew.sh/formula/openjdk@17
 [7]: https://code.visualstudio.com/
 [8]: https://www.jetbrains.com/idea/download/
 [9]: https://code.visualstudio.com/docs/java/java-tutorial#_installing-extensions
