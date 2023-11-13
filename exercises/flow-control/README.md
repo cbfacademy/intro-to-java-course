@@ -139,7 +139,7 @@ Your implementation is correct when all tests pass:
 
 ```
 
-[1]: https://docs.oracle.com/javase/11/docs/api/index.html
+[1]: https://docs.oracle.com/javase/17/docs/api/index.html
 [2]: https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html
 [3]: https://junit.org/junit5/
 [4]: https://maven.apache.org/
