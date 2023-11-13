@@ -159,10 +159,10 @@ Your implementation is correct when all tests pass:
 
 [1]: https://docs.oracle.com/javase/17/docs/api/index.html
 [2]: https://docs.oracle.com/javase/tutorial/collections/intro/index.html
-[3]: https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html
-[4]: https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html
-[5]: https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html
-[6]: https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html
+[3]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html
+[4]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Stack.html
+[5]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayDeque.html
+[6]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashMap.html
 [7]: https://junit.org/junit5/
 [8]: https://maven.apache.org/
 [9]: https://github.com/cbfacademy/intro-to-java-course/blob/main/exercises/java-collections/src/main/java/com/cbfacademy/CollectionsExercises.java

@@ -155,5 +155,5 @@ System.out.println(++number2);
 [3]: https://maven.apache.org/
 [4]: exercises/java-primitives/src/main/java/com/cbfacademy/strings/App.java
 [5]: exercises/java-primitives/src/test/java/com/cbfacademy/strings/AppTest.java
-[6]: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html
+[6]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html
 [7]: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html
