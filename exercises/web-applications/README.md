@@ -11,7 +11,7 @@ The goal of these programming exercises is to practise:
 
 **<ins>Exercise 1</ins>**
 
-Analyse the followint HTTP request:
+Analyse the following HTTP request:
 
 ```
     GET /martignon/index.html HTTP/1.1

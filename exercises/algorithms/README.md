@@ -90,7 +90,7 @@ do until the pointers low and high meet each other.
 
 <sup>3</sup><sub>Compare with [this implementation][6]</sub>
 
-[1]: https://docs.oracle.com/javase/11/docs/api/index.html
+[1]: https://docs.oracle.com/javase/17/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
 [4]: https://www.programiz.com/java-programming/examples/merge-sort

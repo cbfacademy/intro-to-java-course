@@ -106,6 +106,6 @@ For the following list of file names: `Arrays.asList("App.java", "App.txt", null
 {"App.md", 0}
 ```
 
-[1]: https://docs.oracle.com/javase/11/docs/api/index.html
+[1]: https://docs.oracle.com/javase/17/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
