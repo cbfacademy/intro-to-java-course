@@ -24,6 +24,6 @@ Create a simple program with two classes:
 
 Ensure to release all resources at the end of your program.
 
-[1]: https://docs.oracle.com/javase/11/docs/api/index.html
+[1]: https://docs.oracle.com/javase/17/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
