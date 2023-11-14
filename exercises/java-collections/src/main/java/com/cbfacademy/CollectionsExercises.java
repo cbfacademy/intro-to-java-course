@@ -12,7 +12,26 @@ public class CollectionsExercises {
         //  - add 4 as the 3rd element of the list
         //  - invoke the method element() on the list and print the result on the screen
         //  - return the list
-        throw new RuntimeException("Not implemented");
+        // throw new RuntimeException("Not implemented");
+
+            LinkedList<Integer> linkedList = new LinkedList<>();
+    
+             // Add elements to the list
+            linkedList.addFirst(4);
+            linkedList.add(5);
+            linkedList.add(6);
+            linkedList.add(8);
+            linkedList.add(2);
+            linkedList.add(9);
+            linkedList.addLast(2);
+            linkedList.add(2, 4);
+
+             // Invoke the method element() on the list and print the result on the screen
+             Integer result = linkedList.element();
+             System.out.print(result);
+
+            // Return the list
+            return linkedList; 
     }
 
     public Stack<Integer> useStack() {
@@ -23,7 +42,31 @@ public class CollectionsExercises {
         //  - invoke the method pop() on the stack and print the result on the screen
         //  - invoke the push(4) method on the stack
         //  - return the stack
-        throw new RuntimeException("Not implemented");
+        // throw new RuntimeException("Not implemented");
+        
+        // a stack
+        Stack<Integer> stack = new Stack<>();
+
+        // Add 5, 6, 8, 9 to the stack
+        stack.push(5);
+        stack.push(6);
+        stack.push(8);
+        stack.push(9);
+
+        // Print the first element of the stack on the screen
+        System.out.print(stack.firstElement());
+
+        // Print the last element of the stack on the screen
+        System.out.print(stack.lastElement());
+
+        // Invoke the method pop() on the stack and print the result on the screen
+        System.out.print(stack.pop());
+
+        // Invoke the push(4) method on the stack
+        stack.push(4);
+
+        // Return the stack
+        return stack;
     }
 
     public ArrayDeque<Integer> useArrayDeque() {
@@ -34,7 +77,31 @@ public class CollectionsExercises {
         //  - invoke the method poll() on the queue and print the result on the screen
         //  - invoke the element() method on the queue and print the result on the screen
         //  - return the queue
-        throw new RuntimeException("Not implemented");
+        // throw new RuntimeException("Not implemented");
+
+        // an empty ArrayDeque
+        ArrayDeque<Integer> arrayDeque = new ArrayDeque<>();
+
+        // Add 5, 6, 8, 9 to the queue
+        arrayDeque.add(5);
+        arrayDeque.add(6);
+        arrayDeque.add(8);
+        arrayDeque.add(9);
+
+        // Print the first element of the queue on the screen
+        System.out.print(arrayDeque.peekFirst());
+
+        // Print the last element of the queue on the screen
+        System.out.print(arrayDeque.peekLast());
+
+        // Invoke the method poll() on the queue and print the result on the screen
+        System.out.print(arrayDeque.poll());
+
+        // Invoke the element() method on the queue and print the result on the screen
+        System.out.print(arrayDeque.element());
+
+        // Return the queue
+        return arrayDeque;
     }
 
     public HashMap<Integer, String> useHashMap() {
@@ -49,7 +116,33 @@ public class CollectionsExercises {
         //  - determine the set of values from the map and print it on the screen
         //  - determine whether the map contains "English" as a language and print the result on the screen
         //  - return the map
-        throw new RuntimeException("Not implemented");
+        // throw new RuntimeException("Not implemented");
+
+        // an empty HashMap
+        HashMap<Integer, String> hashMap = new HashMap<>();
+
+        // Add entries to the map
+        hashMap.put(1, "TypeScript");
+        hashMap.put(2, "Kotlin");
+        hashMap.put(3, "Python");
+        hashMap.put(4, "Java");
+        hashMap.put(5, "JavaScript");
+        hashMap.put(6, "Rust");
+
+        // Determine the set of keys and print it
+        Set<Integer> keySet = hashMap.keySet();
+        System.out.print(keySet);
+
+        // Determine the set of values and print it
+        Collection<String> values = hashMap.values();
+        System.out.print(values);
+
+        // Determine whether the map contains "English" as a language and print the result
+        boolean containsEnglish = values.contains("English");
+        System.out.print(containsEnglish);
+
+        // Return the map
+        return hashMap;
     }
 
     public String getName() {
