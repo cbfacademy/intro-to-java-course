@@ -23,7 +23,8 @@ public class App {
         // TODO: Write code to return a string formatted as follows: "Item: [item].
         // Price: £[amount]. Quantity: [quantity]". The date should be formatted as
         // DD/MM/YYYY, e.g. 24/10/2023
-        return String.format("Item: %s. Quantity: %d. Price: £%.%2f", item, quantity, price);
+        return String.format("Item: %s. Price: £%.2f. Quantity: %d", item, price, quantity);
+
         // throw new RuntimeException("Not implemented");
     }
 }
