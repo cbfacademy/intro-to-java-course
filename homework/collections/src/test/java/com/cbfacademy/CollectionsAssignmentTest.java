@@ -19,6 +19,7 @@ public class CollectionsAssignmentTest {
 
     @BeforeEach
     void setUp() {
+        
         numbers = new ArrayList<>(List.of(8, 12, 4, 10, 13, 5, 2, 12, 11, 14));
     }
 
@@ -38,8 +39,11 @@ public class CollectionsAssignmentTest {
     void containsDuplicates() {
         final boolean result = CollectionsAssignment.containsDuplicates(numbers);
         assertThat(result, is(true));
-
-        numbers.remove(12);
+        
+        // This will throw an error because numbers has lengths up to ten
+        // Converting 12 into an Integer Object so that you can make use of list.remove(object) not list.remove(index)
+        
+        numbers.remove(Integer.valueOf(12));
         final boolean anotherResult = CollectionsAssignment.containsDuplicates(numbers);
         assertThat(anotherResult, is(false));
     }

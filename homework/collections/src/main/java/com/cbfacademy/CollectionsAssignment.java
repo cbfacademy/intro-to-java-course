@@ -1,8 +1,16 @@
 package com.cbfacademy;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.ListIterator;
+import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 public class CollectionsAssignment {
 
@@ -17,6 +25,21 @@ public class CollectionsAssignment {
     public static void removeSmallInts(List<Integer> list, int minValue) {
         // Your solution must traverse the list from last to first element
         // removing any values less than minValue.
+     for(int i = list.size() -1; i >=0; i--){
+        int val =list.get(i);
+        if (val < minValue){
+            list.remove(i);
+        }
+     }
+
+        //ListIterator<Integer> result = list.listIterator(list.size());
+        //while (result.hasPrevious()) {
+           // int current = result.previous();
+           // if (current < minValue)
+            //{
+              //  result.remove();
+           // }
+       // }
     }
 
     /**
@@ -28,8 +51,14 @@ public class CollectionsAssignment {
      */
     public static boolean containsDuplicates(Collection<Integer> integers) {
         // Your solution must not use any loops.
-        return false;
+
+
+        Set<Integer> uniqueNumbers = new HashSet<>(integers);
+        boolean hasDuplicates = uniqueNumbers.size() < integers.size();
+        return hasDuplicates;
+      
     }
+
 
     /**
      * This method returns an ArrayList containing all elements that appear in
@@ -48,8 +77,16 @@ public class CollectionsAssignment {
      */
     public static ArrayList<Integer> inEither(Collection<Integer> ints1, Collection<Integer> ints2) {
         // This must be done with no loops.
-        return new ArrayList<Integer>();
-    }
+        
+        // TreeSet automatically sorts the argument
+            Set<Integer> set = new TreeSet<>(ints1);
+
+            // skips duplicate as per Set implementation
+            set.addAll(ints2);
+        
+        return new ArrayList<>(set);
+    } 
+
 
     /**
      * This method returns an ArrayList containing all elements that appear in
@@ -66,7 +103,15 @@ public class CollectionsAssignment {
      */
     public static ArrayList<Integer> inBoth(Collection<Integer> ints1, Collection<Integer> ints2) {
         // This must be done with no loops.
-        return new ArrayList<>();
+
+            // created two HashSet objects (set1 and set2) from the input collections
+            Set<Integer> set1 = new HashSet<>(ints1);
+            Set<Integer> set2 = new HashSet<>(ints2);
+    
+            // Find the intersection of the two sets
+            set1.retainAll(set2);
+    
+            return new ArrayList<>(set1);
     }
 
     /**
@@ -85,7 +130,24 @@ public class CollectionsAssignment {
         // your counts to find the largest. You'll need a collection that allows
         // you to store a mapping from Strings to counts.
         // No nested loops or non-enhanced for-loops are allowed.
-        return "";
+
+        //iterate through the list to count occurrences of each String
+        // Count occurrences using streams
+
+        Map<String, Long> occurrences = list.stream()
+        .collect(Collectors.groupingBy(s -> s, Collectors.counting()));
+
+
+       // Then iterate through your counts to find the largest
+
+       Optional<Map.Entry<String, Long>> maxEntry = occurrences.entrySet().stream()
+                .max(Map.Entry.comparingByValue());
+
+
+        // If there is a max entry, return its key; otherwise, return an empty string
+
+        return maxEntry.map(Map.Entry::getKey).orElse("");        
+        
     }
 
     public static String getName() {
