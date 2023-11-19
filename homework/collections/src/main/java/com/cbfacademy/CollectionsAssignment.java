@@ -32,14 +32,7 @@ public class CollectionsAssignment {
         }
      }
 
-        //ListIterator<Integer> result = list.listIterator(list.size());
-        //while (result.hasPrevious()) {
-           // int current = result.previous();
-           // if (current < minValue)
-            //{
-              //  result.remove();
-           // }
-       // }
+        
     }
 
     /**
@@ -52,9 +45,13 @@ public class CollectionsAssignment {
     public static boolean containsDuplicates(Collection<Integer> integers) {
         // Your solution must not use any loops.
 
-
+         
+            // skips duplicate as per Set implementation
         Set<Integer> uniqueNumbers = new HashSet<>(integers);
+
+        // Returns a boolean value if set size is greater than collection
         boolean hasDuplicates = uniqueNumbers.size() < integers.size();
+        
         return hasDuplicates;
       
     }
