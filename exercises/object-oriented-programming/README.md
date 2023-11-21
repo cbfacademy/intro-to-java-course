@@ -18,6 +18,7 @@ For the exercises below, we've provided the starter project above.
 Inside the `cars` package, create a class called `Car` with the following members:
 - `private String make`
 - `private String model`
+- `private String colour`
 - `private int year`
 - `public Car(String make, String model, String colour, int year)` - constructor that accepts parameters representing the make, model, colour and year of the car
 - `public String getMake()` - returns the car make
