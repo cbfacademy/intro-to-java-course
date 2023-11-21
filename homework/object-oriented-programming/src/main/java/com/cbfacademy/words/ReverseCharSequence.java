@@ -1,7 +1,7 @@
 package com.cbfacademy.words;
 
 public class ReverseCharSequence implements CharSequence {
-    private String str;
+    private final String str;
 
     public ReverseCharSequence(String str) {
         this.str = str;
@@ -28,7 +28,7 @@ public class ReverseCharSequence implements CharSequence {
     }
 
     public static void main(String[] args) {
-        ReverseCharSequence reversed = new ReverseCharSequence("Hello, World!");
-        System.out.println(reversed.toString()); // Outputs: "!dlroW ,olleH"
+        ReverseCharSequence reversed = new ReverseCharSequence("My name is Gifty Acquah");
+        System.out.println(reversed.toString()); 
     }
 }

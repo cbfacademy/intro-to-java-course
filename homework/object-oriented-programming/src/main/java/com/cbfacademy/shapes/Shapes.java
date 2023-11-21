@@ -32,11 +32,11 @@ public class Shapes {
         // Putting shapes in a list
         List<Enclosure> shapes = List.of(square1, square2, square3, circle1, circle2, circle3);
 
-        // Computing and printing results
+        // Computing results
         double totalArea = computeArea(shapes);
         double totalPerimeter = computePerimeter(shapes);
 
-        System.out.println("Computed Area for all shapes: " + totalArea);
-        System.out.println("Computed Perimeter for all shapes: " + totalPerimeter);
+        System.out.println("Area for all shapes: " + totalArea);
+        System.out.println("Perimeter for all shapes: " + totalPerimeter);
     }
 }
