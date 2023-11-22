@@ -39,7 +39,7 @@ public class ShowroomTest extends ClassExerciseTest {
 
             String colour = (String) map.get("colour");
 
-            if (colour != null && !car.getColour().equals(colour)) {
+            if (colour != null && !car.getColour().equalsIgnoreCase(colour)) {
                 match = false;
             }
 
