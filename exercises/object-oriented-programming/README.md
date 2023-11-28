@@ -18,6 +18,7 @@ For the exercises below, we've provided the starter project above.
 Inside the `cars` package, create a class called `Car` with the following members:
 - `private String make`
 - `private String model`
+- `private String colour`
 - `private int year`
 - `public Car(String make, String model, String colour, int year)` - constructor that accepts parameters representing the make, model, colour and year of the car
 - `public String getMake()` - returns the car make
@@ -242,6 +243,6 @@ Consider the following ideas:
 - print the amount of paint needed for each item
 - print the overall amount of paint needed to the screen
 
-[1]: https://docs.oracle.com/javase/11/docs/api/index.html
+[1]: https://docs.oracle.com/javase/17/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/

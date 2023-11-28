@@ -76,5 +76,5 @@ In this exercise, we've done all the work **manually** to get acquainted with th
 In the rest of the course, we'll be using [Visual Studio Code][2] to help us with the build and execution process, and focus on the Java language itself.
 
 
-[1]: https://docs.oracle.com/javase/8/docs/api/index.html
+[1]: https://docs.oracle.com/en/java/javase/17/docs/api/index.html
 [2]: https://code.visualstudio.com/

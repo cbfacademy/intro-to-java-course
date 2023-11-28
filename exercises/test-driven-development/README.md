@@ -78,6 +78,6 @@ Start from the definitions on the diagram.
 ![Character Copier](./resources/test-doubles.png)
 
 
-[1]: https://docs.oracle.com/javase/11/docs/api/index.html
+[1]: https://docs.oracle.com/javase/17/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
