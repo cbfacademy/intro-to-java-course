@@ -39,10 +39,6 @@ public class CollectionsAssignmentTest {
     void containsDuplicates() {
         final boolean result = CollectionsAssignment.containsDuplicates(numbers);
         assertThat(result, is(true));
-        
-        // This will throw an error because numbers has lengths up to ten
-        // Converting 12 into an Integer Object so that you can make use of list.remove(object) not list.remove(index)
-        
         numbers.remove(Integer.valueOf(12));
         final boolean anotherResult = CollectionsAssignment.containsDuplicates(numbers);
         assertThat(anotherResult, is(false));
