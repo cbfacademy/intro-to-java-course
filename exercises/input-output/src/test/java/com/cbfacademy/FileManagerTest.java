@@ -3,6 +3,9 @@ package com.cbfacademy;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.AfterEach;
@@ -106,22 +109,15 @@ public class FileManagerTest {
         // Prepare a source file with multiple lines
         Path sourceFile = createTempFileWithContent("source_lines.txt", inputString);
         Path targetFile = getTemporaryFilePath("target_lines.txt");
-        StringBuilder reversedTextBuilder = new StringBuilder();
 
         // Split the input string into individual lines
-        String[] lines = inputString.split("\n");
+        List<String> lines = Arrays.asList(inputString.split(System.lineSeparator()));
 
         // Reverse the order of the lines
-        for (int i = lines.length - 1; i >= 0; i--) {
-            reversedTextBuilder.append(lines[i]);
-
-            if (i > 0) {
-                reversedTextBuilder.append("\n"); // Add a newline if it's not the last line
-            }
-        }
+        Collections.reverse(lines);
 
         // Reconstruct the reversed multiline string
-        String reversedText = reversedTextBuilder.toString();
+        String reversedText = lines.stream().collect(Collectors.joining(System.lineSeparator()));
 
         // Reverse the lines and store in a target file
         fileManager.reverseLines(sourceFile.toString(), targetFile.toString());
