@@ -25,7 +25,7 @@ Inside the `cars` package, create a class called `Car` with the following member
 - `public String getModel()` - returns the car model
 - `public int getYear()` - returns the year the car was made
 - `public String getColour()` - returns the colour of the car
-- `public String setColour()` - sets the colour of the car
+- `public void setColour()` - sets the colour of the car
 - `public String getDetails()` - returns the car details, including the make, model, colour and year
 
 #### :white_check_mark: Verify Your Implementation
