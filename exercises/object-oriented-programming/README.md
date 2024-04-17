@@ -15,7 +15,7 @@ For the exercises below, we've provided the starter project above.
 
 ### Part 1
 
-Inside the `cars` package, create a class called `Car` with the following members:
+Inside the `com.cbfacademy.cars` package under the `cars` module, create a class called `Car` with the following members:
 - `private String make`
 - `private String model`
 - `private String colour`
@@ -35,13 +35,13 @@ To verify that your code works as expected, run the `CarTest` tests.
 In your terminal, ensure that you are in the `object-oriented-programming` folder, then run the following command:
 
 ```shell
-./mvnw clean test -Dtest=CarTest
+./mvnw --projects cars clean test -Dtest=CarTest
 ```
 
 If you are on Windows, run this command instead:
 
 ```bat
-mvnw.cmd clean test -Dtest=CarTest
+mvnw --projects cars clean test -Dtest=CarTest
 ```
 
 Your implementation is correct when all tests pass.
@@ -63,13 +63,13 @@ To verify that your code works as expected, run the `ShowroomTest` tests.
 In your terminal, run the following command:
 
 ```shell
-./mvnw clean test -Dtest=ShowroomTest
+./mvnw --projects cars clean test -Dtest=ShowroomTest
 ```
 
 If you are on Windows, run this command instead:
 
 ```bat
-mvnw.cmd clean test -Dtest=ShowroomTest
+mvnw --projects cars clean test -Dtest=ShowroomTest
 ```
 
 Your implementation is correct when all tests pass.
@@ -78,7 +78,7 @@ Your implementation is correct when all tests pass.
 
 ### Part 1
 
-Inside the `accounts` package, create a class called `Account` with the following members:
+Inside the `com.cbfacademy.accounts` package under the `accounts` module, create a class called `Account` with the following members:
 - `public Account(int accountNumber, double balance)` - constructor that accepts parameters representing the new account number and starting balance
 - `public double getBalance()` - returns the current account balance
 - `public int getAccountNumber()` - returns the account number
@@ -97,13 +97,13 @@ To verify that your code works as expected, run the `AccountTest` tests.
 In your terminal, run the following command:
 
 ```shell
-./mvnw clean test -Dtest=AccountTest
+./mvnw --projects accounts clean test -Dtest=AccountTest
 ```
 
 If you are on Windows, run this command instead:
 
 ```bat
-mvnw.cmd clean test -Dtest=AccountTest
+mvnw --projects accounts clean test -Dtest=AccountTest
 ```
 
 Your implementation is correct when all tests pass.
@@ -133,13 +133,13 @@ To verify that your code works as expected, run the `CurrentAccountTest` and `Sa
 In your terminal, run the following command:
 
 ```shell
-./mvnw clean test -Dtest=CurrentAccountTest,SavingsAccountTest
+./mvnw --projects accounts clean test -Dtest=CurrentAccountTest,SavingsAccountTest
 ```
 
 If you are on Windows, run this command instead:
 
 ```bat
-mvnw.cmd clean test -Dtest=CurrentAccountTest,SavingsAccountTest
+mvnw --projects accounts clean test -Dtest=CurrentAccountTest,SavingsAccountTest
 ```
 
 Your implementation is correct when all tests pass.
@@ -171,7 +171,7 @@ For the purposes of this exercise, the only attribute a shape will have is a `na
 
 ### Part 1
 
-Inside the `shapes` package, create an abstract class `Shape` with the following members:
+Inside the `com.cbfacademy.shapes` package under the `shapes` module, create an abstract class `Shape` with the following members:
 - `abstract double getArea()` - returns the area of the shape
 - `String getName()` - returns the name of the shape
 
@@ -197,13 +197,13 @@ To verify that your code works as expected, run the `ShapeTest` tests.
 In your terminal, run the following command:
 
 ```shell
-./mvnw clean test -Dtest=ShapeTest
+./mvnw --projects shapes clean test -Dtest=ShapeTest
 ```
 
 If you are on Windows, run this command instead:
 
 ```bat
-mvnw.cmd clean test -Dtest=ShapeTest
+mvnw --projects shapes clean test -Dtest=ShapeTest
 ```
 
 Your implementation is correct when all tests pass.
@@ -221,13 +221,13 @@ To verify that your code works as expected, run the `PaintTest` tests.
 In your terminal, run the following command:
 
 ```shell
-./mvnw clean test -Dtest=PaintTest
+./mvnw --projects shapes clean test -Dtest=PaintTest
 ```
 
 If you are on Windows, run this command instead:
 
 ```bat
-mvnw.cmd clean test -Dtest=PaintTest
+mvnw --projects shapes clean test -Dtest=PaintTest
 ```
 
 Your implementation is correct when all tests pass.
