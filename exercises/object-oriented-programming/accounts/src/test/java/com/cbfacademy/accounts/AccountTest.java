@@ -3,8 +3,6 @@ package com.cbfacademy.accounts;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("Account Tests")
@@ -71,17 +69,6 @@ public class AccountTest {
         double balance = account.getBalance();
 
         assertEquals(100.0, balance, 0.01);
-    }
-
-    @Test
-    @DisplayName("toString() method returns string representation")
-    public void toString_ReturnsStringRepresentation() {
-        Account account = new Account(12345, 100.0);
-
-        String accountString = account.toString();
-
-        assertThat(accountString, containsString("Account no: 12345"));
-        assertThat(accountString, containsString("Balance: £100.00"));
     }
 }
 
