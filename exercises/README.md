@@ -55,7 +55,7 @@ mvnw.cmd clean test
 
 
 
-[1]: https://docs.oracle.com/en/java/javase/17/docs/api/index.html
+[1]: https://docs.oracle.com/en/java/javase/21/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
 [4]: https://github.com/cbfacademy/intro-to-java-course/tree/main/exercises/getting-started

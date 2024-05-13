@@ -5,7 +5,7 @@
 
 This project will house exercises for the Introduction to Java course.
 
-We'll be using edition 17 of Java - Java 17 LTS. 
+We'll be using edition 21 of Java - Java 21 LTS. 
 
 This short guide describes:
 
@@ -22,15 +22,15 @@ The Java Development Kit is platform specific. Follow the instructions described
 
 **Ubuntu Linux**
 
-- [How to Install Java JDK 17 on Ubuntu 22.04][5]
+- [How to Install Java JDK 21 on Ubuntu][5]
 
-**Mac OS**
+**macOS**
 
-- [Install OpenJDK 17 with Homebrew][6]
+- [Install OpenJDK 21 with Homebrew][6]
 
 ### :white_check_mark: Verify your installation
 
-To verify that OpenJDK 17 has been successfully installed on your machine, open a terminal and run the following commands:
+To verify that OpenJDK 21 has been successfully installed on your machine, open a terminal and run the following commands:
 
 **Java Runtime Environment**
 
@@ -41,9 +41,9 @@ java -version
 You should get an ouput similar to this one:
 
 ```bash
-openjdk version "17.0.9" 2023-01-17 LTS
-OpenJDK Runtime Environment (build 17.0.9+9-LTS)
-OpenJDK 64-Bit Server VM (build 17.0.9+9-LTS, mixed mode)
+openjdk version "21.0.3" 2024-04-16
+OpenJDK Runtime Environment Homebrew (build 21.0.3)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.3, mixed mode, sharing)
 ```
 
 **Java Compiler**
@@ -55,7 +55,7 @@ javac -version
 You should get an ouput similar to this one:
 
 ```bash
-javac 17.0.9
+javac 21.0.3
 ```
 
 ## :wrench: Visual Studio Code Configuration
@@ -89,7 +89,7 @@ In the coming weeks, you will be actively writing Java code, and pushing your co
 [3]: #wrench-visual-studio-code-configuration
 [4]: https://learn.microsoft.com/en-us/java/openjdk/install?source=recommendations#install-on-windows-via-msi
 [5]: https://learn.microsoft.com/en-us/java/openjdk/install?source=recommendations#install-on-ubuntu
-[6]: https://formulae.brew.sh/formula/openjdk@17
+[6]: https://formulae.brew.sh/formula/openjdk@21
 [7]: https://code.visualstudio.com/
 [8]: https://www.jetbrains.com/idea/download/
 [9]: https://code.visualstudio.com/docs/java/java-tutorial#_installing-extensions

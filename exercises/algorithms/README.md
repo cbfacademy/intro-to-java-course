@@ -129,6 +129,6 @@ mvnw.cmd clean test
 
 Your implementation is correct when all tests pass.
 
-[1]: https://docs.oracle.com/javase/17/docs/api/index.html
+[1]: https://docs.oracle.com/javase/21/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
