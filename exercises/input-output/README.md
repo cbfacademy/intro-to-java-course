@@ -96,6 +96,6 @@ Add the following methods and call them from the `main` method:
   - read the contents of the reversed file
   - print the contents to the screen, line by line
 
-[1]: https://docs.oracle.com/javase/17/docs/api/index.html
+[1]: https://docs.oracle.com/javase/21/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/

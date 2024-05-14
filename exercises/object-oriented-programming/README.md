@@ -243,6 +243,6 @@ Consider the following ideas:
 - print the amount of paint needed for each item
 - print the overall amount of paint needed to the screen
 
-[1]: https://docs.oracle.com/javase/17/docs/api/index.html
+[1]: https://docs.oracle.com/javase/21/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/

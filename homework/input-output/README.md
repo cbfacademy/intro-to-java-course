@@ -22,7 +22,12 @@ db.user=cbfacademy
 db.password=password
 ```
 
+- Both methods should make use of the Java [Properties](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Properties.html) class and relevant methods. 
 
-[1]: https://docs.oracle.com/javase/17/docs/api/index.html
+Notes: 
+- You should deal with any missing input such as an empty string for the filename, or an empty properties map. In these cases, you should return an empty properties object.
+-  If the createFile method is given an existing filePath, it should **not** overwrite the contents of that file. 
+
+[1]: https://docs.oracle.com/javase/21/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
