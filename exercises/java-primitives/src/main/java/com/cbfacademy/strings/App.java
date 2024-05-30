@@ -3,11 +3,17 @@ package com.cbfacademy.strings;
 public class App {
     public static void main( String[] args ) {
         System.out.println( "Hello World!" );
+        String greeting = concatenate("hello", "Every", "One");
+        System.out.println(greeting);
     }
 
     public static String concatenate(String word1, String word2, String word3) {
         // TODO: Write code that concatenates the input parameters and returns the result
-        throw new RuntimeException("Not implemented");
+        String threeWords = word1.concat(word2).concat(word3);
+        // return word1 + " " + word2 + " " + word3
+        // return String.join(" ", word1, word2, word3);
+        System.out.println(threeWords);
+        return threeWords;
     }
 
     public static Boolean areEqual(String word1, String word2) {
