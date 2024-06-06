@@ -17,7 +17,7 @@ public abstract class ClassExerciseTest {
                     String colour = (String) map.get("colour");
                     int year = (int) map.get("year");
 
-                    return Arguments.of(new Car(make, model, colour, year), make, model, colour, year);
+                    return Arguments.of(new Car(make, model, colour, year));
                 });
     }
 
