@@ -32,6 +32,12 @@ Inside the `com.cbfacademy.cars` package under the `cars` module, create a class
 
 To verify that your code works as expected, run the `CarTest` tests.
 
+First, edit `object-oriented-programming/cars/pom.xml` to uncomment the `<testExclude>` line. This will prevent some unwanted compilation errors until you've progressed to the next step.
+
+```xml
+  <testExclude>**/ShowroomTest.java</testExclude>
+```
+
 In your terminal, ensure that you are in the `object-oriented-programming` folder, then run the following command:
 
 ```shell
@@ -59,6 +65,12 @@ In the `main` method of the `App` class, instantiate a `Showroom` object, call `
 #### :white_check_mark: Verify Your Implementation
 
 To verify that your code works as expected, run the `ShowroomTest` tests.
+
+Edit `object-oriented-programming/cars/pom.xml` and undo the changes to the `<testExclude>` line:
+
+```xml
+  <!-- <testExclude>**/ShowroomTest.java</testExclude> -->
+```
 
 In your terminal, run the following command:
 
