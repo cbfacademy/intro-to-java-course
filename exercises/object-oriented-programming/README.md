@@ -32,6 +32,15 @@ Inside the `com.cbfacademy.cars` package under the `cars` module, create a class
 
 To verify that your code works as expected, run the `CarTest` tests.
 
+First, edit `object-oriented-programming/cars/pom.xml` to uncomment the `<testExclude>` element:
+
+```xml
+  <testExclude>**/ShowroomTest.java</testExclude>
+```
+
+#### :information_source: Notes
+The `<testExclude>` element excludes the `ShowroomTest` class from being compiled until you've progressed to the next step, as a compiler error would be thrown otherwise.
+
 In your terminal, ensure that you are in the `object-oriented-programming` folder, then run the following command:
 
 ```shell
@@ -60,6 +69,12 @@ In the `main` method of the `App` class, instantiate a `Showroom` object, call `
 
 To verify that your code works as expected, run the `ShowroomTest` tests.
 
+Edit `object-oriented-programming/cars/pom.xml` and undo the changes to the `<testExclude>` element:
+
+```xml
+  <!-- <testExclude>**/ShowroomTest.java</testExclude> -->
+```
+
 In your terminal, run the following command:
 
 ```shell
@@ -74,6 +89,17 @@ mvnw --projects cars clean test -Dtest=ShowroomTest
 
 Your implementation is correct when all tests pass.
 
+#### :information_source: Notes
+If you want to experiment with the provided application in the App.java file, you can run a command in this format `./mvnw -q --projects [project name] clean compile exec:java -Dexec.mainClass=[package].[class]` from the terminal:
+
+```shell
+./mvnw -q --projects cars clean compile exec:java -Dexec.mainClass=com.cbfacademy.cars.App
+```
+
+For any of the later exercises, simply set the appropriate project and package names.
+
+Notice that, unlike the test command, we use the `-q` flag to suppress the output of the Maven build as we don't need to see the generated informational messages if we're just running our own application code.
+
 ## :pushpin: Inheritance
 
 ### Part 1
@@ -85,7 +111,7 @@ Inside the `com.cbfacademy.accounts` package under the `accounts` module, create
 - `public double deposit(double amount)` - deposits funds to the account and returns the new balance
 - `public double withdraw(double requested)` - withdraws funds from the account and returns the requested amount or `0` if the account has an insufficient balance
 
-#### Notes
+#### :information_source: Notes
 - This account doesn't have an overdraft facility.
 - The balance of an account may only be modified through the `deposit()` and `withdraw()` methods.
 - Consider the necessary instance variables and the appropriate access modifiers to allow any sub-classes to access those values
@@ -93,6 +119,13 @@ Inside the `com.cbfacademy.accounts` package under the `accounts` module, create
 #### :white_check_mark: Verify Your Implementation
 
 To verify that your code works as expected, run the `AccountTest` tests.
+
+Edit `object-oriented-programming/accounts/pom.xml` to uncomment the `<testExclude>` elements:
+
+```xml
+  <testExclude>**/CurrentAccountTest.java</testExclude>
+  <testExclude>**/SavingsAccountTest.java</testExclude>
+```
 
 In your terminal, run the following command:
 
@@ -123,12 +156,19 @@ Using the `Account` class as a base class, create two derived classes:
 - `public double getOverdraftLimit()` - returns the current overdraft limit
 - `public void setOverdraftLimit()` - sets the overdraft limit
 
-#### Notes
+#### :information_source: Notes
 Ensure that you have overridden methods of the `Account` class where necessary in the derived classes.
 
 #### :white_check_mark: Verify Your Implementation
 
 To verify that your code works as expected, run the `CurrentAccountTest` and `SavingsAccountTest` tests.
+
+Edit `object-oriented-programming/accounts/pom.xml` and undo the changes to the `<testExclude>` elements:
+
+```xml
+  <!-- <testExclude>**/CurrentAccountTest.java</testExclude> -->
+  <!-- <testExclude>**/SavingsAccountTest.java</testExclude> -->
+```
 
 In your terminal, run the following command:
 
@@ -144,7 +184,7 @@ mvnw --projects accounts clean test -Dtest=CurrentAccountTest,SavingsAccountTest
 
 Your implementation is correct when all tests pass.
 
-### Stretch Goal
+### :rocket: Stretch Goal
 
 If you have extra time in the session, or wish to experiment further, create a `Bank` class to manage accounts. Consider the following ideas — you may choose to implement some, all or come up with your own:
 - storing a internal list of accounts. Remember that accounts in the list could be instances of the `Account` class, the `SavingsAccount` class, or the `CurrentAccount` class.
@@ -159,7 +199,7 @@ If you have extra time in the session, or wish to experiment further, create a `
 
 Update `App.java` to create a bank instance and then execute your bank's operations
 
-#### Notes
+#### :information_source: Notes
 There are no tests for the `Bank` class, so it's up to you how to implement it.
 
 ## :pushpin: Abstraction
@@ -187,12 +227,18 @@ In the same package, create a concrete class `Cylinder` that extends `Shape`:
 - `Cylinder(double radius, double height)` - constructor
 - `double getArea()` - overrides the base method. The value is given by the formula (`height` * `𝛑` * (`radius`<sup>2</sup>)).
 
-#### Notes
+#### :information_source: Notes
 Consider the appropriate visibility of all constructors, methods and instance variables
 
 #### :white_check_mark: Verify Your Implementation
 
 To verify that your code works as expected, run the `ShapeTest` tests.
+
+Edit `object-oriented-programming/shapes/pom.xml` to uncomment the `<testExclude>` element:
+
+```xml
+  <testExclude>**/PaintTest.java</testExclude>
+```
 
 In your terminal, run the following command:
 
@@ -218,6 +264,12 @@ Inside the `shapes` package, create a class `Paint` with the following members:
 
 To verify that your code works as expected, run the `PaintTest` tests.
 
+Edit `object-oriented-programming/shapes/pom.xml` and undo the changes to the `<testExclude>` element:
+
+```xml
+  <!-- <testExclude>**/PaintTest.java</testExclude> -->
+```
+
 In your terminal, run the following command:
 
 ```shell
@@ -232,7 +284,7 @@ mvnw --projects shapes clean test -Dtest=PaintTest
 
 Your implementation is correct when all tests pass.
 
-### Stretch Goal
+### :rocket: Stretch Goal
 
 If you have extra time in the session, or wish to experiment further, create a **program** in the same package that computes the amount of paint needed to paint various shapes, e.g.:
 - a rectangular deck of length `35` and width `20` 
