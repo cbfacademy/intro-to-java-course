@@ -41,15 +41,6 @@ First, edit `object-oriented-programming/cars/pom.xml` to uncomment the `<testEx
 #### :information_source: Notes
 The `<testExclude>` element excludes the `ShowroomTest` class from being compiled until you've progressed to the next step, as a compiler error would be thrown otherwise.
 
-First, edit `object-oriented-programming/cars/pom.xml` to uncomment the `<testExclude>` element:
-
-```xml
-  <testExclude>**/ShowroomTest.java</testExclude>
-```
-
-#### :information_source: Notes
-The `<testExclude>` element excludes the `ShowroomTest` class from being compiled until you've progressed to the next step, as a compiler error would be thrown otherwise.
-
 In your terminal, ensure that you are in the `object-oriented-programming` folder, then run the following command:
 
 ```shell
