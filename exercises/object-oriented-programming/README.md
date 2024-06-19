@@ -47,11 +47,7 @@ In your terminal, ensure that you are in the `object-oriented-programming` folde
 ./mvnw --projects cars clean test -Dtest=CarTest
 ```
 
-If you are on Windows, run this command instead:
-
-```bat
-mvnw --projects cars clean test -Dtest=CarTest
-```
+If you are using the Windows Command Prompt, use `mvnw` instead of `./mvnw` for all commands.
 
 Your implementation is correct when all tests pass.
 
@@ -79,12 +75,6 @@ In your terminal, run the following command:
 
 ```shell
 ./mvnw --projects cars clean test -Dtest=ShowroomTest
-```
-
-If you are on Windows, run this command instead:
-
-```bat
-mvnw --projects cars clean test -Dtest=ShowroomTest
 ```
 
 Your implementation is correct when all tests pass.
@@ -133,12 +123,6 @@ In your terminal, run the following command:
 ./mvnw --projects accounts clean test -Dtest=AccountTest
 ```
 
-If you are on Windows, run this command instead:
-
-```bat
-mvnw --projects accounts clean test -Dtest=AccountTest
-```
-
 Your implementation is correct when all tests pass.
 
 ### Part 2
@@ -174,12 +158,6 @@ In your terminal, run the following command:
 
 ```shell
 ./mvnw --projects accounts clean test -Dtest=CurrentAccountTest,SavingsAccountTest
-```
-
-If you are on Windows, run this command instead:
-
-```bat
-mvnw --projects accounts clean test -Dtest=CurrentAccountTest,SavingsAccountTest
 ```
 
 Your implementation is correct when all tests pass.
@@ -246,12 +224,6 @@ In your terminal, run the following command:
 ./mvnw --projects shapes clean test -Dtest=ShapeTest
 ```
 
-If you are on Windows, run this command instead:
-
-```bat
-mvnw --projects shapes clean test -Dtest=ShapeTest
-```
-
 Your implementation is correct when all tests pass.
 
 ### Part 2
@@ -274,12 +246,6 @@ In your terminal, run the following command:
 
 ```shell
 ./mvnw --projects shapes clean test -Dtest=PaintTest
-```
-
-If you are on Windows, run this command instead:
-
-```bat
-mvnw --projects shapes clean test -Dtest=PaintTest
 ```
 
 Your implementation is correct when all tests pass.
