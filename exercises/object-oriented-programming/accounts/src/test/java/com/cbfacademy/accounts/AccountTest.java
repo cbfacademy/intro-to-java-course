@@ -71,4 +71,3 @@ public class AccountTest {
         assertEquals(100.0, balance, 0.01);
     }
 }
-

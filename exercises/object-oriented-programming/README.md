@@ -5,6 +5,7 @@
 [![Maven Dependency Manager](https://img.shields.io/badge/dependency%20manager-Maven-AA215A.svg?style=for-the-badge)][3]
 
 The goal of these exercises is to practise OOP concepts:
+
 - Encapsulation
 - Inheritance
 - Abstraction
@@ -16,6 +17,7 @@ For the exercises below, we've provided the starter project above.
 ### Part 1
 
 Inside the `com.cbfacademy.cars` package under the `cars` module, create a class called `Car` with the following members:
+
 - `private String make`
 - `private String model`
 - `private String colour`
@@ -49,6 +51,7 @@ Your implementation is correct when all tests pass.
 ### Part 2
 
 Create a class called `Showroom` with the following members:
+
 - `public List<Car> getCars()` - returns a list containing the following three `Car` objects:
   - a blue Volvo V40 from 2012
   - a red Porsche Panamera from 2009
@@ -79,6 +82,7 @@ Your implementation is correct when all tests pass.
 ### Part 1
 
 Inside the `com.cbfacademy.accounts` package under the `accounts` module, create a class called `Account` with the following members:
+
 - `public Account(int accountNumber, double balance)` - constructor that accepts parameters representing the new account number and starting balance
 - `public double getBalance()` - returns the current account balance
 - `public int getAccountNumber()` - returns the account number
@@ -86,6 +90,7 @@ Inside the `com.cbfacademy.accounts` package under the `accounts` module, create
 - `public double withdraw(double requested)` - withdraws funds from the account and returns the requested amount or `0` if the account has an insufficient balance
 
 #### Notes
+
 - This account doesn't have an overdraft facility.
 - The balance of an account may only be modified through the `deposit()` and `withdraw()` methods.
 - Consider the necessary instance variables and the appropriate access modifiers to allow any sub-classes to access those values
@@ -113,17 +118,20 @@ Your implementation is correct when all tests pass.
 Using the `Account` class as a base class, create two derived classes:
 
 `SavingsAccount` with the following members, in addition to the attributes of the `Account` class:
+
 - `public SavingsAccount(int accountNumber, double balance, double interestRate)` - constructor that accepts parameters representing the new account number, starting balance and interest rate
 - `public void applyInterest()` applies interest to the account
 - `public double getInterestRate()` - returns the current interest rate
 - `public void setInterestRate()` - sets the interest rate
 
 `CurrentAccount` with the following members, in addition to the attributes of the `Account` class:
+
 - `public CurrentAccount(int accountNumber, double balance, double overdraftLimit)` - constructor that accepts parameters representing the new account number, starting balance and overdraft limit
 - `public double getOverdraftLimit()` - returns the current overdraft limit
 - `public void setOverdraftLimit()` - sets the overdraft limit
 
 #### Notes
+
 Ensure that you have overridden methods of the `Account` class where necessary in the derived classes.
 
 #### :white_check_mark: Verify Your Implementation
@@ -147,6 +155,7 @@ Your implementation is correct when all tests pass.
 ### Stretch Goal
 
 If you have extra time in the session, or wish to experiment further, create a `Bank` class to manage accounts. Consider the following ideas — you may choose to implement some, all or come up with your own:
+
 - storing a internal list of accounts. Remember that accounts in the list could be instances of the `Account` class, the `SavingsAccount` class, or the `CurrentAccount` class.
 - opening a new account, given a type and balance.
 - getting a list of account numbers held by the bank
@@ -160,11 +169,12 @@ If you have extra time in the session, or wish to experiment further, create a `
 Update `App.java` to create a bank instance and then execute your bank's operations
 
 #### Notes
+
 There are no tests for the `Bank` class, so it's up to you how to implement it.
 
 ## :pushpin: Abstraction
 
-In this exercise you will develop a class hierarchy of shapes and write a program that computes the amount of paint needed to paint different objects. 
+In this exercise you will develop a class hierarchy of shapes and write a program that computes the amount of paint needed to paint different objects.
 The hierarchy will consist of a parent class `Shape` with three derived classes - `Sphere`, `Rectangle`, and `Cylinder`.
 
 For the purposes of this exercise, the only attribute a shape will have is a `name` and the method of interest will be one that computes the area of the shape (surface area in the case of three-dimensional shapes).
@@ -172,22 +182,27 @@ For the purposes of this exercise, the only attribute a shape will have is a `na
 ### Part 1
 
 Inside the `com.cbfacademy.shapes` package under the `shapes` module, create an abstract class `Shape` with the following members:
+
 - `abstract double getArea()` - returns the area of the shape
 - `String getName()` - returns the name of the shape
 
 In the same package, create a concrete class `Sphere` that extends `Shape`:
+
 - `Sphere(double radius)` - constructor
-- `double getArea()` - overrides the base method. The value is given by the formula (`4` * `𝛑` * (`radius`<sup>2</sup>))
+- `double getArea()` - overrides the base method. The value is given by the formula (`4` _ `𝛑` _ (`radius`<sup>2</sup>))
 
 In the same package, create a concrete class `Rectangle` that extends `Shape`:
+
 - `Rectangle(double length, double width)` - constructor
-- `double getArea()` - overrides the base method. The value is given by the formula (`length` * `width`)
+- `double getArea()` - overrides the base method. The value is given by the formula (`length` \* `width`)
 
 In the same package, create a concrete class `Cylinder` that extends `Shape`:
+
 - `Cylinder(double radius, double height)` - constructor
-- `double getArea()` - overrides the base method. The value is given by the formula (`height` * `𝛑` * (`radius`<sup>2</sup>)).
+- `double getArea()` - overrides the base method. The value is given by the formula (`height` _ `𝛑` _ (`radius`<sup>2</sup>)).
 
 #### Notes
+
 Consider the appropriate visibility of all constructors, methods and instance variables
 
 #### :white_check_mark: Verify Your Implementation
@@ -211,6 +226,7 @@ Your implementation is correct when all tests pass.
 ### Part 2
 
 Inside the `shapes` package, create a class `Paint` with the following members:
+
 - `Paint(double coverage)` - constructor that accepts a parameter representing the number of square feet per gallon this paint can cover
 - `getAmount(Shape shape)` - returns the amount of paint (measured in gallons) needed to paint a given shape
 
@@ -235,11 +251,13 @@ Your implementation is correct when all tests pass.
 ### Stretch Goal
 
 If you have extra time in the session, or wish to experiment further, create a **program** in the same package that computes the amount of paint needed to paint various shapes, e.g.:
-- a rectangular deck of length `35` and width `20` 
+
+- a rectangular deck of length `35` and width `20`
 - a ball of radius `15`
 - a tank of radius `10` and height `30`.
 
 Consider the following ideas:
+
 - print the amount of paint needed for each item
 - print the overall amount of paint needed to the screen
 
