@@ -5,18 +5,35 @@ import java.util.*;
 public class CollectionsExercises {
 
     public LinkedList<Integer> useLinkedList() {
-        // TODO: create an empty linked list
+        // create an empty linked list
         //  - add 4 as the first element of the list
         //  - then add 5, 6, 8, 2, 9 to the list
         //  - add another 2 as the last element of the list
         //  - add 4 as the 3rd element of the list
         //  - invoke the method element() on the list and print the result on the screen
         //  - return the list
-        throw new RuntimeException("Not implemented");
+
+        LinkedList<Integer> integersList = new LinkedList<>();
+
+        // System.out.println(integersList);
+
+        integersList.add(4);
+        Collections.addAll(integersList, 5, 6, 8, 2, 9);
+        integersList.add(2);
+        integersList.add(2, 4);  // Add 4 as the 3rd element (index 2)
+
+    
+        // System.out.println(integersList); 
+        System.out.println(integersList.element()); // Print the result of element() method
+       
+        return integersList;
     }
 
+
+    // ./mvnw clean test -Dtest=com.cbfacademy
+
     public Stack<Integer> useStack() {
-        // TODO: create an empty stack
+        // : create an empty stack
         //  - add 5, 6, 8, 9 to the stack
         //  - print the first element of the stack on the screen
         //  - print the last element of the stack on the screen
