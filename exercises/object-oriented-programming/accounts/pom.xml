@@ -12,4 +12,22 @@
   <version>1.0.0</version>
 
   <name>accounts</name>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <testExcludes>
+              <!-- <testExclude>**/BankTest.java</testExclude> -->
+              <!-- <testExclude>**/CurrentAccountTest.java</testExclude> -->
+              <!-- <testExclude>**/SavingsAccountTest.java</testExclude> -->
+            </testExcludes>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>
