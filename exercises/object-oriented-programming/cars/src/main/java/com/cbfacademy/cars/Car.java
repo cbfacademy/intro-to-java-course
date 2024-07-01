@@ -1,3 +1,5 @@
+package com.cbfacademy.cars;
+
 public class Car {
 
     private String make;
@@ -45,8 +47,7 @@ public class Car {
     public void setYear(int year) {
         this.year = year;
     }
-
-    public int getDetails(){
-        return make, model, colour, year;
+    public String getDetails() {
+        return "Make: " + make + ", Model: " + model + ", Colour: " + colour + ", Year: " + year;
     }
 }
