@@ -10,11 +10,7 @@ The goal of this exercise is to:
 
 ## Setup
 
-In your preferred working directory,
-
-- Create a project folder called **`getting-started-with-java`**.
-
-- Inside this project folder:
+- Inside the **`exercises/getting-started`** directory:
     - create a sub-directory called **`com`**
     - inside the `com` directory, create a sub-directory called **`cbfacademy`**
 
@@ -41,7 +37,7 @@ public class HelloWorld {
 
 :hourglass: **Compile**
 
-In your terminal, navigate to the `getting-started-with-java` project folder. 
+In your terminal, navigate to the `getting-started` project folder. 
 
 Execute this command to **compile** our Java program
 
@@ -55,7 +51,7 @@ A `HelloWorld.class` file is now created alongside our Java source.
 
 :runner: **Run**
 
-To run our Java program, let's execute the following command in the same directory as before (`getting-started-with-java`)
+To run our Java program, let's execute the following command in the same directory as before (`getting-started`)
 
 ```bash
 java com.cbfacademy.HelloWorld
