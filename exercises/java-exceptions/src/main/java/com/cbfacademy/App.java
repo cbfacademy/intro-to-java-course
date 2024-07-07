@@ -5,9 +5,18 @@ package com.cbfacademy;
  *
  */
 public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+{   
+    // // is the following code legal?
+    // try {
+    // } finally {
+    // }
+    public static void main( String[] args ){ 
+
     }
+
+
 }
+
+
+// compile:avac -d target/classes src/main/java/com/cbfacademy/App.java
+// run: java -cp target/classes com.cbfacademy.App
