@@ -72,9 +72,9 @@ public class FlowControlExercisesTest {
     @DisplayName("Reverse the list order")
     public void reverseOrder(ArrayList<Integer> numbers, List<Integer> expected) {
         final FlowControlExercises exercise = new FlowControlExercises();
-
+        System.out.println(numbers);
         final List<Integer> result = exercise.reverse(numbers);
-
+        System.out.println(result);
         assertThat(result.size(), is(expected.size()));
         assertThat(result, is(expected));
     }

@@ -1,6 +1,7 @@
 package com.cbfacademy;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -125,17 +126,19 @@ public class FlowControlExercises {
     public List<Integer> reverse(ArrayList<Integer> numbers) {
         // TODO - Implement this method such that
         // - it takes an array list of integers
-        List<Integer> list1 = new ArrayList<>(10);
-        for (int i = 10; i > 10; i--) {
-            list1.add(i);
+        ArrayList<Integer> reversedNumbers = new ArrayList<>(numbers);
 
-        }
+        // Reversing the list using Collections.reverse() method
+        Collections.reverse(reversedNumbers);
 
-        // - it returns the list in reverse order
-
-        // return list1
-        throw new RuntimeException("Not implemented");
+        // Returning the reversed list
+        return reversedNumbers;
     }
+
+    // - it returns the list in reverse order
+
+    // return list1
+    // throw new RuntimeException("Not implemented");
 
     public String getName() {
         return "Flow Control Exercises";
