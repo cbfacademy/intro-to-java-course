@@ -12,7 +12,7 @@ For this assignment, we've provided the starter project above.
 
 ## :earth_africa: Using URLs
 
-Create a program that connects to the CBF academy website, then prints its content to the screen line by line.
+Create a program that connects to the [Coding Black Females](https://codingblackfemales.com) website, then prints its content to the screen line by line.
 
 Whenever possible, use the try-with-resources construct we saw earlier in the course, and ensure to release all resources.
 
