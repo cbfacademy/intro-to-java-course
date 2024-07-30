@@ -21,14 +21,15 @@ public class ExerciseServer {
                 try (Socket socket = serverSocket.accept()) {
                     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                     BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-
-                    String clientMessage = bufferedReader.readLine();
-                    System.out.println("Message from client: " + clientMessage);
-
-                    // Echo back to client
-                    bufferedWriter.write("Server received: " + clientMessage);
-                    bufferedWriter.newLine();
-                    bufferedWriter.flush();
+                    while (true) { 
+                        String clientMessage = bufferedReader.readLine();
+                        System.out.println("Message from client: " + clientMessage);
+    
+                        // Echo back to client
+                        bufferedWriter.write("Server received: " + clientMessage);
+                        bufferedWriter.newLine();
+                        bufferedWriter.flush();   
+                    }
                 }
             }
         } catch (IOException e) {
@@ -39,9 +40,8 @@ public class ExerciseServer {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
-
+        } // YOU COULD USE A TRY WITH REOSURCES BLOCK TO ELIMINATE USING A FINALLY BLOCK 
     }
-
-    
 }
+
+// if you want to run multiple clients - put another while loop but in practice- you will introduce multiple threads

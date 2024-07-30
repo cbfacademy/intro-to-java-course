@@ -41,7 +41,7 @@ An HTTP client sends the following message:
     Accept: text/html, image/gif, image/jpeg
     If-modified-since: 27 Feb 2017 08:10:00
 ```
-
+HTTP 1.1 304 Not Modified
 Write down two feasible responses of the HTTP server (only the status line)
 
 ## :spider_web: HTML

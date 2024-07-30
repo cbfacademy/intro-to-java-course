@@ -8,20 +8,6 @@ import java.io.OutputStreamWriter;
 import java.net.*;
 import java.util.Scanner;
 
-/**
- * This class implements java Client that connects with the server
- * @author hafsa!
- *
- */
-
-
- // Create a simple program with two classes:
-    // a ExerciseServer class which uses a ServerSocket to listen for connections on localhost:4040, then prints message it receives on the screen.
-    // a ExerciseClient class which requests a connection to server, sends a simple text message to the server.
-    // IP address, port number, socket connection, 
-// Ensure to release all resources at the end of your program.
-
-
 public class ExerciseClient {
     private static final String serveraddress = "localhost";
     private static final int serverPORT = OldServer.PORT;
