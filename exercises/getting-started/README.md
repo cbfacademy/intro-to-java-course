@@ -16,7 +16,7 @@ The goal of this exercise is to:
 
 - Inside that last sub-directory (`cbfacademy`), create a file called **`HelloWorld.java`**.
 
-At this point, our project folder structure looks as follows:
+At this point, our directory structure looks as follows:
 
 ![Folder Structure](../resources/folder-structure-01.png)
 
@@ -37,7 +37,7 @@ public class HelloWorld {
 
 :hourglass: **Compile**
 
-In your terminal, navigate to the `getting-started` project folder. 
+In your terminal, navigate to the `getting-started` directory. 
 
 Execute this command to **compile** our Java program
 
