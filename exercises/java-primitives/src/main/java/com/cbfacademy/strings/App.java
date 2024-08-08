@@ -16,7 +16,7 @@ public class App {
     }
 
     public static String format(String item, int quantity, double price) {
-        // TODO: Write code to return a string formatted as follows: "Item: [item]. Price: £[amount]. Quantity: [quantity]". The date should be formatted as DD/MM/YYYY, e.g. 24/10/2023
+        // TODO: Write code to return a string formatted as follows: "Item: [item]. Price: £[price]. Quantity: [quantity]". The price should be formatted to two decimal places, e.g. 99.99
         throw new RuntimeException("Not implemented");
     }
 }
