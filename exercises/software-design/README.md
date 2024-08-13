@@ -94,10 +94,11 @@ We have now implemented DIP, where a high-level module (`DiceGame`) and low-leve
 
 We have now inverted control and introduced abstraction, but our classes are still tightly coupled to the factory classes. Let's resolve this by instead injecting dependencies into the constructor of the `DiceGame` class.
 
-1. Modify the `DiceGame` constructor to accept two `Player` instances.
-2. Modify the `main` method in `App` to create two `Player` instances (using `PlayerFactory`) and pass them to the `DiceGame` constructor.
-3. Run the application again to confirm you get the same output as before.
-4. Commit your changes.
+1. Modify the `DiceGame` constructor to accept two `Player` parameters.
+2. Modify the `GameFactory.create()` method to accept two `Player` parameters and inject them into the `DiceGame` constructor.
+3. Modify the `main` method in `App` to create two `Player` instances (using `PlayerFactory`) and pass them to the `GameFactory.create()` method.
+4. Run the application again to confirm you get the same output as before.
+5. Commit your changes.
 
 By injecting the `Player` instances into the `DiceGame` constructor, we have now successfully decoupled `DiceGame` from `DicePlayer`.
 
