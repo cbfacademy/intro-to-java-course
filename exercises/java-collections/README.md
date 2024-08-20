@@ -46,8 +46,11 @@ This allows us to access functionality that is specific to `LinkedList`, and may
 Using the [LinkedList Java documentation][3] as a guide, implement the `useLinkedList` method as described below.
 
 ```java
+
 public LinkedList<Integer> useLinkedList() {
+    
     // TODO: create an empty linked list
+
     //  - add 4 as the first element of the list
     //  - then add 5, 6, 8, 2, 9 to the the list
     //  - add another 2 as the last element of the list
@@ -56,6 +59,7 @@ public LinkedList<Integer> useLinkedList() {
     //  - return the list
     throw new RuntimeException("Not implemented");
 }
+
 ```
 
 ## :books: Java `Stack`

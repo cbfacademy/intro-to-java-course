@@ -5,51 +5,59 @@ import java.util.*;
 public class CollectionsExercises {
 
     public LinkedList<Integer> useLinkedList() {
-        // TODO: create an empty linked list
-        //  - add 4 as the first element of the list
-        //  - then add 5, 6, 8, 2, 9 to the list
-        //  - add another 2 as the last element of the list
-        //  - add 4 as the 3rd element of the list
-        //  - invoke the method element() on the list and print the result on the screen
-        //  - return the list
-        throw new RuntimeException("Not implemented");
+        LinkedList<Integer> integersList = new LinkedList<>();
+        integersList.add(4);
+        integersList.add(5);
+        integersList.add(6);
+        integersList.add(8);
+        integersList.add(2);
+        integersList.add(9);
+        integersList.addLast(2);
+        integersList.add(2, 4);
+        Integer firstElement = integersList.element(); 
+        System.out.println(firstElement); 
+        return integersList;   
     }
 
     public Stack<Integer> useStack() {
-        // TODO: create an empty stack
-        //  - add 5, 6, 8, 9 to the stack
-        //  - print the first element of the stack on the screen
-        //  - print the last element of the stack on the screen
-        //  - invoke the method pop() on the stack and print the result on the screen
-        //  - invoke the push(4) method on the stack
-        //  - return the stack
-        throw new RuntimeException("Not implemented");
+        Stack<Integer> stack = new Stack<>();
+        stack.add(5);
+        stack.add(6);
+        stack.add(8);
+        stack.add(9);
+        System.out.print(stack.firstElement());
+        System.out.print(stack.lastElement());
+        System.out.print(stack.pop());
+        stack.push(4);
+        return stack;
     }
 
     public ArrayDeque<Integer> useArrayDeque() {
-        // TODO: create an empty arrayDeque
-        //  - add 5, 6, 8, 9 to the queue
-        //  - print the first element of the queue on the screen
-        //  - print the last element of the queue on the screen
-        //  - invoke the method poll() on the queue and print the result on the screen
-        //  - invoke the element() method on the queue and print the result on the screen
-        //  - return the queue
-        throw new RuntimeException("Not implemented");
+        ArrayDeque<Integer> queue = new ArrayDeque<Integer>();
+        queue.add(5);
+        queue.add(6);
+        queue.add(8);
+        queue.add(9);
+        System.out.print(queue.getFirst());
+        System.out.print(queue.getLast());
+        System.out.print(queue.poll());
+        System.out.print(queue.element());
+        return queue;
     }
-
+    
     public HashMap<Integer, String> useHashMap() {
-        // TODO: create an empty hash map
-        //  - add {1, TypeScript} entry to the map
-        //  - add {2, Kotlin} entry to the map
-        //  - add {3, Python} entry to the map
-        //  - add {4, Java} entry to the map
-        //  - add {5, JavaScript} entry to the map
-        //  - add {6, Rust} entry to the map
-        //  - determine the set of keys from the map and print it on the screen
-        //  - determine the set of values from the map and print it on the screen
-        //  - determine whether the map contains "English" as a language and print the result on the screen
-        //  - return the map
-        throw new RuntimeException("Not implemented");
+        HashMap<Integer, String> hash = new HashMap<>();     
+        hash.put(1, "TypeScript");
+        hash.put(2, "Kotlin");
+        hash.put(3, "Python");
+        hash.put(4, "Java");
+        hash.put(5, "JavaScript");
+        hash.put(6, "Rust");
+        System.out.print(hash.keySet());
+        System.out.print(hash.values());
+        System.out.print(hash.containsValue("English"));
+        return hash;
+
     }
 
     public String getName() {
