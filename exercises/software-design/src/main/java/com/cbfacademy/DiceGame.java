@@ -48,4 +48,10 @@ public class DiceGame implements Player{
         
         return winner;
     }
+
+    @Override
+    public int roll() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'roll'");
+    }
 }
