@@ -1,3 +1,5 @@
+package com.cbfacademy;
+
 public class FizzBuzz {
 
        // Method to get the FizzBuzz output
