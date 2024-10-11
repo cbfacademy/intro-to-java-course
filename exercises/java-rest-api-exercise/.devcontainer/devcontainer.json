@@ -1,0 +1,25 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/java
+{
+  "name": "Java",
+  "image": "mcr.microsoft.com/devcontainers/java:1-21-bookworm",
+
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/mysql-homebrew:1": {}
+  },
+
+  "forwardPorts": [8080],
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "esbenp.prettier-vscode",
+        "cweijan.vscode-mysql-client2",
+        "rangav.vscode-thunder-client"
+      ]
+    }
+  },
+
+  "postStartCommand": "mysql.server start"
+}

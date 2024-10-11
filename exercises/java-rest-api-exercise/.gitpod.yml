@@ -1,0 +1,21 @@
+image:
+  file: .gitpod.Dockerfile
+
+# Commands that will run on workspace start
+tasks:
+  - name: Resolve dependencies
+    command: ./mvnw dependency:resolve
+
+# Ports to expose on workspace startup
+ports:
+  - port: 8080
+    onOpen: open-preview
+    name: API
+    description: REST API Preview
+    visibility: private
+    protocol: https
+
+vscode:
+  extensions:
+    - esbenp.prettier-vscode
+    - vscjava.vscode-java-pack
