@@ -1,15 +1,29 @@
 package com.cbfacademy;
 
-public class DiceGame {
+public class DiceGame implements Player{
     private DicePlayer player1;
     private DicePlayer player2;
     private int targetScore = 30;
 
     public DiceGame() {
-        player1 = new DicePlayer();
-        player2 = new DicePlayer();
+        player1 = PlayerFactory.create();
+        player2 = PlayerFactory.create();
         player1.setName("Player 1");
         player2.setName("Player 2");
+    }
+
+  public DiceGame(Player player1, Player player2) {
+        
+    }
+
+@Override
+    public void setName(String name) {
+        // You can leave this blank if DiceGame doesn't need a name itself
+    }
+
+    @Override
+    public String getName() {
+        return "DiceGame"; // Return a default name, or customize as needed
     }
 
     public String play() {

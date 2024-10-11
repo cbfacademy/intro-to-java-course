@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="client-server-architecture" />
+        <module name="software-design" />
+        <module name="flow-control" />
+        <module name="java-collections" />
+        <module name="sort" />
+        <module name="cars" />
+        <module name="search" />
+        <module name="shapes" />
+        <module name="java-exceptions" />
+        <module name="accounts" />
+        <module name="java-primitives" />
+        <module name="test-driven-development" />
+        <module name="input-output" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
