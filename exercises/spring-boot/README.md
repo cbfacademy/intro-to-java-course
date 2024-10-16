@@ -102,6 +102,7 @@ Stop the application by pressing `Ctrl + C`
 7. Create an `IOURepository` interface that extends `ListCrudRepository<IOU, UUID>`
 8. If it's not already running, start your API with `./mvnw clean spring-boot:run`. Check the output and confirm there are no errors
 9. Check your database contains an "ious" table with the correct columns and data types
+10. Commit your changes
 
 ## Exercise 2
 
@@ -113,6 +114,7 @@ Stop the application by pressing `Ctrl + C`
     - `void deleteIOU(UUID id)`
 2. Create an `IOUController` class that implements the endpoints below. Ensure your service class is injected as a dependency and apply the appropriate annotations
 3. Start your API and confirm there are no errors
+4. Commit your changes
 
 | Method | Endpoint | Description |
 | --- | --- | --- |
@@ -142,8 +144,9 @@ The JSON representation of an IOU that you'll get in responses or provide in the
 
 1. Create an `ious` package inside the test/java/com/cbfacademy/springbootexercise package
 2. Download the [test suite](https://gist.github.com/cbfacademy-admin/be990e8da45fca196513f35f86ed3f52) and copy to the test ious package as IOUControllerTest.java
-3. Run the tests with `./mvnw test`
-4. Examine the results. Which tests fail? What reasons are given?
+3. Run the tests with `./mvnw clean test`
+4. Examine the results. Do any tests fail? If so, what reasons are given? Modify your code so all tests pass
+5. Commit your changes
 
 ## Exercise 4
 
@@ -155,6 +158,10 @@ The JSON representation of an IOU that you'll get in responses or provide in the
 2. Test the modified endpoint
 3. Commit your changes
 
+#### :chart_with_upwards_trend: Stretch Goal
+
+Modify the `/api/ious` endpoint to filter IOUs for a specific lender, defined as an optional query string parameter.
+
 ## Exercise 5
 
 1. Create a new API endpoint to return IOUs with above-average value:
@@ -165,6 +172,7 @@ The JSON representation of an IOU that you'll get in responses or provide in the
 2. Test the new endpoint
 3. Commit your changes
 4. Create a new endpoint at `/low` to return IOUs that are below or equal to the average value. Implement the repository method using JPQL instead of SQL
+5. Commit your changes
 
 ## Top Tips
 
