@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/exercises/algorithms/search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/algorithms/search/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/algorithms/sort/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/algorithms/sort/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/algorithms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/algorithms/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/client-server-architecture/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/client-server-architecture/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/flow-control/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/flow-control/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/input-output/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/input-output/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/java-collections/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/java-collections/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/java-exceptions/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/java-exceptions/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/java-primitives/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/java-primitives/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/object-oriented-programming/accounts/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/object-oriented-programming/accounts/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/object-oriented-programming/cars/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/object-oriented-programming/cars/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/object-oriented-programming/shapes/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/object-oriented-programming/shapes/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/object-oriented-programming/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/object-oriented-programming/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/software-design/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/software-design/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/test-driven-development/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exercises/test-driven-development/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/homework/collections/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/homework/collections/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/homework/input-output/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/homework/input-output/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/homework/object-oriented-programming/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/homework/object-oriented-programming/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/restful-api/java-rest-api-exercise/restapiexercise/src/main/java" charset="UTF-8" />
+  </component>
+</project>

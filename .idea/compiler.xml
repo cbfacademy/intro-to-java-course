@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="client-server-architecture" />
+        <module name="restapiexercise" />
+        <module name="object-oriented-programming (2)" />
+        <module name="software-design" />
+        <module name="flow-control" />
+        <module name="java-collections" />
+        <module name="sort" />
+        <module name="object-oriented-programming" />
+        <module name="cars" />
+        <module name="input-output (2)" />
+        <module name="search" />
+        <module name="collections" />
+        <module name="input-output (1)" />
+        <module name="shapes" />
+        <module name="java-exceptions" />
+        <module name="accounts" />
+        <module name="java-primitives" />
+        <module name="test-driven-development" />
+        <module name="input-output" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="restapiexercise" options="-parameters" />
+    </option>
+  </component>
+</project>
