@@ -37,7 +37,7 @@ public class HelloWorld {
 
 :hourglass: **Compile**
 
-In your terminal, navigate to the `getting-started` directory. 
+In your terminal, navigate to the `exercises/getting-started` directory. 
 
 Execute this command to **compile** our Java program
 
