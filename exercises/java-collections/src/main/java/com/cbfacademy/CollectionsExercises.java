@@ -103,7 +103,6 @@ public class CollectionsExercises {
         LinkedList<Integer> resultList = exercises.useLinkedList();
         System.out.println("Final linked list: " + resultList);
          // Test Stack
-         Stack<Integer> resultStack = exercises.useStack();
          System.out.println("Final stack: " + resultStack);
          // Test ArrayDeque
         ArrayDeque<Integer> resultQueue = exercises.useArrayDeque();
