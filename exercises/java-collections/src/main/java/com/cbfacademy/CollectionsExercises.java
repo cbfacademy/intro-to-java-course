@@ -110,5 +110,6 @@ public class CollectionsExercises {
          // Test HashMap
          HashMap<Integer, String> resultMap = exercises.useHashMap();
          System.out.println("Final map: " + resultMap);
+
         } 
     }  
