@@ -19,8 +19,7 @@ Using the [String Java documentation][6] as a guide, implement the methods in `A
 
 ### String Concatenation
 
-Implement the `concatenate` method in such a way that it creates a new String by concatenating the provided parameters.
-
+Implement the `concatenate` method in such a way that it creates a new String by concatenating the provided 
 ```java
 public static String concatenate(String word1, String word2, String word3) {
     // TODO: Write code that concatenates the input parameters and returns the result
