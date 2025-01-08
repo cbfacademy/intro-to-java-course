@@ -18,7 +18,17 @@
     // Configure properties specific to VS Code.
     "vscode": {
       // Add the IDs of extensions you want installed when the container is created.
-      "extensions": ["esbenp.prettier-vscode", "vscjava.vscode-java-pack"]
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "vscjava.vscode-java-pack",
+        "vmware.vscode-boot-dev-pack",
+        "cweijan.vscode-mysql-client2",
+        "GitHub.vscode-pull-request-github",
+        "bierner.github-markdown-preview",
+        "Postman.postman-for-vscode"
+      ]
     }
-  }
+  },
+
+  "forwardPorts": [8080]
 }
