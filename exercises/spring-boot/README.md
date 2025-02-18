@@ -24,8 +24,9 @@ exit;
 ### Initialise Project
 1. Open this [pre-configured Initializr project](https://start.spring.io/#!type=maven-project&language=java&packaging=jar&jvmVersion=21&groupId=com.cbfacademy&artifactId=springbootexercise&name=Spring%20Boot%20Exercise&description=Build%20a%20RESTful%20API%20using%20Spring%20Boot&packageName=com.cbfacademy.springbootexercise&dependencies=web,data-jpa,mysql,devtools). Review the configured settings, but do not make any changes. Click "Generate" to download a zipped project
 2. Extract the downloaded zip file
-3. Ensure that the `spring-boot` directory is the current working directory in the terminal, then copy the contents of the extracted directory to your local repository.  **IMPORTANT:** Do NOT copy the extracted files using (macOS) Finder or (Windows) Explorer as not all extracted files may be correctly moved:
+3. Ensure that the `spring-boot` directory is the current working directory in the terminal, then copy the contents of the extracted directory to your local repository.  **IMPORTANT:** Do NOT copy the extracted files using (macOS) Finder or (Windows) Explorer as not all extracted files may be correctly moved. Confirm the terminal that you're using (check with your instructor/mentor if you're unsure) and use the appropriate command to copy the files. Note that you MUST use the correct command for your terminal:
    - macOS (zsh): `cp -r [extracted directory]/* [extracted directory]/.[^.]* .`, e.g. `cp -r ~/Downloads/springbootexercise/* ~/Downloads/springbootexercise/.[^.]* .`
+   - macOS (bash): `cp -R [extracted directory]/. .`, e.g. `cp -R ~/Downloads/springbootexercise/. .`
    - Windows (Git Bash): `cp -r [extracted directory]/* [extracted directory]/.* .`, e.g. `cp -r ~/Downloads/springbootexercise/* ~/Downloads/springbootexercise/.* .`
    - Windows (Command Prompt): `xcopy /e /h /i /k /r /y "[extracted directory]" %cd%`, e.g. `xcopy /e /h /i /k /r /y "%USERPROFILE%\Downloads\springbootexercise" %cd%`
 4. Delete the extracted directory and the downloaded zip file
