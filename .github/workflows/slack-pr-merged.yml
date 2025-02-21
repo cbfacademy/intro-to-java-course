@@ -1,4 +1,4 @@
-name: Notify Slack on PR Merge
+name: Notify Slack
 
 on:
   pull_request:
