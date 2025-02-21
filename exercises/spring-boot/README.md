@@ -1,5 +1,9 @@
 # Spring Boot
 
+[![Java Language](https://img.shields.io/badge/PLATFORM-OpenJDK-3A75B0.svg?style=for-the-badge)][1]
+[![JUnit5 Testing Framework](https://img.shields.io/badge/testing%20framework-JUnit5-26A162.svg?style=for-the-badge)][2]
+[![Maven Dependency Manager](https://img.shields.io/badge/dependency%20manager-Maven-AA215A.svg?style=for-the-badge)][3]
+
 ## Description
 
 The goal of these exercises is to build a RESTful API service that allows users to manage IOUs (I Owe You agreements) using Spring Boot.
@@ -186,3 +190,7 @@ Modify the `/api/ious` endpoint to filter IOUs for a specific lender, defined as
 - :sos: Ask. :clap: For. :clap: Help! :clap: Your mentors, instructors and assistants are literally here to support you, so *make use of them* - don't sit and struggle in silence.
 
 Best of luck! Remember, it's not just about the destination; it's the journey. Happy coding! 🚀
+
+[1]: https://docs.oracle.com/javase/21/docs/api/index.html
+[2]: https://junit.org/junit5/
+[3]: https://maven.apache.org/
