@@ -96,7 +96,7 @@ Once all your tests are passing, commit your changes.
 
 ## Exercise 3
 
-Add more scenarios to cover the Calculator's addition and subtraction functionalities.
+Add more scenarios to cover the calculator's addition and subtraction functionalities.
 
 Once all your tests are passing, commit your changes and push your branch to GitHub.
 
