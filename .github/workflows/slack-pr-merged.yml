@@ -78,10 +78,10 @@ jobs:
                 text:
                   type: mrkdwn
                   text: "<https://github.com/${{ steps.get-changes.outputs.author }}|${{ steps.get-changes.outputs.author }}> contributed <${{ steps.get-changes.outputs.url }}|${{ steps.get-changes.outputs.title }}>"
-              - type: section
+              ${{ steps.get-changes.outputs.description != '' && steps.get-changes.outputs.description != null && format('- type: section
                 text:
                   type: mrkdwn
-                  text: "> ${{ steps.get-changes.outputs.description }}"
+                  text: "> {0}"', steps.get-changes.outputs.description) || '' }}
               - type: section
                 text:
                   type: mrkdwn
