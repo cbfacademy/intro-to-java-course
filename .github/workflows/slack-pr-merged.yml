@@ -71,18 +71,14 @@ jobs:
                 text:
                   type: mrkdwn
                   text: |
-                    *Title:* ${{ steps.get-changes.outputs.title }}
-                    *Author:* ${{ steps.get-changes.outputs.author }}
-                    *URL:* ${{ steps.get-changes.outputs.url }}
+                    "## [${{ steps.get-changes.outputs.author }}](https://github.com/${{ steps.get-changes.outputs.author }}) contributed [${{ steps.get-changes.outputs.title }}]({{ steps.get-changes.outputs.url }})"
+              - type: section
+                text:
+                  type: mrkdwn
+                  text: "> ${{ steps.get-changes.outputs.description }}"
               - type: section
                 text:
                   type: mrkdwn
                   text: |
-                    *Description:*
-                    ${{ steps.get-changes.outputs.description }}
-              - type: section
-                text:
-                  type: mrkdwn
-                  text: |
-                    *Changed Files:*
+                    "### Changed Files"
                     ```${{ steps.get-changes.outputs.changed_files }}```
