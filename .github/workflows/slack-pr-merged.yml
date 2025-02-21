@@ -87,4 +87,5 @@ jobs:
                   type: mrkdwn
                   text: |
                     *Changed Files:*
+                    
                     - ${{ steps.get-changes.outputs.changed_files }}
