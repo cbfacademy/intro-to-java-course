@@ -26,14 +26,14 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             # Get PR changes
-            CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | sed '2,$s/^/        - /')
+            CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | sed '2,$s/^/        • /')
             DESCRIPTION=$(echo "${{ github.event.pull_request.body }}" | sed 's/"/\\"/g' | sed '2,$s/^/        >/')
             TITLE=$(echo "${{ github.event.pull_request.title }}" | sed 's/"/\\"/g' | sed '2,$s/^/        /')
             AUTHOR="${{ github.event.pull_request.user.login }}"
             URL="${{ github.event.pull_request.html_url }}"
           else
             # Get push changes
-            CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }} | sed '2,$s/^/        - /')
+            CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }} | sed '2,$s/^/        • /')
             
             # Split commit message into title and description
             COMMIT_MSG="${{ github.event.head_commit.message }}"
@@ -87,5 +87,4 @@ jobs:
                   type: mrkdwn
                   text: |
                     *Changed Files:*
-                    
-                    - ${{ steps.get-changes.outputs.changed_files }}
+                    • ${{ steps.get-changes.outputs.changed_files }}
