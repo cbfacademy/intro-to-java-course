@@ -27,7 +27,7 @@ jobs:
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             # Get PR changes
             CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | sed '2,$s/^/        • /')
-            DESCRIPTION=$(echo "${{ github.event.pull_request.body }}" | sed 's/"/\\"/g' | sed '2,$s/^/        /')
+            DESCRIPTION=$(echo "${{ github.event.pull_request.body }}" | sed 's/"/\\"/g' | awk '{printf "%s\\n", $0}')
             TITLE=$(echo "${{ github.event.pull_request.title }}" | sed 's/"/\\"/g' | sed '2,$s/^/        /')
             AUTHOR="${{ github.event.pull_request.user.login }}"
             URL="${{ github.event.pull_request.html_url }}"
@@ -38,7 +38,7 @@ jobs:
             # Split commit message into title and description
             COMMIT_MSG="${{ github.event.head_commit.message }}"
             TITLE=$(echo "$COMMIT_MSG" | head -n1 | sed 's/"/\\"/g')
-            DESCRIPTION=$(echo "$COMMIT_MSG" | tail -n +2 | sed '/./,$!d' | sed 's/"/\\"/g' | sed '2,$s/^/        /')
+            DESCRIPTION=$(echo "$COMMIT_MSG" | tail -n +2 | sed '/./,$!d' | sed 's/"/\\"/g' | awk '{printf "%s\\n", $0}')
             
             AUTHOR="${{ github.event.head_commit.author.username }}"
             URL="${{ github.event.head_commit.url }}"
@@ -48,14 +48,8 @@ jobs:
           echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
           
-          echo "description<<EOF" >> $GITHUB_OUTPUT
-          echo "$DESCRIPTION" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
-          
-          echo "title<<EOF" >> $GITHUB_OUTPUT
-          echo "$TITLE" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
-          
+          echo "description=$DESCRIPTION" >> $GITHUB_OUTPUT
+          echo "title=$TITLE" >> $GITHUB_OUTPUT
           echo "author=$AUTHOR" >> $GITHUB_OUTPUT
           echo "url=$URL" >> $GITHUB_OUTPUT
 
