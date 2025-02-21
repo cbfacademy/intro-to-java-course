@@ -70,7 +70,7 @@ jobs:
               - type: section
                 text:
                   type: mrkdwn
-                  text: "## [${{ steps.get-changes.outputs.author }}](https://github.com/${{ steps.get-changes.outputs.author }}) contributed [${{ steps.get-changes.outputs.title }}]({{ steps.get-changes.outputs.url }})"
+                  text: "[${{ steps.get-changes.outputs.author }}](https://github.com/${{ steps.get-changes.outputs.author }}) contributed [${{ steps.get-changes.outputs.title }}]({{ steps.get-changes.outputs.url }})"
               - type: section
                 text:
                   type: mrkdwn
@@ -79,5 +79,5 @@ jobs:
                 text:
                   type: mrkdwn
                   text: |
-                    ### Changed Files
+                    *Changed Files:*
                     ```${{ steps.get-changes.outputs.changed_files }}```
