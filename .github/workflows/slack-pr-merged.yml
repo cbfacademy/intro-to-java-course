@@ -1,0 +1,84 @@
+name: Notify Slack
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  notify-slack:
+    if: |
+      (github.event_name == 'pull_request' && github.event.pull_request.merged == true && success()) ||
+      (github.event_name == 'push' && !contains(github.event.head_commit.message, 'Merge pull request') && success())
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changes
+        id: get-changes
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            # Get PR changes
+            CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | sed '2,$s/^/        • /')
+            DESCRIPTION=$(echo "${{ github.event.pull_request.body }}" | sed 's/"/\\"/g' | awk '{printf "%s\\n", $0}')
+            TITLE=$(echo "${{ github.event.pull_request.title }}" | sed 's/"/\\"/g' | sed '2,$s/^/        /')
+            AUTHOR="${{ github.event.pull_request.user.login }}"
+            URL="${{ github.event.pull_request.html_url }}"
+          else
+            # Get push changes
+            CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }} | sed '2,$s/^/        • /')
+            
+            # Split commit message into title and description
+            COMMIT_MSG="${{ github.event.head_commit.message }}"
+            TITLE=$(echo "$COMMIT_MSG" | head -n1 | sed 's/"/\\"/g')
+            DESCRIPTION=$(echo "$COMMIT_MSG" | tail -n +2 | sed '/./,$!d' | sed 's/"/\\"/g' | awk '{printf "%s\\n", $0}')
+            
+            AUTHOR="${{ github.event.head_commit.author.username }}"
+            URL="${{ github.event.head_commit.url }}"
+          fi
+          
+          echo "changed_files<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          
+          echo "description=$DESCRIPTION" >> $GITHUB_OUTPUT
+          echo "title=$TITLE" >> $GITHUB_OUTPUT
+          echo "author=$AUTHOR" >> $GITHUB_OUTPUT
+          echo "url=$URL" >> $GITHUB_OUTPUT
+
+      - name: Send to Slack
+        if: success()
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          payload: |
+            channel: ${{ vars.SLACK_CHANNEL_ID }}
+            text: "GitHub Action build result: ${{ job.status }}\n${{ steps.get-changes.outputs.url }}"
+            blocks:
+              - type: header
+                text:
+                  type: plain_text
+                  text: "🎉 Repo Updated! 🎉"
+                  emoji: true
+              - type: section
+                text:
+                  type: mrkdwn
+                  text: "<https://github.com/${{ steps.get-changes.outputs.author }}|${{ steps.get-changes.outputs.author }}> contributed <${{ steps.get-changes.outputs.url }}|${{ steps.get-changes.outputs.title }}>"
+              ${{ steps.get-changes.outputs.description != '' && steps.get-changes.outputs.description != null && format('- type: section
+                text:
+                  type: mrkdwn
+                  text: "{0}"', steps.get-changes.outputs.description) || '' }}
+              - type: section
+                text:
+                  type: mrkdwn
+                  text: |
+                    *Changed Files:*
+                    • ${{ steps.get-changes.outputs.changed_files }}
